@@ -1,8 +1,8 @@
 import Container from "./Container";
 import { NavLink } from "react-router-dom";
-import Logo from '../img/logo.svg?react'
-import Search from '../img/search.svg?react'
-import ShoppingIcon from '../img/shopping.svg?react'
+import Logo from '../images/logo.svg?react'
+import Search from '../images/search.svg?react'
+import ShoppingIcon from '../images/shopping.svg?react'
 
 export default function Header() {
    return (
