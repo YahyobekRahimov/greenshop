@@ -16,13 +16,13 @@ export default function Header() {
                <NavLink to="/">Home</NavLink>
             </li>
             <li>
-               <NavLink to="/shop/product/1">Product View</NavLink>
+               <NavLink to="/shop">Shop</NavLink>
             </li>
             <li>
-               <NavLink to="/shop/cart">Shopping Cart</NavLink>
+               <NavLink to="/plant-care">Plant Care</NavLink>
             </li>
             <li>
-               <NavLink to="/shop/checkout">Checkout</NavLink>
+               <NavLink to="/blogs">Blogs</NavLink>
             </li>
          </ul>
          </div>
