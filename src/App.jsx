@@ -13,6 +13,9 @@ import ProductView from "./pages/ProductView";
 import ProductCart from "./pages/ProductCart";
 import ProductCheckout from "./pages/ProductCheckout";
 import MyAccount from "./pages/MyAccount";
+import Shop from "./pages/Shop";
+import PlantCare from "./pages/PlantCare";
+import Blogs from "./pages/Blogs";
 
 function App() {
    return (
@@ -29,6 +32,9 @@ function App() {
                path="/shop/checkout"
                element={<ProductCheckout />}
             />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/plant-care" element={<PlantCare />} />
+            <Route path="/blogs" element={<Blogs />} />
          </Routes>
          <Footer />
       </BrowserRouter>
