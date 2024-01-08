@@ -1,35 +1,37 @@
 import Container from "./Container";
 import { NavLink } from "react-router-dom";
-import Logo from '../images/logo.svg?react'
-import Search from '../images/search.svg?react'
-import ShoppingIcon from '../images/shopping.svg?react'
+import Logo from "../images/logo.svg?react";
+import Search from "../images/search.svg?react";
+import ShoppingIcon from "../images/shopping.svg?react";
+import ColorBadge from "./ColorBadge";
 
 export default function Header() {
    return (
-      <Container classes='flex justify-between items-center '>
+      <Container classes="flex justify-between items-center ">
          <div>
-            <Logo/>
+            <Logo />
          </div>
          <div>
             <ul className="list-none flex gap-5">
-            <li>
-               <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-               <NavLink to="/shop">Shop</NavLink>
-            </li>
-            <li>
-               <NavLink to="/plant-care">Plant Care</NavLink>
-            </li>
-            <li>
-               <NavLink to="/blogs">Blogs</NavLink>
-            </li>
-         </ul>
+               <li>
+                  <NavLink to="/">Home</NavLink>
+               </li>
+               <li>
+                  <NavLink to="/shop">Shop</NavLink>
+               </li>
+               <li>
+                  <NavLink to="/plant-care">Plant Care</NavLink>
+               </li>
+               <li>
+                  <NavLink to="/blogs">Blogs</NavLink>
+               </li>
+            </ul>
          </div>
          <div className="flex gap-8">
-            <Search/>
-            <ShoppingIcon/>
+            <Search />
+            <ShoppingIcon />
          </div>
+         <ColorBadge />
       </Container>
    );
 }
