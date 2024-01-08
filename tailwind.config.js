@@ -10,6 +10,9 @@ export default {
             customBlue: "#3498db",
          },
       },
+      container: {
+         center: true,
+      },
    },
    plugins: [],
 };
