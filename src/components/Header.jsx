@@ -1,13 +1,14 @@
 import Container from "./Container";
 import { NavLink } from "react-router-dom";
 import Logo from "../images/logo.svg?react";
+import ShoppingIcon from "../images/shoppingC.svg?react";
 import Search from "../images/search.svg?react";
-import ShoppingIcon from "../images/shopping.svg?react";
+import Login from "../images/Logout.svg?react";
 import ColorBadge from "./ColorBadge";
 
 export default function Header() {
    return (
-      <Container classes="flex justify-between items-center ">
+      <Container classes="flex justify-between items-center mb-[1rem] ">
          <div>
             <Logo />
          </div>
@@ -27,11 +28,16 @@ export default function Header() {
                </li>
             </ul>
          </div>
-         <div className="flex gap-8">
+         <div className="flex gap-8 items-center">
             <Search />
-            <ShoppingIcon />
+            <ColorBadge />
+            <button className=" items-center flex gap-[0.25rem] text-white px-[1.0625rem] py-[0.5rem] rounded-md bg-green-600">
+               <Login/> 
+               Login
+            </button>
          </div>
-         <ColorBadge />
+         
       </Container>
+      
    );
 }
