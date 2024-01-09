@@ -18,7 +18,6 @@ export default function CustomizedBadges() {
    return (
       <IconButton aria-label="cart">
          <StyledBadge badgeContent={10} color="primary">
-            {/* <ShoppingCartIcon /> */}
             <ShoppingCart />
          </StyledBadge>
       </IconButton>
