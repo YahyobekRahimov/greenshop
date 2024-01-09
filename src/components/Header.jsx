@@ -20,7 +20,7 @@ export default function Header() {
       <div className="mt-[1.5rem]">
          <Container classes="flex justify-between items-center ">
             <div className="cursor-pointer">
-               <Logo />
+               <NavLink to="/" ><Logo /></NavLink>
             </div>
             <div>
                <ul className="list-none flex gap-16 items-center">

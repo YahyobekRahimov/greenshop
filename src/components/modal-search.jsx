@@ -51,9 +51,9 @@ Fade.propTypes = {
 
 const style = {
    width: "80%",
-   height: "50%",
+   height: "70%",
    position: "absolute",
-   top: "30%",
+   top: "40%",
    left: "50%",
    transform: "translate(-50%, -50%)",
    bgcolor: "background.paper",
@@ -98,7 +98,7 @@ export default function SpringModal() {
                         className="text-2xl ml-5 w-[70%] p-3 text-[0.875rem] duration-200 border-gray-300 shadow-input focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-300 focus:border-r-0 rounded-lg"
                         type="text"
                      />
-                     <button className="">search</button>
+                     <button className=" hover:bg-primaryDark bg-primary text-white text-2xl px-4 rounded-lg">Search</button>
                   </Typography>
                   <Typography
                      id="spring-modal-description"
