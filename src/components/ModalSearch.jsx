@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useSpring, animated } from "@react-spring/web";
 import Search from "../images/search.svg?react";
+import ModalCard from "./ModalCard";
 
 const Fade = React.forwardRef(function Fade(props, ref) {
    const {
@@ -51,9 +52,9 @@ Fade.propTypes = {
 
 const style = {
    width: "80%",
-   height: "50%",
+   height: "70%",
    position: "absolute",
-   top: "30%",
+   top: "40%",
    left: "50%",
    transform: "translate(-50%, -50%)",
    bgcolor: "background.paper",
@@ -94,17 +95,19 @@ export default function SpringModal() {
                      component="h2"
                      className="flex gap-4"
                   >
-                     <input
-                        className="text-2xl ml-5 w-[70%] p-3 text-[0.875rem] duration-200 border-gray-300 shadow-input focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-300 focus:border-r-0 rounded-lg"
+                     <input placeholder="What are looking for ?"
+                        className="placeholder:text-gray-600 placeholder:tracking-widest text-2xl ml-5 w-[70%] p-3 text-[0.875rem] duration-200 border-gray-300 shadow-input focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-300 focus:border-r-0 rounded-lg"
                         type="text"
                      />
-                     <button className="">search</button>
+                     <button className=" hover:bg-primaryDark bg-primary text-white text-2xl px-4 rounded-lg">Search</button>
                   </Typography>
                   <Typography
                      id="spring-modal-description"
                      sx={{ mt: 2 }}
                   >
-                     card
+                     <div className=" mt-8 ml-5 ">
+                        <ModalCard/>
+                     </div>
                   </Typography>
                </Box>
             </Fade>
