@@ -53,7 +53,7 @@ Fade.propTypes = {
 };
 
 const style = {
-   width: "80%",
+   width: "70%",
    height: "70%",
    position: "absolute",
    top: "40%",
@@ -114,7 +114,7 @@ export default function SpringModal() {
                      <input
                      ref={ModalInputRef} 
                      placeholder="What are looking for ?"
-                        className="placeholder:text-gray-600 placeholder:tracking-widest text-2xl ml-5 w-[70%] p-3 text-[0.875rem] duration-200 border-gray-300 shadow-input focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-300 focus:border-r-0 rounded-lg"
+                        className="placeholder:text-gray-600 placeholder:tracking-widest text-2xl ml-5 w-[90%] p-3 text-[0.875rem] duration-200 border-gray-300 shadow-input focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-300 focus:border-r-0 rounded-lg"
                         type="text"
                      />
                      <button onClick={ModulClick} className=" hover:bg-primaryDark bg-primary text-white text-2xl px-4 rounded-lg">Search</button>
@@ -123,7 +123,7 @@ export default function SpringModal() {
                      id="spring-modal-description"
                      sx={{ mt: 2 }}
                   >
-                     <div className=" mt-8 ml-5 ">
+                     <div className=" w-[98%] h-[29rem] overflow-auto mt-8 ml-5 ">
                         <ModalCard data={newData} />
                      </div>
                   </Typography>
