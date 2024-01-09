@@ -8,6 +8,8 @@ import Typography from "@mui/material/Typography";
 import { useSpring, animated } from "@react-spring/web";
 import Search from "../images/search.svg?react";
 import ModalCard from "./ModalCard";
+import Data from '../../data/data.json'
+import { useState, useEffect, useRef } from "react";
 
 const Fade = React.forwardRef(function Fade(props, ref) {
    const {
@@ -68,6 +70,20 @@ export default function SpringModal() {
    const [open, setOpen] = React.useState(false);
    const handleOpen = () => setOpen(true);
    const handleClose = () => setOpen(false);
+   const ModalInputRef =useRef('');
+   const [newData, setNewData] = useState([]);
+
+
+   function ModulClick(e){
+      if (!ModalInputRef.current.value) {
+         return;
+      }
+      let searchValue = ModalInputRef.current.value.toLowerCase();
+      let NewData = Data.filter((item) => {
+         return item.name.toLowerCase().includes(searchValue);
+      });
+      setNewData(NewData)
+   }
 
    return (
       <div>
@@ -95,18 +111,20 @@ export default function SpringModal() {
                      component="h2"
                      className="flex gap-4"
                   >
-                     <input placeholder="What are looking for ?"
+                     <input
+                     ref={ModalInputRef} 
+                     placeholder="What are looking for ?"
                         className="placeholder:text-gray-600 placeholder:tracking-widest text-2xl ml-5 w-[70%] p-3 text-[0.875rem] duration-200 border-gray-300 shadow-input focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-300 focus:border-r-0 rounded-lg"
                         type="text"
                      />
-                     <button className=" hover:bg-primaryDark bg-primary text-white text-2xl px-4 rounded-lg">Search</button>
+                     <button onClick={ModulClick} className=" hover:bg-primaryDark bg-primary text-white text-2xl px-4 rounded-lg">Search</button>
                   </Typography>
                   <Typography
                      id="spring-modal-description"
                      sx={{ mt: 2 }}
                   >
                      <div className=" mt-8 ml-5 ">
-                        <ModalCard/>
+                        <ModalCard data={newData} />
                      </div>
                   </Typography>
                </Box>
