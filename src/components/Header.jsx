@@ -6,14 +6,14 @@ import Search from "../images/search.svg?react";
 import Login from "../images/Logout.svg?react";
 import ColorBadge from "./ColorBadge";
 import { useLocation } from "react-router-dom";
-import ModalSearch from '../components/modal-search'
+import ModalSearch from "./ModalSearch";
 import { useState } from "react";
 
 export default function Header() {
-   function handleclik (e){
-     setModalSearch(true);
+   function handleclick(e) {
+      setModalSearch(true);
    }
-   const [modalSearch,setModalSearch] = useState(false);
+   const [modalSearch, setModalSearch] = useState(false);
    const location = useLocation();
 
    return (
@@ -77,8 +77,21 @@ export default function Header() {
                </ul>
             </div>
             <div className="  flex gap-8 items-center">
-               <Search onClick={handleclik} className={`${setModalSearch ? "hidden":" block rounded-full hover:bg-gray-100 cursor-pointer" }`} />
-                 <ModalSearch className={`${setModalSearch ? "hidden":" block cursor-pointer" }`} />
+               <Search
+                  onClick={handleclick}
+                  className={`${
+                     setModalSearch
+                        ? "hidden"
+                        : " block rounded-full hover:bg-gray-100 cursor-pointer"
+                  }`}
+               />
+               <ModalSearch
+                  className={`${
+                     setModalSearch
+                        ? "hidden"
+                        : " block cursor-pointer"
+                  }`}
+               />
                <ColorBadge />
                <button className=" hover:bg-primaryDark items-center flex gap-[0.25rem] text-white px-[1.0625rem] py-[0.5rem] rounded-md bg-green-600">
                   <Login />

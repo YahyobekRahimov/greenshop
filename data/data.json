@@ -1,0 +1,502 @@
+[
+   {
+      "id": 1,
+      "image": "../images/plant1.png",
+      "name": "Lush Greenery Delight",
+      "price": 24.99,
+      "description": "Bring the outdoors in with this delightful green plant.",
+      "sizes": ["S", "M", "L"],
+      "categories": ["House Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 2,
+      "image": "../images/plant2.png",
+      "name": "Colorful Blossom Marvel",
+      "price": 34.99,
+      "description": "A marvel of colorful blossoms to brighten up any room.",
+      "sizes": ["M", "L"],
+      "categories": ["House Plants", "Potter Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 3,
+      "image": "../images/plant3.png",
+      "name": "Spiky Elegance Cactus",
+      "price": 12.99,
+      "description": "An elegant cactus with spiky charm for a unique touch.",
+      "sizes": ["S"],
+      "categories": ["Succulents"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 4,
+      "image": "../images/plant4.png",
+      "name": "Golden Sunflower Patch",
+      "price": 19.99,
+      "description": "A patch of golden sunflowers to bring warmth to your space.",
+      "sizes": ["S", "M"],
+      "categories": ["Seeds"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 5,
+      "image": "../images/plant5.png",
+      "name": "Tiny Terrarium Wonderland",
+      "price": 27.99,
+      "description": "Create your own miniature wonderland with this tiny terrarium.",
+      "sizes": ["S"],
+      "categories": ["Terrariums"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 6,
+      "image": "../images/plant6.png",
+      "name": "Majestic Fern Forest",
+      "price": 29.99,
+      "description": "Transform your space into a majestic fern forest retreat.",
+      "sizes": ["M", "L"],
+      "categories": ["Big Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 7,
+      "image": "../images/plant7.png",
+      "name": "Bamboo Zen Garden",
+      "price": 39.99,
+      "description": "Find tranquility with a Zen garden featuring bamboo elements.",
+      "sizes": ["L"],
+      "categories": ["Gardening", "Accessories"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 8,
+      "image": "../images/plant8.png",
+      "name": "Scented Lavender Fields",
+      "price": 18.99,
+      "description": "Bring the soothing aroma of lavender fields to your home.",
+      "sizes": ["S"],
+      "categories": ["Small Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 9,
+      "image": "../images/plant9.png",
+      "name": "Ruby Red Rose Elegance",
+      "price": 32.99,
+      "description": "An elegant arrangement of ruby red roses for a touch of romance.",
+      "sizes": ["M"],
+      "categories": ["Potter Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 10,
+      "image": "../images/plant10.png",
+      "name": "Succulent Surprise Set",
+      "price": 22.99,
+      "description": "Discover the surprise of a set featuring assorted succulents.",
+      "sizes": ["S"],
+      "categories": ["Succulents", "Terrariums"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 11,
+      "image": "../images/plant11.png",
+      "name": "Eternal Eucalyptus Bliss",
+      "price": 26.99,
+      "description": "Experience eternal bliss with the soothing aroma of eucalyptus.",
+      "sizes": ["S", "M"],
+      "categories": ["House Plants", "Big Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 12,
+      "image": "../images/plant12.png",
+      "name": "Floating Lotus Pond",
+      "price": 36.99,
+      "description": "Create a serene atmosphere with a floating lotus pond arrangement.",
+      "sizes": ["L"],
+      "categories": ["Gardening", "Accessories"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 13,
+      "image": "../images/plant13.png",
+      "name": "Royal Blue Hydrangea Bouquet",
+      "price": 17.99,
+      "description": "A bouquet of royal blue hydrangeas to add a touch of sophistication.",
+      "sizes": ["M"],
+      "categories": ["Potter Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 14,
+      "image": "../images/plant14.png",
+      "name": "Daisy Delightful Garden",
+      "price": 23.99,
+      "description": "Cultivate delight with a garden featuring cheerful daisies.",
+      "sizes": ["S"],
+      "categories": ["Seeds", "Small Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 15,
+      "image": "../images/plant15.png",
+      "name": "Golden Pothos Cascade",
+      "price": 28.99,
+      "description": "Let the golden pothos cascade for an elegant and lush display.",
+      "sizes": ["M", "L"],
+      "categories": ["House Plants", "Big Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 16,
+      "image": "../images/plant16.png",
+      "name": "Succulent Paradise Pack",
+      "price": 21.99,
+      "description": "Create your own succulent paradise with this assorted pack.",
+      "sizes": ["S"],
+      "categories": ["Succulents", "Terrariums"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 17,
+      "image": "../images/plant17.png",
+      "name": "Bonsai Serenity Grove",
+      "price": 42.99,
+      "description": "Cultivate serenity with a bonsai grove that stands the test of time.",
+      "sizes": ["L"],
+      "categories": ["Gardening", "Accessories"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 18,
+      "image": "../images/plant18.png",
+      "name": "Sun-Kissed Marigold Patch",
+      "price": 15.99,
+      "description": "Enjoy the vibrant colors of a sun-kissed marigold patch in your garden.",
+      "sizes": ["S", "M"],
+      "categories": ["Seeds", "Small Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 19,
+      "image": "../images/plant19.png",
+      "name": "Cactus Garden Oasis",
+      "price": 31.99,
+      "description": "Transform your space into a desert oasis with this cactus garden.",
+      "sizes": ["M"],
+      "categories": ["Succulents"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 20,
+      "image": "../images/plant20.png",
+      "name": "Zen Bamboo Fountain",
+      "price": 48.99,
+      "description": "Invite tranquility with a bamboo fountain for a Zen-inspired ambiance.",
+      "sizes": ["L"],
+      "categories": ["Gardening", "Accessories"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 21,
+      "image": "../images/plant21.png",
+      "name": "Enchanting Lavender Bouquet",
+      "price": 19.99,
+      "description": "An enchanting bouquet of lavender for a calming and aromatic experience.",
+      "sizes": ["S", "M"],
+      "categories": ["Potter Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 22,
+      "image": "../images/plant22.png",
+      "name": "Rainbow Tulip Array",
+      "price": 27.99,
+      "description": "Create a burst of colors with a rainbow tulip array in your garden.",
+      "sizes": ["M"],
+      "categories": ["Seeds", "Small Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 23,
+      "image": "../images/plant23.png",
+      "name": "Cascading Ivy Elegance",
+      "price": 34.99,
+      "description": "Elevate your space with cascading ivy that adds a touch of elegance.",
+      "sizes": ["L"],
+      "categories": ["Big Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 24,
+      "image": "../images/plant24.png",
+      "name": "Golden Zinnia Meadow",
+      "price": 22.99,
+      "description": "Transform your garden into a golden meadow with vibrant zinnias.",
+      "sizes": ["S", "M"],
+      "categories": ["Seeds", "Small Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 25,
+      "image": "../images/plant25.png",
+      "name": "Succulent Symphony Pack",
+      "price": 31.99,
+      "description": "Create a symphony of succulents with this harmonious assorted pack.",
+      "sizes": ["S"],
+      "categories": ["Succulents", "Terrariums"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 26,
+      "image": "../images/plant26.png",
+      "name": "Jasmine Scented Garden",
+      "price": 38.99,
+      "description": "Immerse yourself in the sweet fragrance of a jasmine-scented garden.",
+      "sizes": ["L"],
+      "categories": ["Gardening", "Accessories"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 27,
+      "image": "../images/plant27.png",
+      "name": "Peace Lily Harmony",
+      "price": 29.99,
+      "description": "Achieve harmony with the timeless beauty of a peace lily.",
+      "sizes": ["S", "M"],
+      "categories": ["House Plants", "Big Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 28,
+      "image": "../images/plant28.png",
+      "name": "Autumn Maple Bonsai",
+      "price": 45.99,
+      "description": "Capture the essence of autumn with a maple bonsai in your living space.",
+      "sizes": ["L"],
+      "categories": ["Gardening", "Accessories"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 29,
+      "image": "../images/plant29.png",
+      "name": "Fairy Garden Retreat",
+      "price": 26.99,
+      "description": "Create a whimsical retreat with a fairy garden that sparks imagination.",
+      "sizes": ["S"],
+      "categories": ["Terrariums"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 30,
+      "image": "../images/plant30.png",
+      "name": "Eternal Rose Elegance",
+      "price": 48.99,
+      "description": "Embrace everlasting elegance with an eternal rose arrangement.",
+      "sizes": ["M"],
+      "categories": ["Potter Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 31,
+      "image": "../images/plant31.png",
+      "name": "Moonlit Cactus Garden",
+      "price": 36.99,
+      "description": "Transform your space into a mystical oasis with a moonlit cactus garden.",
+      "sizes": ["L"],
+      "categories": ["Succulents", "Terrariums"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 32,
+      "image": "../images/plant32.png",
+      "name": "Cherry Blossom Bliss",
+      "price": 24.99,
+      "description": "Experience the bliss of spring with a cherry blossom arrangement.",
+      "sizes": ["S", "M"],
+      "categories": ["Potter Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 33,
+      "image": "../images/plant33.png",
+      "name": "Crystal Clear Terrarium",
+      "price": 29.99,
+      "description": "Create a crystal clear terrarium with an assortment of miniature wonders.",
+      "sizes": ["S"],
+      "categories": ["Terrariums"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 34,
+      "image": "../images/plant34.png",
+      "name": "Majestic Orchid Ensemble",
+      "price": 39.99,
+      "description": "Adorn your space with the majestic beauty of an orchid ensemble.",
+      "sizes": ["M"],
+      "categories": ["House Plants", "Big Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 35,
+      "image": "../images/plant35.png",
+      "name": "Lush Monstera Paradise",
+      "price": 42.99,
+      "description": "Create a lush paradise with the iconic and vibrant monstera plant.",
+      "sizes": ["L"],
+      "categories": ["Big Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 36,
+      "image": "../images/plant36.png",
+      "name": "Radiant Rosemary Bush",
+      "price": 18.99,
+      "description": "Add a touch of radiance to your garden with a rosemary bush in full bloom.",
+      "sizes": ["S"],
+      "categories": ["Seeds", "Small Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 37,
+      "image": "../images/plant37.png",
+      "name": "Aloe Vera Oasis",
+      "price": 26.99,
+      "description": "Experience the healing vibes of an aloe vera oasis in your living space.",
+      "sizes": ["M"],
+      "categories": ["Succulents"],
+      "tags": ["Home", "Garden, Plants"]
+   },
+   {
+      "id": 38,
+      "image": "../images/plant38.png",
+      "name": "Sunflower Symphony",
+      "price": 33.99,
+      "description": "Enjoy a symphony of sunflowers that brighten up any corner of your garden.",
+      "sizes": ["L"],
+      "categories": ["Seeds", "Small Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 39,
+      "image": "../images/plant39.png",
+      "name": "Fern Forest Retreat",
+      "price": 28.99,
+      "description": "Create a retreat with a lush fern forest that brings the outdoors indoors.",
+      "sizes": ["S", "M"],
+      "categories": ["House Plants", "Big Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 40,
+      "image": "../images/plant40.png",
+      "name": "Soothing Lavender Fields",
+      "price": 23.99,
+      "description": "Experience tranquility with a garden featuring soothing lavender fields.",
+      "sizes": ["M"],
+      "categories": ["Gardening", "Accessories"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 41,
+      "image": "../images/plant41.png",
+      "name": "Mystical Bonsai Wonderland",
+      "price": 45.99,
+      "description": "Step into a mystical wonderland with a captivating bonsai arrangement.",
+      "sizes": ["L"],
+      "categories": ["Gardening", "Accessories"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 42,
+      "image": "../images/plant42.png",
+      "name": "Daisy Delight Bouquet",
+      "price": 19.99,
+      "description": "Delight your senses with a vibrant bouquet of cheerful daisies.",
+      "sizes": ["S", "M"],
+      "categories": ["Potter Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 43,
+      "image": "../images/plant43.png",
+      "name": "Floating Air Plant Ensemble",
+      "price": 32.99,
+      "description": "Create an ethereal atmosphere with a floating air plant ensemble.",
+      "sizes": ["S"],
+      "categories": ["Succulents", "Terrariums"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 44,
+      "image": "../images/plant44.png",
+      "name": "Sapphire Succulent Sphere",
+      "price": 27.99,
+      "description": "Adorn your space with a captivating sapphire succulent sphere.",
+      "sizes": ["M"],
+      "categories": ["Seeds", "Small Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 45,
+      "image": "../images/plant45.png",
+      "name": "Whimsical Moss Garden",
+      "price": 36.99,
+      "description": "Create a whimsical oasis with a mesmerizing moss garden.",
+      "sizes": ["L"],
+      "categories": ["Terrariums"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 46,
+      "image": "../images/plant46.png",
+      "name": "Emerald Fern Elegance",
+      "price": 23.99,
+      "description": "Enhance your living space with the elegant beauty of emerald ferns.",
+      "sizes": ["S"],
+      "categories": ["House Plants", "Big Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 47,
+      "image": "../images/plant47.png",
+      "name": "Harvest Herb Haven",
+      "price": 29.99,
+      "description": "Create a haven of freshness with a harvest herb garden in your kitchen.",
+      "sizes": ["M"],
+      "categories": ["Gardening", "Accessories"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 48,
+      "image": "../images/plant48.png",
+      "name": "Ruby Red Rose Bouquet",
+      "price": 38.99,
+      "description": "Express love with a radiant ruby red rose bouquet.",
+      "sizes": ["S"],
+      "categories": ["Potter Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 49,
+      "image": "../images/plant49.png",
+      "name": "Tranquil Bamboo Grove",
+      "price": 42.99,
+      "description": "Create a tranquil escape with a bamboo grove that soothes the soul.",
+      "sizes": ["L"],
+      "categories": ["Big Plants"],
+      "tags": ["Home", "Garden", "Plants"]
+   },
+   {
+      "id": 50,
+      "image": "../images/plant50.png",
+      "name": "Charming Bonsai Retreat",
+      "price": 31.99,
+      "description": "Embark on a charming retreat with a bonsai that captivates the heart.",
+      "sizes": ["M"],
+      "categories": ["Gardening", "Accessories"],
+      "tags": ["Home", "Garden", "Plants"]
+   }
+]

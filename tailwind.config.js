@@ -12,6 +12,7 @@ export default {
             primaryDark: "var(--green-primary-darker)",
             softBackground: "#FBFBFB",
             footerBackgroundSecondary: "rgba(70, 163, 88, 0.10)",
+            socialMediaBorder: "rgba(70, 163, 88, 0.20)",
             textPrimary: "#3D3D3D",
             textSecondary: "#727272",
          },
