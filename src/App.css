@@ -40,3 +40,9 @@ body {
 .footer-grid-custom {
    grid-template-columns: 1fr 1fr 1fr 2fr;
 }
+
+@media (min-width: 640px) {
+   
+}
+
+

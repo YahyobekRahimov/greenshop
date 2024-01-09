@@ -8,6 +8,7 @@ import ColorBadge from "./ColorBadge";
 import { useLocation } from "react-router-dom";
 import ModalSearch from "./ModalSearch";
 import { useState } from "react";
+import Button from "./Button";
 
 export default function Header() {
    function handleclick(e) {
@@ -20,7 +21,9 @@ export default function Header() {
       <div className="mt-[1.5rem]">
          <Container classes="flex justify-between items-center ">
             <div className="cursor-pointer">
-               <NavLink to="/" ><Logo /></NavLink>
+               <NavLink to="/">
+                  <Logo />
+               </NavLink>
             </div>
             <div>
                <ul className="list-none flex gap-16 items-center">
@@ -76,27 +79,27 @@ export default function Header() {
                   </li>
                </ul>
             </div>
-            <div className="  flex gap-8 items-center">
+            <div className="flex gap-8 items-center">
                <Search
                   onClick={handleclick}
                   className={`${
                      setModalSearch
                         ? "hidden"
-                        : " block rounded-full hover:bg-gray-100 cursor-pointer"
+                        : "block rounded-full w-10 h-10 hover:bg-gray-100 cursor-pointer"
                   }`}
                />
                <ModalSearch
                   className={`${
                      setModalSearch
                         ? "hidden"
-                        : " block cursor-pointer"
+                        : "block cursor-pointer"
                   }`}
                />
                <ColorBadge />
-               <button className=" hover:bg-primaryDark items-center flex gap-[0.25rem] text-white px-[1.0625rem] py-[0.5rem] rounded-md bg-green-600">
+               <Button classes="hover:bg-primaryDark items-center flex gap-[0.25rem] text-white px-[1.0625rem] py-[0.5rem] rounded-md bg-green-600">
                   <Login />
                   Login
-               </button>
+               </Button>
             </div>
          </Container>
          <Container>
