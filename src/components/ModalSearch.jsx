@@ -72,7 +72,7 @@ export default function SpringModal() {
    const handleClose = () => setOpen(false);
    const ModalInputRef =useRef('');
    const [newData, setNewData] = useState([]);
-
+ 
 
    function ModulClick(e){
       if (!ModalInputRef.current.value) {
@@ -82,9 +82,12 @@ export default function SpringModal() {
       let NewData = Data.filter((item) => {
          return item.name.toLowerCase().includes(searchValue);
       });
-      setNewData(NewData)
+      setNewData(NewData);
    }
-
+   useEffect(() => {
+     setNewData([])
+    }, [open]);
+    
    return (
       <div>
          <Button className="hover:rounded-full" onClick={handleOpen}>
