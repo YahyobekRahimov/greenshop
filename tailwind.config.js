@@ -11,6 +11,9 @@ export default {
             primary: "var(--green-primary)",
             primaryDark: "var(--green-primary-darker)",
             softBackground: "#FBFBFB",
+            footerBackgroundSecondary: "rgba(70, 163, 88, 0.10)",
+            textPrimary: "#3D3D3D",
+            textSecondary: "#727272",
          },
       },
       container: {
