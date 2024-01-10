@@ -106,7 +106,7 @@ export default function SpringModal() {
             }}
          >
             <Fade in={open}>
-               <Box sx={style} className="overflow-auto h-full">
+               <Box sx={style} className=" h-full overflow-hidden ">
                   <Typography
                      id="spring-modal-title"
                      variant="h6"
@@ -132,7 +132,7 @@ export default function SpringModal() {
                      id="spring-modal-description"
                      sx={{ mt: 2 }}
                   >
-                     <div className=" w-[98%] h-[50vh] mt-8 ml-5 ">
+                     <div className=" w-[98%] h-[60vh] overflow-auto mt-8 ml-5 ">
                         <ModalCard data={newData} />
                      </div>
                   </Typography>
