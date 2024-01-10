@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 import Logo from "../../images/logo.svg?react";
 import HeaderLinks from "./HeaderLinks";
 import HeaderButtons from "./HeaderButtons";
-import ModalSearch from "./ModalSearch";
 import { useLocation } from "react-router-dom";
 
 export default function Header() {
