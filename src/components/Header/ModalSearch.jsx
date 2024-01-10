@@ -6,9 +6,9 @@ import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useSpring, animated } from "@react-spring/web";
-import Search from "../images/search.svg?react";
+import Search from "../../images/search.svg?react";
 import ModalCard from "./ModalCard";
-import Data from '../../data/data.json'
+import Data from '../../../data/data.json'
 import { useState, useEffect, useRef } from "react";
 
 const Fade = React.forwardRef(function Fade(props, ref) {
