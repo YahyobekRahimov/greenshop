@@ -1,4 +1,3 @@
-// LoginButton.js
 import React from "react";
 import LogoutIcon from "../../images/Logout.svg?react";
 

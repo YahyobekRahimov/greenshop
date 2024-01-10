@@ -128,7 +128,7 @@ export default function SpringModal() {
                         </button>
                      </div>
                   </Typography>
-                  <Typography
+                  <Typography  
                      id="spring-modal-description"
                      sx={{ mt: 2 }}
                   >
