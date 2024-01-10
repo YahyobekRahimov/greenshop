@@ -106,8 +106,8 @@ export default function SpringModal() {
                },
             }}
          >
-            <Fade in={open}>
-               <Box sx={style}>
+            <Fade in={open} >
+               <Box sx={style} className="h-full overflow-auto">
                   <Typography
                      id="spring-modal-title"
                      variant="h6"
@@ -122,11 +122,11 @@ export default function SpringModal() {
                      />
                      <button onClick={ModulClick} className=" hover:bg-primaryDark bg-primary text-white text-2xl px-4 rounded-lg">Search</button>
                   </Typography>
-                  <Typography
+                  <Typography  
                      id="spring-modal-description"
                      sx={{ mt: 2 }}
                   >
-                     <div className=" w-[98%] h-[29rem] overflow-auto mt-8 ml-5 ">
+                     <div className=" w-[98%] h-[50vh] overflow-auto mt-8 ml-5 ">
                         <ModalCard data={newData} />
                      </div>
                   </Typography>

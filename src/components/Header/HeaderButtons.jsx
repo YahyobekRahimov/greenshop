@@ -1,4 +1,3 @@
-// HeaderButtons.js
 import React from "react";
 import SearchIcon from "../../images/search.svg?react";
 import LogoutIcon from "../../images/Logout.svg?react";
@@ -11,7 +10,6 @@ export default function HeaderButtons({ handleclick, setModalSearch }) {
 
    return (
       <div className="flex gap-8 items-center">
-        
          <ModalSearch
             className={isModalSearchVisible && "block cursor-pointer"}
          />
