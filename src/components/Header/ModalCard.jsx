@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import someImage from "../images/cactus.png"
 
 export default function ModalCard({ data }) {
  
