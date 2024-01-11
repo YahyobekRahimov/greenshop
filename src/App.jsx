@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import ProductView from "./pages/ProductView";
 import ProductCart from "./pages/ProductCart";
