@@ -2,6 +2,25 @@
 export default {
    content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
    theme: {
+      screens: {
+         "3xl": { "max": "1439px" },
+         // => @media (max-width: 1439px) { ... }
+
+         "2xl": { "max": "1279px" },
+         // => @media (max-width: 1279px) { ... }
+
+         "xl": { "max": "1023px" },
+         // => @media (max-width: 1023px) { ... }
+
+         "lg": { "max": "767px" },
+         // => @media (max-width: 767px) { ... }
+
+         "md": { "max": "639px" },
+         // => @media (max-width: 639px) { ... }
+
+         "sm": { "max": "374px" },
+         // => @media (max-width: 374px) { ... }
+      },
       extend: {
          boxShadow: {
             primary: "0 4px 6px rgba(0, 0, 0, 0.1)",
