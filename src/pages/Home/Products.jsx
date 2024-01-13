@@ -1,5 +1,6 @@
 import Container from "../../components/Container";
 import data from "/data/data.json";
+import { Divider } from "@mui/material";
 
 export default function Products() {
    let products = data.slice(38);
@@ -13,7 +14,7 @@ export default function Products() {
                   className="cursor-pointer shadow-custom w-[17rem] px-6 py-6 rounded-lg bg-softBackground"
                >
                   <img
-                     className="w-[14rem] h-[14rem] object-cover mb-3"
+                     className="w-[14rem] h-[14rem] object-cover mb-3 border-2 border-solid rounded-lg"
                      src={product.image}
                      alt={product.name}
                   />
