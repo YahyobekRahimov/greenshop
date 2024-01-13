@@ -37,11 +37,15 @@ export default {
             textPrimary: "#3D3D3D",
             textSecondary: "#727272",
          },
+         backgroundImage: {
+            primaryGradient:
+               "linear-gradient(98deg, rgba(245, 245, 245, 0.50) -23.46%, rgba(245, 245, 245, 0.50) 107.51%)",
+         },
       },
-    },
-    container: {
+   },
+   container: {
       center: true,
-    },
+   },
 
-  plugins: [],
+   plugins: [],
 };
