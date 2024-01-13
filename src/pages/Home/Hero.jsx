@@ -1,4 +1,3 @@
-// Importing everything needed for the carousel
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import Container from "../../components/Container";

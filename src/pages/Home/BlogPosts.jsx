@@ -11,7 +11,7 @@ const BlogPosts = () => {
         plants.
       </p>
 
-      <div className="flex gap-10">
+      <div className="flex gap-10 mb-24">
         {data &&
           data.map((product) => (
             <BlogPostCard key={product.id} product={product} />
