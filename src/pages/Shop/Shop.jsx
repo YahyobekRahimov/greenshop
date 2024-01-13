@@ -1,12 +1,10 @@
 import Container from "../../components/Container";
-import Detail from "./Detail";
+import Card from "./Card";
 
 export default function Shop() {
   return (
     <Container>
-      <h1></h1>
-
-      <Detail />
+   <Card/>
     </Container>
   );
 }
