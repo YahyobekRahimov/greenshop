@@ -25,6 +25,8 @@ export default {
          boxShadow: {
             primary: "0 4px 6px rgba(0, 0, 0, 0.1)",
             input: "0px 0px 20px 0px rgba(0, 0, 0, 0.06)",
+            custom:
+               "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;",
          },
          colors: {
             primary: "var(--green-primary)",

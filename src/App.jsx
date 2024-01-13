@@ -8,7 +8,7 @@ import {
 import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import ProductView from "./pages/ProductView";
 import ProductCart from "./pages/ProductCart";
 import ProductCheckout from "./pages/ProductCheckout";
