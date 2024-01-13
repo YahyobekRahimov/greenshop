@@ -16,6 +16,7 @@ import MyAccount from "./pages/MyAccount";
 import Shop from "./pages/Shop";
 import PlantCare from "./pages/PlantCare";
 import Blogs from "./pages/Blogs";
+import FindMore from "./pages/Home/FindMore";
 
 function App() {
    return (
