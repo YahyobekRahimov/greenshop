@@ -13,7 +13,7 @@ import ProductView from "./pages/ProductView";
 import ProductCart from "./pages/ProductCart";
 import ProductCheckout from "./pages/ProductCheckout";
 import MyAccount from "./pages/MyAccount";
-import Shop from "./pages/Shop";
+import Shop from "./pages/Shop/Shop";
 import PlantCare from "./pages/PlantCare";
 import Blogs from "./pages/Blogs";
 import FindMore from "./pages/Home/FindMore";
