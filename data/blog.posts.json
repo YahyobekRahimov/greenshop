@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "image": "/src/images/blog-posts/plant1.png",
+    "name": "Cactus & Succulent Care Tips",
+    "price": 31.99,
+    "description": "Cacti are succulents are easy care plants for any home or patio. ",
+    "sizes": ["M"],
+    "categories": ["Gardening", "Accessories"],
+    "tags": ["Home", "Garden", "Plants"],
+    "postedAt": "September 12  I Read in 6 minutes"
+  },
+  {
+    "id": 2,
+    "image": "/src/images/blog-posts/plant2.png",
+    "name": "Top 10 Succulents for Your Home",
+    "price": 31.99,
+    "description": "Best in hanging baskets. Prefers medium to high light.",
+    "sizes": ["M"],
+    "categories": ["Gardening", "Accessories"],
+    "tags": ["Home", "Garden", "Plants"],
+    "postedAt": "September 13  I Read in 2 minutes"
+  },
+  {
+    "id": 3,
+    "image": "/src/images/blog-posts/plant3.png",
+    "name": "Cacti & Succulent Care Tips",
+    "price": 31.99,
+    "description": "Cacti and succulents thrive in containers and because most are..",
+    "sizes": ["M"],
+    "categories": ["Gardening", "Accessories"],
+    "tags": ["Home", "Garden", "Plants"],
+    "postedAt": "September 15  I Read in 3 minutes"
+  },
+  {
+    "id": 4,
+    "image": "/src/images/blog-posts/plant4.png",
+    "name": "Best Houseplants Room by Room",
+    "price": 31.99,
+    "description": "The benefits of houseplants are endless. In addition to.. ",
+    "sizes": ["M"],
+    "categories": ["Gardening", "Accessories"],
+    "tags": ["Home", "Garden", "Plants"],
+    "postedAt": "September 15  I Read in 2 minutes"
+  }
+]

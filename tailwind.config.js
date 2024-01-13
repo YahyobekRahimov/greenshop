@@ -38,9 +38,10 @@ export default {
             textSecondary: "#727272",
          },
       },
-      container: {
-         center: true,
-      },
-   },
-   plugins: [],
+    },
+    container: {
+      center: true,
+    },
+
+  plugins: [],
 };
