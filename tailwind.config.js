@@ -29,6 +29,8 @@ export default {
                "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;",
          },
          colors: {
+            subtitel: "var(--text-subtitel)",
+            findBg: "var(--find-more-bg)",
             primary: "var(--green-primary)",
             primaryDark: "var(--green-primary-darker)",
             softBackground: "#FBFBFB",

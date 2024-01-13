@@ -4,6 +4,8 @@
 
 @layer base {
    :root {
+      --find-more-bg:#FBFBFB;
+      --text-subtitel: #727272;
       --green-primary: #46a358;
       --green-primary-darker: #3a8549;
       --soft-background: #f2efef;
