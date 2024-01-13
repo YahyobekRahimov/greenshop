@@ -1,24 +1,34 @@
-import Container from "./Container";
-import Plant from "../images/plant.png";
-import Cactus from "../images/cactus.png";
-import Teapot from "../images/teapot.png";
-import Button from "./Button";
-import Divider from "@mui/material/Divider";
-import Logo from "../images/logo.svg?react";
-import Location from "../images/Location.png";
-import Message from "../images/Message.png";
-import Calling from "../images/Calling.png";
+// From libraries
+
 import { NavLink } from "react-router-dom";
-import Facebook from "../images/Facebook.svg";
-import Instagram from "../images/Instagram.svg";
-import Twitter from "../images/Twitter.svg";
-import Linkedin from "../images/Linkedin.svg";
-import Union from "../images/Union.svg";
-import AcceptedPayments from "../images/AcceptedPayments.png";
+import Divider from "@mui/material/Divider";
+
+// Components
+
+import Container from "../Container";
+import Button from "../Button";
+
+// Images
+import Plant from "/src/images/plant.png";
+import Cactus from "/src/images/cactus.png";
+import Teapot from "/src/images/teapot.png";
+import Location from "/src/images/Location.png";
+import Message from "/src/images/Message.png";
+import Calling from "/src/images/Calling.png";
+import AcceptedPayments from "/src/images/AcceptedPayments.png";
+
+// SVG
+
+import Logo from "/src/images/logo.svg?react";
+import Facebook from "/src/images/Facebook.svg?react";
+import Instagram from "/src/images/Instagram.svg?react";
+import Twitter from "/src/images/Twitter.svg?react";
+import Linkedin from "/src/images/Linkedin.svg?react";
+import Union from "/src/images/Union.svg?react";
 
 export default function Footer() {
    return (
-      <Container classes="flex bg-softBackground flex-col">
+      <Container classes="flex bg-softBackground flex-col sm:hidden">
          <div className="flex py-8 gap-[4rem] px-7">
             {/* Cards */}
             <div className="flex w-[60%] gap-7">
@@ -193,54 +203,34 @@ export default function Footer() {
                </h3>
                <div className="grid grid-cols-5 w-max gap-3">
                   <a
-                     className="border-2 border-solid rounded border-socialMediaBorder p-[0.4rem] w-8 h-8"
+                     className="border-2 border-solid rounded border-socialMediaBorder p-[0.4rem] w-8 h-8 flex justify-center items-center"
                      href="https://facebook.com/ourPage"
                   >
-                     <img
-                        className="w-full h-full"
-                        src={Facebook}
-                        alt="Facebook"
-                     />
+                     <Facebook />
                   </a>
                   <a
-                     className="border-2 border-solid rounded border-socialMediaBorder p-[0.4rem] w-8 h-8"
+                     className="border-2 border-solid rounded border-socialMediaBorder p-[0.4rem] w-8 h-8 flex justify-center items-center"
                      href="https://facebook.com/ourPage"
                   >
-                     <img
-                        className="w-full h-full"
-                        src={Instagram}
-                        alt="Facebook"
-                     />
+                     <Instagram />
                   </a>
                   <a
-                     className="border-2 border-solid rounded border-socialMediaBorder p-[0.4rem] w-8 h-8"
+                     className="border-2 border-solid rounded border-socialMediaBorder p-[0.4rem] w-8 h-8 flex justify-center items-center"
                      href="https://facebook.com/ourPage"
                   >
-                     <img
-                        className="w-full h-full"
-                        src={Twitter}
-                        alt="Facebook"
-                     />
+                     <Twitter />
                   </a>
                   <a
-                     className="border-2 border-solid rounded border-socialMediaBorder p-[0.4rem] w-8 h-8"
+                     className="border-2 border-solid rounded border-socialMediaBorder p-[0.4rem] w-8 h-8 flex justify-center items-center"
                      href="https://facebook.com/ourPage"
                   >
-                     <img
-                        className="w-full h-full"
-                        src={Linkedin}
-                        alt="Facebook"
-                     />
+                     <Linkedin />
                   </a>
                   <a
-                     className="border-2 border-solid rounded border-socialMediaBorder p-[0.4rem] w-8 h-8"
+                     className="border-2 border-solid rounded border-socialMediaBorder p-[0.4rem] w-8 h-8 flex justify-center items-center"
                      href="https://facebook.com/ourPage"
                   >
-                     <img
-                        className="w-full h-full"
-                        src={Union}
-                        alt="Facebook"
-                     />
+                     <Union />
                   </a>
                </div>
                <div>
