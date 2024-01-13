@@ -1,14 +1,14 @@
 import Container from "../../components/Container";
-import data from '../../../data/data.json'
+import data from "../../../data/data.json";
 import { useEffect } from "react";
-import SearchIcon from '../../images/searchicon.svg?react'
-import LikeIcon from '../../images/likeIcon.svg?react'
-import ShoppingIcon from '../../images/shoppingIcon.svg?react'
+import SearchIcon from "../../images/searchicon.svg?react";
+import LikeIcon from "../../images/likeIcon.svg?react";
+import ShoppingIcon from "../../images/shoppingIcon.svg?react";
 
 export default function Products() {
    let products = data.slice(2);
    return (
-      <Container>
+      <>
          <h2 className="text-[2rem] text-center">Products</h2>
          <div className="grid grid-cols-4 justify-items-center gap-y-16 pt-10 pb-10">
             {products.map((product) => (
@@ -28,13 +28,13 @@ export default function Products() {
                      ${product.price}
                   </h4>
                   <div className="mt-2 px-5 flex gap-10 text-center ">
-                     <ShoppingIcon  />
-                     <LikeIcon/>
-                     <SearchIcon/>
+                     <ShoppingIcon />
+                     <LikeIcon />
+                     <SearchIcon />
                   </div>
                </div>
             ))}
          </div>
-      </Container>
+      </>
    );
 }
