@@ -10,16 +10,18 @@ export default function Products() {
             {products.map((product) => (
                <div
                   key={product.id}
-                  className="cursor-pointer shadow-custom w-[17rem] px-6 py-6 rounded-lg"
+                  className="cursor-pointer shadow-custom w-[17rem] px-6 py-6 rounded-lg bg-softBackground"
                >
                   <img
-                     className="bg-softBackground"
+                     className="w-[14rem] h-[14rem] object-cover mb-3"
                      src={product.image}
                      alt={product.name}
                   />
-                  <h3 className="text-[1.2rem]">{product.name}</h3>
+                  <h3 className="text-[1.2rem] h-14">
+                     {product.name}
+                  </h3>
                   <h4 className="font-bold text-primary text-[1.25rem]">
-                     {product.price}
+                     ${product.price}
                   </h4>
                </div>
             ))}
