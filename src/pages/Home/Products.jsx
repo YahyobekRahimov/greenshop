@@ -11,10 +11,10 @@ export default function Products() {
             {products.map((product) => (
                <div
                   key={product.id}
-                  className="cursor-pointer shadow-custom w-[17rem] px-6 py-6 rounded-lg bg-softBackground"
+                  className="cursor-pointer shadow-custom w-[17rem] px-6 py-6 rounded-lg bg-softBackground hover:scale-105 duration-200"
                >
                   <img
-                     className="w-[14rem] h-[14rem] object-cover mb-3 border-2 border-solid rounded-lg"
+                     className="w-[14rem] h-[14rem] object-cover mb-3 border-2 border-solid rounded-lg bg-white"
                      src={product.image}
                      alt={product.name}
                   />
