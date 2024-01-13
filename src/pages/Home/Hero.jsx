@@ -27,7 +27,7 @@ export default function Hero() {
             modules={[Pagination, Navigation]}
             className="mySwiper"
          >
-            <SwiperSlide className="flex items-center px-16 bg-primaryGradient">
+            <SwiperSlide className="flex items-center px-16 bg-primaryGradient select-none">
                <div>
                   <h3 className="uppercase text-[0.875rem] text-textPrimary font-medium">
                      Welcome to Greenshop
@@ -48,7 +48,7 @@ export default function Hero() {
                </div>
                <img src={HeroImg} alt="bunch of plants" />
             </SwiperSlide>
-            <SwiperSlide className="flex items-center px-16 bg-primaryGradient ">
+            <SwiperSlide className="flex items-center px-16 bg-primaryGradient select-none ">
                <div>
                   <h3 className="uppercase text-[0.875rem] text-textPrimary font-medium">
                      Welcome to Greenshop
@@ -69,7 +69,7 @@ export default function Hero() {
                </div>
                <img src={HeroImg} alt="bunch of plants" />
             </SwiperSlide>
-            <SwiperSlide className="flex items-center px-16 bg-primaryGradient">
+            <SwiperSlide className="flex items-center px-16 bg-primaryGradient select-none">
                <div>
                   <h3 className="uppercase text-[0.875rem] text-textPrimary font-medium">
                      Welcome to Greenshop
