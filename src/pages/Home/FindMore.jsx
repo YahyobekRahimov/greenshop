@@ -14,7 +14,6 @@ export default function FindMore(props) {
           <p className="text-right text-subtitel w-[18.25rem] text-sm ">{textSubtitel}</p>
           <Button image={<IconRight />} classes="flex gap-2 items-center bg-primary rounded-lg hover:bg-primaryDark text-white py-[0.625rem] pr-[3rem] pl-[1.75rem]">Find More </Button>
         </div>
-
       </div>
     </Container>
 
