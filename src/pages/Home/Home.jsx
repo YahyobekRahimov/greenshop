@@ -10,7 +10,7 @@ export default function Home() {
       <main>
          <Hero />
          <Products />
-         <div className="flex mb-10 mt-5">
+         <div className="flex mb-10 mt-3">
             <FindMore
                image={FindMoreImagesOne}
                textTitel="Summer cactus& succulents"

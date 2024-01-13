@@ -1,4 +1,5 @@
 import Container from "../../components/Container";
+import LikeIcon from "../../components/likeIcon";
 import data from "/data/data.json";
 import { Divider } from "@mui/material";
 
@@ -24,6 +25,7 @@ export default function Products() {
                   <h4 className="font-bold text-primary text-[1.25rem]">
                      ${product.price}
                   </h4>
+                  <LikeIcon />
                </div>
             ))}
          </div>
