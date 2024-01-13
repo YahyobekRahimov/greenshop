@@ -1,5 +1,3 @@
-// Importing everything needed for the carousel
-
 import Container from "../../components/Container";
 import React, { useRef, useState } from "react";
 // Import Swiper React components
