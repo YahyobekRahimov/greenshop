@@ -42,9 +42,9 @@ export default function RangeSlider() {
                     }}
                 />
             </Box>
-            <div className="flex gap-7">
-                <h1>Price: <span  className="text-green-700 ">${value[0]} - ${value[1]}</span></h1>
-                <Button  classes="hover:bg-primaryDark py-[0.5rem] px-[0.8rem] rounded bg-primary text-white">Filter</Button>
+            <div className="flex ">
+                <h1 className="mt-2 text-xl">Price: <span  className="text-green-700 ">${value[0]} - ${value[1]}</span></h1>
+                <Button  classes=" absolute left-[30rem] hover:bg-primaryDark py-[0.5rem] px-[0.8rem] rounded bg-primary text-white">Filter</Button>
             </div>
         </div>
     );
