@@ -32,6 +32,7 @@ export default function LabTabs() {
          aria-label="lab API tabs example"
          sx={{
            '& .Mui-selected': {
+            font:"36px",
              borderBottomStyle:"green",
              color: "green",
              backgroundColor: 'green',
