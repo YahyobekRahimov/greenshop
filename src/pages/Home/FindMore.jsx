@@ -13,7 +13,7 @@ export default function FindMore(props) {
                alt=""
                className="absolute left-0 top-[-3rem]"
             />
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 items-end">
                <h1 className="text-right text-lg">{textTitel}</h1>
                <p className="text-right text-subtitel text-sm ">
                   {textSubtitel}

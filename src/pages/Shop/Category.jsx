@@ -6,7 +6,7 @@ export default function Category() {
   }
 
   return (
-    <div className="mt-5">
+    <div className="mt-5 absolute top-[4.5rem] left-[30rem]">
       <select
         onChange={handelsub}
         name="category"
@@ -30,6 +30,7 @@ export default function Category() {
         <option className=" rounded-full " value="Gardening">Gardening</option>
         <option className=" rounded-full " value="Accessories">Accessories</option>
       </select>
+      
     </div>
   );
 }
