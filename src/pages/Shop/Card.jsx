@@ -5,11 +5,26 @@ import SearchIcon from "../../images/searchicon.svg?react";
 import LikeIcon from "../../images/likeIcon.svg?react";
 import ShoppingIcon from "../../images/shoppingIcon.svg?react";
 
-export default function Products() {
-   let products = data.slice(2);
+export default function Products(props) {
+   const {value} = props;
+   let products;
+
+   if(value == 1){
+      products = data.slice(2);
+     
+   }
+ 
+   if (value == 2){
+       products = data.filter((item) => item.price > 20);
+   }
+   if(value == 3){
+      products = data.filter((item) => item.price < 20);
+      
+   }
+ 
+   
    return (
       <>
-         <h2 className="text-[2rem] text-center">Products</h2>
          <div className="grid grid-cols-4 justify-items-center gap-y-16 pt-10 pb-10">
             {products.map((product) => (
                <div
