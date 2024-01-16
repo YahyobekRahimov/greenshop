@@ -1,10 +1,26 @@
+import { useDispatch } from "react-redux";
+import AddToCart from "../../components/AddToCart";
 import Container from "../../components/Container";
-import LikeIcon from "../../components/likeIcon";
+import LikeIcon from "../../components/LikeIcon";
 import data from "/data/data.json";
 import { Divider } from "@mui/material";
+import { addAllLikedProducts } from "../../redux/likedProductsSlice";
 
 export default function Products() {
+   const dispatch = useDispatch();
    let products = data.slice(38);
+   let likedProducts =
+      JSON.parse(localStorage.getItem("likedProducts")) || [];
+   dispatch(addAllLikedProducts(likedProducts));
+   function returnState(product) {
+      for (let i = 0; i < likedProducts.length; i++) {
+         let element = likedProducts[i];
+         if (product.id === element.id) {
+            return true;
+         }
+      }
+      return false;
+   }
    return (
       <Container>
          <h2 className="text-[2rem] text-center">Products</h2>
@@ -25,7 +41,13 @@ export default function Products() {
                   <h4 className="font-bold text-primary text-[1.25rem]">
                      ${product.price}
                   </h4>
-                  <LikeIcon />
+                  <div className="flex justify-around">
+                     <LikeIcon
+                        product={product}
+                        state={returnState(product)}
+                     />
+                     <AddToCart />
+                  </div>
                </div>
             ))}
          </div>
