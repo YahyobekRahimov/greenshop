@@ -2,10 +2,25 @@ import Container from "../../components/Container";
 import data from "../../../data/data.json";
 import { useEffect } from "react";
 import SearchIcon from "../../images/searchicon.svg?react";
-import LikeIcon from "../../images/likeIcon.svg?react";
+import LikeIcon from "../../components/LikeIcon";
 import ShoppingIcon from "../../images/shoppingIcon.svg?react";
+import { addAllLikedProducts } from "../../redux/likedProductsSlice";
+import { useDispatch } from "react-redux";
 
 export default function Products(props) {
+   const dispatch = useDispatch();
+   let likedProducts =
+   JSON.parse(localStorage.getItem("likedProducts")) || [];
+dispatch(addAllLikedProducts(likedProducts));
+function returnState(product) {
+   for (let i = 0; i < likedProducts.length; i++) {
+      let element = likedProducts[i];
+      if (product.id === element.id) {
+         return true;
+      }
+   }
+   return false;
+}
    const {value} = props;
    let products;
 
@@ -39,13 +54,13 @@ export default function Products(props) {
                   <h3 className="text-[1.2rem] h-14">
                      {product.name}
                   </h3>
-                  <h4 className="font-bold text-primary text-[1.25rem]">
+                  <h4 className="font-bold text-primary text-center text-[1.25rem]">
                      ${product.price}
                   </h4>
-                  <div className="mt-2 px-5 flex gap-10 text-center ">
-                     <ShoppingIcon />
-                     <LikeIcon />
-                     <SearchIcon />
+                  <div className="mt-2 px-5 flex justify-between text-center ">
+                 <div className="w-max h-max px-3 py-2 rounded-lg border-2 border-solid border-slate-400 ">    <ShoppingIcon className="  w-[3rem] h-[2rem]" /></div>
+                     <LikeIcon  product={product}
+                        state={returnState(product)} />
                   </div>
                </div>
             ))}

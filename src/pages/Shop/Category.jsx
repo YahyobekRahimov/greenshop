@@ -17,11 +17,9 @@ export default function Category() {
         w-[15.5rem]
         text-xl
           py-3 px-6 
-          rounded-full 
+        
           border-2 border-green-500
-          focus:outline-none focus:border-blue-500 
-          hover:bg-green-200 hover:border-green-700 
-          transition duration-300 
+          
         "
       >
         <option className=" rounded-full " value="">Select somene tip</option>
