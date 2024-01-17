@@ -1,5 +1,4 @@
 import { useDispatch } from "react-redux";
-import AddToCart from "../../components/AddToCart";
 import Container from "../../components/Container";
 import LikeIcon from "../../components/LikeIcon";
 import data from "/data/data.json";
@@ -46,7 +45,6 @@ export default function Products() {
                         product={product}
                         state={returnState(product)}
                      />
-                     <AddToCart />
                   </div>
                </div>
             ))}
