@@ -1,7 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
-import { Dispatch } from "@reduxjs/toolkit";
+import { useDispatch, useSelector } from "react-redux";
 import { addPriceRange } from "../redux/filterSlice";
 
 function valuetext(value) {
@@ -9,9 +9,23 @@ function valuetext(value) {
 }
 
 export default function RangeSlider() {
-   const [value, setValue] = React.useState([0, 1000]);
+   const priceStart = useSelector(
+      (state) => state.filterSlice.priceStart
+   );
+   const priceEnd = useSelector(
+      (state) => state.filterSlice.priceEnd
+   );
+
+   const [value, setValue] = React.useState([priceStart, priceEnd]);
+   const dispatch = useDispatch();
    const handleChange = (event, newValue) => {
       setValue(newValue);
+      dispatch(
+         addPriceRange({
+            priceStart: newValue[0],
+            priceEnd: newValue[1],
+         })
+      );
    };
 
    return (

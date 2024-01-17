@@ -14,7 +14,6 @@ export default function LikeIcon({
    state,
 }) {
    const [liked, setLiked] = useState(state);
-   console.log(state);
    const dispatch = useDispatch();
    const likedProducts = useSelector((state) => state.likedProducts);
    function handleLiked() {
