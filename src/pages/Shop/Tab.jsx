@@ -6,14 +6,15 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Card from "./Card";
 import Category from "/src/pages/Shop/Category";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import JSON_DATA from "/data/data.json";
+import { setPagination } from "../../redux/paginationSlice";
 
 export default function LabTabs() {
    const [value, setValue] = React.useState("1");
    const [filteredProducts, setFilteredProducts] =
       React.useState(null);
-
+   const dispatch = useDispatch();
    const chosenCategory = useSelector(
       (state) => state.filterSlice.category
    );
@@ -40,6 +41,7 @@ export default function LabTabs() {
          );
       }
       setFilteredProducts(filtered);
+      dispatch(setPagination(1));
    }
    return (
       <div className="mt-10">
