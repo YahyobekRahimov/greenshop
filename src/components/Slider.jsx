@@ -29,7 +29,7 @@ export default function RangeSlider() {
    };
 
    return (
-      <div>
+      <div className="flex flex-col">
          <Box sx={{ width: 300 }}>
             <Slider
                getAriaLabel={() => "Price range"}
