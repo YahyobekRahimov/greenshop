@@ -6,7 +6,7 @@
       "price": 24.99,
       "description": "Bring the outdoors in with this delightful green plant.",
       "sizes": ["S", "M", "L"],
-      "categories": ["House Plants"],
+      "categories": ["house-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -16,7 +16,7 @@
       "price": 34.99,
       "description": "A marvel of colorful blossoms to brighten up any room.",
       "sizes": ["M", "L"],
-      "categories": ["House Plants", "Potter Plants"],
+      "categories": ["house-plants", "potter-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -26,7 +26,7 @@
       "price": 12.99,
       "description": "An elegant cactus with spiky charm for a unique touch.",
       "sizes": ["S"],
-      "categories": ["Succulents"],
+      "categories": ["succulents"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -36,7 +36,7 @@
       "price": 19.99,
       "description": "A patch of golden sunflowers to bring warmth to your space.",
       "sizes": ["S", "M"],
-      "categories": ["Seeds"],
+      "categories": ["seeds"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -46,7 +46,7 @@
       "price": 27.99,
       "description": "Create your own miniature wonderland with this tiny terrarium.",
       "sizes": ["S"],
-      "categories": ["Terrariums"],
+      "categories": ["terrariums"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -56,7 +56,7 @@
       "price": 29.99,
       "description": "Transform your space into a majestic fern forest retreat.",
       "sizes": ["M", "L"],
-      "categories": ["Big Plants"],
+      "categories": ["big-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -66,7 +66,7 @@
       "price": 39.99,
       "description": "Find tranquility with a Zen garden featuring bamboo elements.",
       "sizes": ["L"],
-      "categories": ["Gardening", "Accessories"],
+      "categories": ["gardening", "accessories"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -76,7 +76,7 @@
       "price": 18.99,
       "description": "Bring the soothing aroma of lavender fields to your home.",
       "sizes": ["S"],
-      "categories": ["Small Plants"],
+      "categories": ["small-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -86,7 +86,7 @@
       "price": 32.99,
       "description": "An elegant arrangement of ruby red roses for a touch of romance.",
       "sizes": ["M"],
-      "categories": ["Potter Plants"],
+      "categories": ["potter-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -96,7 +96,7 @@
       "price": 22.99,
       "description": "Discover the surprise of a set featuring assorted succulents.",
       "sizes": ["S"],
-      "categories": ["Succulents", "Terrariums"],
+      "categories": ["succulents", "terrariums"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -106,7 +106,7 @@
       "price": 26.99,
       "description": "Experience eternal bliss with the soothing aroma of eucalyptus.",
       "sizes": ["S", "M"],
-      "categories": ["House Plants", "Big Plants"],
+      "categories": ["house-plants", "big-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -116,7 +116,7 @@
       "price": 36.99,
       "description": "Create a serene atmosphere with a floating lotus pond arrangement.",
       "sizes": ["L"],
-      "categories": ["Gardening", "Accessories"],
+      "categories": ["gardening", "accessories"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -126,7 +126,7 @@
       "price": 17.99,
       "description": "A bouquet of royal blue hydrangeas to add a touch of sophistication.",
       "sizes": ["M"],
-      "categories": ["Potter Plants"],
+      "categories": ["potter-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -136,7 +136,7 @@
       "price": 23.99,
       "description": "Cultivate delight with a garden featuring cheerful daisies.",
       "sizes": ["S"],
-      "categories": ["Seeds", "Small Plants"],
+      "categories": ["seeds", "small-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -146,7 +146,7 @@
       "price": 28.99,
       "description": "Let the golden pothos cascade for an elegant and lush display.",
       "sizes": ["M", "L"],
-      "categories": ["House Plants", "Big Plants"],
+      "categories": ["house-plants", "big-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -156,7 +156,7 @@
       "price": 21.99,
       "description": "Create your own succulent paradise with this assorted pack.",
       "sizes": ["S"],
-      "categories": ["Succulents", "Terrariums"],
+      "categories": ["succulents", "terrariums"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -166,7 +166,7 @@
       "price": 42.99,
       "description": "Cultivate serenity with a bonsai grove that stands the test of time.",
       "sizes": ["L"],
-      "categories": ["Gardening", "Accessories"],
+      "categories": ["gardening", "accessories"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -176,7 +176,7 @@
       "price": 15.99,
       "description": "Enjoy the vibrant colors of a sun-kissed marigold patch in your garden.",
       "sizes": ["S", "M"],
-      "categories": ["Seeds", "Small Plants"],
+      "categories": ["seeds", "small-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -186,7 +186,7 @@
       "price": 31.99,
       "description": "Transform your space into a desert oasis with this cactus garden.",
       "sizes": ["M"],
-      "categories": ["Succulents"],
+      "categories": ["succulents"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -196,7 +196,7 @@
       "price": 48.99,
       "description": "Invite tranquility with a bamboo fountain for a Zen-inspired ambiance.",
       "sizes": ["L"],
-      "categories": ["Gardening", "Accessories"],
+      "categories": ["gardening", "accessories"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -206,7 +206,7 @@
       "price": 19.99,
       "description": "An enchanting bouquet of lavender for a calming and aromatic experience.",
       "sizes": ["S", "M"],
-      "categories": ["Potter Plants"],
+      "categories": ["potter-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -216,7 +216,7 @@
       "price": 27.99,
       "description": "Create a burst of colors with a rainbow tulip array in your garden.",
       "sizes": ["M"],
-      "categories": ["Seeds", "Small Plants"],
+      "categories": ["seeds", "small-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -226,7 +226,7 @@
       "price": 34.99,
       "description": "Elevate your space with cascading ivy that adds a touch of elegance.",
       "sizes": ["L"],
-      "categories": ["Big Plants"],
+      "categories": ["big-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -236,7 +236,7 @@
       "price": 22.99,
       "description": "Transform your garden into a golden meadow with vibrant zinnias.",
       "sizes": ["S", "M"],
-      "categories": ["Seeds", "Small Plants"],
+      "categories": ["seeds", "small-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -246,7 +246,7 @@
       "price": 31.99,
       "description": "Create a symphony of succulents with this harmonious assorted pack.",
       "sizes": ["S"],
-      "categories": ["Succulents", "Terrariums"],
+      "categories": ["succulents", "terrariums"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -256,7 +256,7 @@
       "price": 38.99,
       "description": "Immerse yourself in the sweet fragrance of a jasmine-scented garden.",
       "sizes": ["L"],
-      "categories": ["Gardening", "Accessories"],
+      "categories": ["gardening", "accessories"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -266,7 +266,7 @@
       "price": 29.99,
       "description": "Achieve harmony with the timeless beauty of a peace lily.",
       "sizes": ["S", "M"],
-      "categories": ["House Plants", "Big Plants"],
+      "categories": ["house-plants", "big-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -276,7 +276,7 @@
       "price": 45.99,
       "description": "Capture the essence of autumn with a maple bonsai in your living space.",
       "sizes": ["L"],
-      "categories": ["Gardening", "Accessories"],
+      "categories": ["gardening", "accessories"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -286,7 +286,7 @@
       "price": 26.99,
       "description": "Create a whimsical retreat with a fairy garden that sparks imagination.",
       "sizes": ["S"],
-      "categories": ["Terrariums"],
+      "categories": ["terrariums"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -296,7 +296,7 @@
       "price": 48.99,
       "description": "Embrace everlasting elegance with an eternal rose arrangement.",
       "sizes": ["M"],
-      "categories": ["Potter Plants"],
+      "categories": ["potter-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -306,7 +306,7 @@
       "price": 36.99,
       "description": "Transform your space into a mystical oasis with a moonlit cactus garden.",
       "sizes": ["L"],
-      "categories": ["Succulents", "Terrariums"],
+      "categories": ["succulents", "terrariums"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -316,7 +316,7 @@
       "price": 24.99,
       "description": "Experience the bliss of spring with a cherry blossom arrangement.",
       "sizes": ["S", "M"],
-      "categories": ["Potter Plants"],
+      "categories": ["potter-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -326,7 +326,7 @@
       "price": 29.99,
       "description": "Create a crystal clear terrarium with an assortment of miniature wonders.",
       "sizes": ["S"],
-      "categories": ["Terrariums"],
+      "categories": ["terrariums"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -336,7 +336,7 @@
       "price": 39.99,
       "description": "Adorn your space with the majestic beauty of an orchid ensemble.",
       "sizes": ["M"],
-      "categories": ["House Plants", "Big Plants"],
+      "categories": ["house-plants", "big-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -346,7 +346,7 @@
       "price": 42.99,
       "description": "Create a lush paradise with the iconic and vibrant monstera plant.",
       "sizes": ["L"],
-      "categories": ["Big Plants"],
+      "categories": ["big-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -356,7 +356,7 @@
       "price": 18.99,
       "description": "Add a touch of radiance to your garden with a rosemary bush in full bloom.",
       "sizes": ["S"],
-      "categories": ["Seeds", "Small Plants"],
+      "categories": ["seeds", "small-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -366,7 +366,7 @@
       "price": 26.99,
       "description": "Experience the healing vibes of an aloe vera oasis in your living space.",
       "sizes": ["M"],
-      "categories": ["Succulents"],
+      "categories": ["succulents"],
       "tags": ["Home", "Garden, Plants"]
    },
    {
@@ -376,7 +376,7 @@
       "price": 33.99,
       "description": "Enjoy a symphony of sunflowers that brighten up any corner of your garden.",
       "sizes": ["L"],
-      "categories": ["Seeds", "Small Plants"],
+      "categories": ["seeds", "small-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -386,7 +386,7 @@
       "price": 28.99,
       "description": "Create a retreat with a lush fern forest that brings the outdoors indoors.",
       "sizes": ["S", "M"],
-      "categories": ["House Plants", "Big Plants"],
+      "categories": ["house-plants", "big-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -396,7 +396,7 @@
       "price": 23.99,
       "description": "Experience tranquility with a garden featuring soothing lavender fields.",
       "sizes": ["M"],
-      "categories": ["Gardening", "Accessories"],
+      "categories": ["gardening", "accessories"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -406,7 +406,7 @@
       "price": 45.99,
       "description": "Step into a mystical wonderland with a captivating bonsai arrangement.",
       "sizes": ["L"],
-      "categories": ["Gardening", "Accessories"],
+      "categories": ["gardening", "accessories"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -416,7 +416,7 @@
       "price": 19.99,
       "description": "Delight your senses with a vibrant bouquet of cheerful daisies.",
       "sizes": ["S", "M"],
-      "categories": ["Potter Plants"],
+      "categories": ["potter-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -426,7 +426,7 @@
       "price": 32.99,
       "description": "Create an ethereal atmosphere with a floating air plant ensemble.",
       "sizes": ["S"],
-      "categories": ["Succulents", "Terrariums"],
+      "categories": ["succulents", "terrariums"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -436,7 +436,7 @@
       "price": 27.99,
       "description": "Adorn your space with a captivating sapphire succulent sphere.",
       "sizes": ["M"],
-      "categories": ["Seeds", "Small Plants"],
+      "categories": ["seeds", "small-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -446,7 +446,7 @@
       "price": 36.99,
       "description": "Create a whimsical oasis with a mesmerizing moss garden.",
       "sizes": ["L"],
-      "categories": ["Terrariums"],
+      "categories": ["terrariums"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -456,7 +456,7 @@
       "price": 23.99,
       "description": "Enhance your living space with the elegant beauty of emerald ferns.",
       "sizes": ["S"],
-      "categories": ["House Plants", "Big Plants"],
+      "categories": ["house-plants", "big-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -466,7 +466,7 @@
       "price": 29.99,
       "description": "Create a haven of freshness with a harvest herb garden in your kitchen.",
       "sizes": ["M"],
-      "categories": ["Gardening", "Accessories"],
+      "categories": ["gardening", "accessories"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -476,7 +476,7 @@
       "price": 38.99,
       "description": "Express love with a radiant ruby red rose bouquet.",
       "sizes": ["S"],
-      "categories": ["Potter Plants"],
+      "categories": ["potter-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -486,7 +486,7 @@
       "price": 42.99,
       "description": "Create a tranquil escape with a bamboo grove that soothes the soul.",
       "sizes": ["L"],
-      "categories": ["Big Plants"],
+      "categories": ["big-plants"],
       "tags": ["Home", "Garden", "Plants"]
    },
    {
@@ -496,7 +496,7 @@
       "price": 31.99,
       "description": "Embark on a charming retreat with a bonsai that captivates the heart.",
       "sizes": ["M"],
-      "categories": ["Gardening", "Accessories"],
+      "categories": ["gardening", "accessories"],
       "tags": ["Home", "Garden", "Plants"]
-   }  
+   }
 ]

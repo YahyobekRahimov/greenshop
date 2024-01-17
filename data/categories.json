@@ -1,0 +1,12 @@
+[
+   { "label": "All", "value": "all" },
+   { "label": "House Plants", "value": "house-plants" },
+   { "label": "Potter Plants", "value": "potter-plants" },
+   { "label": "Succulents", "value": "succulents" },
+   { "label": "Seeds", "value": "seeds" },
+   { "label": "Terrariums", "value": "terrariums" },
+   { "label": "Big Plants", "value": "big-plants" },
+   { "label": "Gardening", "value": "gardening" },
+   { "label": "Accessories", "value": "accessories" },
+   { "label": "Small Plants", "value": "small-plants" }
+]

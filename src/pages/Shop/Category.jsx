@@ -9,28 +9,11 @@ import {
 import Button from "/src/components/Button";
 import { useDispatch } from "react-redux";
 import { addCategory } from "../../redux/filterSlice";
+import Categories from "/data/categories.json";
 
-export default function Category() {
-   const [category, setCategory] = useState("");
+export default function Category({handleFilter}) {
+   const [category, setCategory] = useState("all");
    const dispatch = useDispatch();
-   const categories = [
-      {
-         label: "All",
-         value: "",
-      },
-      {
-         label: "Potter-Plants",
-         value: "potter-plants",
-      },
-      {
-         label: "Seeds",
-         value: "seeds",
-      },
-      {
-         label: "Small Plants",
-         value: "small-plants",
-      },
-   ];
 
    function handleChange(e) {
       setCategory(e.target.value);
@@ -38,7 +21,7 @@ export default function Category() {
    }
 
    return (
-      <div className="flex gap-[2rem]">
+      <div className="flex gap-[2rem] items-center justify-between">
          <FormControl fullWidth>
             <InputLabel id="plant-category">Categories</InputLabel>
             <Select
@@ -49,7 +32,7 @@ export default function Category() {
                onChange={handleChange}
                className="w-[12rem]"
             >
-               {categories.map((category, index) => (
+               {Categories.map((category, index) => (
                   <MenuItem key={index} value={category.value}>
                      {category.label}
                   </MenuItem>
@@ -57,7 +40,10 @@ export default function Category() {
             </Select>
          </FormControl>
          <Slider></Slider>
-         <Button classes="hover:bg-primaryDark py-[0.5rem] px-[0.8rem] rounded bg-primary text-white">
+         <Button
+            onClick={handleFilter}
+            classes="hover:bg-primaryDark py-[0.6rem] px-[2rem] text-[1.25rem] rounded bg-primary text-white h-max w-max ml-[5rem]"
+         >
             Filter
          </Button>
       </div>
