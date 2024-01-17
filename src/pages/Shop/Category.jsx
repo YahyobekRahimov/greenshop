@@ -28,7 +28,6 @@ export default function Category() {
          value: "small-plants",
       },
    ];
-
    return (
       <div className="flex gap-[2rem]">
          <FormControl fullWidth>
