@@ -1,38 +1,55 @@
-import React from 'react';
-import Silder from '../../components/Slider'
+import React, { useRef, useState } from "react";
+import Slider from "../../components/Slider";
+import {
+   InputLabel,
+   Select,
+   MenuItem,
+   FormControl,
+} from "@mui/material";
+import Button from "/src/components/Button";
 
 export default function Category() {
-  function handelsub(e) {
-    console.log(e.target.value);
-  }
-
-  return (
-    <div className="flex gap-10 mt-5 absolute top-[4.5rem] left-[33rem]">
-      <select
-        onChange={handelsub}
-        name="category"
-        id=""
-        className="
-        h-[4rem]
-        w-[15.5rem]
-        text-xl
-          py-3 px-6 
-        
-          border-2 border-green-500
-          
-        "
-      >
-        <option className=" rounded-full " value="">Select somene tip</option>
-        <option className=" rounded-full " value="Potter Plants">Potter-Plants</option>
-        <option className=" rounded-full " value="Seed">Seeds</option>
-        <option className=" rounded-full " value="Small Plents">Small Plants</option>
-        <option className=" rounded-full " value="Big Plents">Big Plants</option>
-        <option className=" rounded-full " value="Succulents">Succulents</option>
-        <option className=" rounded-full "value="Trerrariums">Trerrariums</option>
-        <option className=" rounded-full " value="Gardening">Gardening</option>
-        <option className=" rounded-full " value="Accessories">Accessories</option>
-      </select>
-      <Silder></Silder>
-    </div>
-  );
+   const category = useRef("");
+   const categories = [
+      {
+         label: "All",
+         value: "",
+      },
+      {
+         label: "Potter-Plants",
+         value: "potter-plants",
+      },
+      {
+         label: "Seeds",
+         value: "seeds",
+      },
+      {
+         label: "Small Plants",
+         value: "small-plants",
+      },
+   ];
+   return (
+      <div className="flex gap-[2rem]">
+         <FormControl fullWidth>
+            <InputLabel id="plant-category">Categories</InputLabel>
+            <Select
+               labelId="plant-category"
+               id="plant-category"
+               label="category"
+               inputRef={category}
+               className="w-[12rem]"
+            >
+               {categories.map((category, index) => (
+                  <MenuItem key={index} value={category.value}>
+                     {category.label}
+                  </MenuItem>
+               ))}
+            </Select>
+         </FormControl>
+         <Slider></Slider>
+         <Button classes="hover:bg-primaryDark py-[0.5rem] px-[0.8rem] rounded bg-primary text-white">
+            Filter
+         </Button>
+      </div>
+   );
 }
