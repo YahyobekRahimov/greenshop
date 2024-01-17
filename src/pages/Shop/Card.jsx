@@ -35,6 +35,9 @@ export default function Products(props) {
    let result = products ?? PRODUCTS.slice(0, 16);
 
    function returnState(product) {
+      if (!(likedProducts.length > 1)) {
+         return false;
+      }
       for (let i = 0; i < likedProducts.length; i++) {
          let element = likedProducts[i];
          if (product.id === element.id) {

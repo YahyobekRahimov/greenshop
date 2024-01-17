@@ -12,6 +12,9 @@ export default function Products() {
       JSON.parse(localStorage.getItem("likedProducts")) || [];
    dispatch(addAllLikedProducts(likedProducts));
    function returnState(product) {
+      if (!(likedProducts.length > 1)) {
+         return false;
+      }
       for (let i = 0; i < likedProducts.length; i++) {
          let element = likedProducts[i];
          if (product.id === element.id) {
