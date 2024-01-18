@@ -4,6 +4,7 @@ import {
    Routes,
    Route,
    Router,
+   ScrollRestoration,
 } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
@@ -17,11 +18,13 @@ import Shop from "./pages/Shop/Shop";
 import PlantCare from "./pages/PlantCare";
 import Blogs from "./pages/Blogs";
 import FindMore from "./pages/Home/FindMore";
+import ScrollToTopOnNavigation from "/src/JavaScript/ScrollToTopOnNavigation.js";
 
 function App() {
    return (
       <BrowserRouter>
          <Header />
+         <ScrollToTopOnNavigation />
          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/shop/:id" element={<ProductView />} />
