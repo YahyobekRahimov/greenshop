@@ -15,7 +15,7 @@ import Teapot from "/src/images/teapot.png";
 import Location from "/src/images/Location.png";
 import Message from "/src/images/Message.png";
 import Calling from "/src/images/Calling.png";
-import AcceptedPayments from "/src/images/AcceptedPayments.png";
+import AcceptedPayments from "/src/images/acceptedPayments.png";
 
 // SVG
 
