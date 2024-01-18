@@ -4,6 +4,7 @@ import Images from "../images/plant1.png";
 import data from "/data/data.json";
 import { useState } from "react";
 import LikeIcon from "../components/LikeIcon";
+import PlantImage from "/src/images/plant13.png";
 
 export default function ProductDetails() {
    const [counter, setCounter] = useState(1);
@@ -21,31 +22,15 @@ export default function ProductDetails() {
    return (
       <div className="flex mt-12">
          <div className="w-[10%]">
-            <img
-               className="w-[6.25rem]"
-               src={ProdoctData.image}
-               alt=""
-            />
-            <img
-               className="w-[6.25rem]"
-               src={ProdoctData.image}
-               alt=""
-            />
-            <img
-               className="w-[6.25rem]"
-               src={ProdoctData.image}
-               alt=""
-            />
-            <img
-               className="w-[6.25rem]"
-               src={ProdoctData.image}
-               alt=""
-            />
+            <img className="w-[6.25rem]" src={PlantImage} alt="" />
+            <img className="w-[6.25rem]" src={PlantImage} alt="" />
+            <img className="w-[6.25rem]" src={PlantImage} alt="" />
+            <img className="w-[6.25rem]" src={PlantImage} alt="" />
          </div>
          <div className="w-[40%]">
             <img
                className="text-center w-[25.25rem]"
-               src={ProdoctData.image}
+               src={PlantImage}
                alt=""
             />
          </div>

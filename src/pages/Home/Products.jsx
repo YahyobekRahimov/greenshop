@@ -4,6 +4,7 @@ import LikeIcon from "../../components/LikeIcon";
 import data from "/data/data.json";
 import { Divider } from "@mui/material";
 import { addAllLikedProducts } from "../../redux/likedProductsSlice";
+import Plant5 from "/src/images/plant5.png";
 
 export default function Products() {
    const dispatch = useDispatch();
@@ -41,7 +42,7 @@ export default function Products() {
                >
                   <img
                      className="w-[14rem] h-[14rem] object-cover mb-3 border-2 border-solid rounded-lg bg-white"
-                     src={product.image}
+                     src={Plant5}
                      alt={product.name}
                   />
                   <h3 className="text-[1.2rem] h-14">
