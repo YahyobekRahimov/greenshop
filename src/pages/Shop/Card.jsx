@@ -9,8 +9,10 @@ import { useDispatch, useSelector } from "react-redux";
 import MyPagination from "./MyPagination";
 import { setPagination } from "../../redux/paginationSlice";
 import PlantImage from "/src/images/plant10.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Products(props) {
+   const navigate = useNavigate();
    const { value, filteredProducts } = props;
    const [products, setProducts] = useState(null);
    const page = useSelector((state) => state.paginationSlice);
@@ -60,13 +62,19 @@ export default function Products(props) {
       setProducts(data.slice(start, end));
       dispatch(setPagination(value));
    }
+   function handleCardClick(product, PlantImage) {
+      let PRODUCT = { ...product, image: PlantImage };
+      navigate(`/shop/${PRODUCT.id}`, { state: { key: PRODUCT } });
+   }
+
    return (
       <>
-         <div className="grid grid-cols-4 justify-items-center gap-y-16 pt-10 pb-10">
+         <div className="grid grid-cols-4 justify-items-center gap-y-16 pt-10 pb-10 cursor-pointer">
             {result.map((product) => (
                <div
                   key={product.id}
                   className="cursor-pointer shadow-custom w-[17rem] px-6 py-6 rounded-lg bg-softBackground transition duration-300 transform hover:shadow-lg hover:scale-105"
+                  onClick={() => handleCardClick(product, PlantImage)}
                >
                   <img
                      className="w-[14rem] h-[14rem] object-cover mb-3 transition duration-300 transform hover:scale-110"

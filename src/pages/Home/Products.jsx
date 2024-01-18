@@ -5,13 +5,19 @@ import data from "/data/data.json";
 import { Divider } from "@mui/material";
 import { addAllLikedProducts } from "../../redux/likedProductsSlice";
 import Plant5 from "/src/images/plant5.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Products() {
+   const navigate = useNavigate();
    const dispatch = useDispatch();
    let products = data.slice(38);
    let likedProducts =
       JSON.parse(localStorage.getItem("likedProducts")) || [];
    dispatch(addAllLikedProducts(likedProducts));
+   function handleCardClick(product, PlantImage) {
+      let PRODUCT = { ...product, image: PlantImage };
+      navigate(`/shop/${PRODUCT.id}`, { state: { key: PRODUCT } });
+   }
    function returnState(product) {
       if (!(likedProducts.length > 1)) {
          return false;
@@ -39,6 +45,7 @@ export default function Products() {
                <div
                   key={product.id}
                   className="cursor-pointer shadow-custom w-[17rem] px-6 py-6 rounded-lg bg-softBackground hover:scale-105 duration-200"
+                  onClick={() => handleCardClick(product, Plant5)}
                >
                   <img
                      className="w-[14rem] h-[14rem] object-cover mb-3 border-2 border-solid rounded-lg bg-white"

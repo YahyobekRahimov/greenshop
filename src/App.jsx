@@ -24,10 +24,7 @@ function App() {
          <Header />
          <Routes>
             <Route path="/" element={<Home />} />
-            <Route
-               path="/shop/product/:id"
-               element={<ProductView />}
-            />
+            <Route path="/shop/:id" element={<ProductView />} />
             <Route path="/shop/cart" element={<ProductCart />} />
             <Route
                path="/shop/checkout"
