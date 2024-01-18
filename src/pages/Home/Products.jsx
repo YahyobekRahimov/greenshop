@@ -15,11 +15,18 @@ export default function Products() {
       if (!(likedProducts.length > 1)) {
          return false;
       }
-      for (let i = 0; i < likedProducts.length; i++) {
-         let element = likedProducts[i];
-         if (product.id === element.id) {
-            return true;
+      try {
+         for (let i = 0; i < likedProducts.length; i++) {
+            let element = likedProducts[i];
+            if ((element = null)) {
+               continue;
+            }
+            if (product.id === element.id) {
+               return true;
+            }
          }
+      } catch (error) {
+         console.log(error);
       }
       return false;
    }
