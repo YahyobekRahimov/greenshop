@@ -3,9 +3,7 @@ import Container from "../components/Container";
 export default function PlantCare() {
    return (
       <Container>
-         <div>
-            <ProductDetails />
-         </div>
+         <div></div>
       </Container>
    );
 }
