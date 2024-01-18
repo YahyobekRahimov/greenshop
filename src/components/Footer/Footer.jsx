@@ -9,22 +9,22 @@ import Container from "../Container";
 import Button from "../Button";
 
 // Images
-import Plant from "/src/images/plant.png";
-import Cactus from "/src/images/cactus.png";
-import Teapot from "/src/images/teapot.png";
-import Location from "/src/images/Location.png";
-import Message from "/src/images/Message.png";
-import Calling from "/src/images/Calling.png";
-import AcceptedPayments from "/src/images/acceptedPayments.png";
+import Plant from "../../images/plant.png";
+import Cactus from "../../images/cactus.png";
+import Teapot from "../../images/teapot.png";
+import Location from "../../images/Location.png";
+import Message from "../../images/Message.png";
+import Calling from "../../images/Calling.png";
+import AcceptedPayments from "../../images/acceptedPayments.png";
 
 // SVG
 
-import Logo from "/src/images/logo.svg?react";
-import Facebook from "/src/images/Facebook.svg?react";
-import Instagram from "/src/images/Instagram.svg?react";
-import Twitter from "/src/images/Twitter.svg?react";
-import Linkedin from "/src/images/Linkedin.svg?react";
-import Union from "/src/images/Union.svg?react";
+import Logo from "../../images/logo.svg?react";
+import Facebook from "../../images/Facebook.svg?react";
+import Instagram from "../../images/Instagram.svg?react";
+import Twitter from "../../images/Twitter.svg?react";
+import Linkedin from "../../images/Linkedin.svg?react";
+import Union from "../../images/Union.svg?react";
 
 export default function Footer() {
    return (
