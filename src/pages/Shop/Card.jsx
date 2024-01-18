@@ -8,6 +8,7 @@ import { addAllLikedProducts } from "../../redux/likedProductsSlice";
 import { useDispatch, useSelector } from "react-redux";
 import MyPagination from "./MyPagination";
 import { setPagination } from "../../redux/paginationSlice";
+import PlantImage from "/src/images/plant10.png";
 
 export default function Products(props) {
    const { value, filteredProducts } = props;
@@ -69,7 +70,7 @@ export default function Products(props) {
                >
                   <img
                      className="w-[14rem] h-[14rem] object-cover mb-3 transition duration-300 transform hover:scale-110"
-                     src={product.image}
+                     src={PlantImage}
                      alt={product.name}
                   />
                   <h3 className="text-[1.2rem] h-14">
