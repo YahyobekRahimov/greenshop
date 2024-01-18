@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "quantity": 23,
     "image": "/src/images/blog-posts/plant1.png",
     "name": "Cactus & Succulent Care Tips",
     "price": 31.99,
@@ -12,6 +13,7 @@
   },
   {
     "id": 2,
+    "quantity": 23,
     "image": "/src/images/blog-posts/plant2.png",
     "name": "Top 10 Succulents for Your Home",
     "price": 31.99,
@@ -23,6 +25,7 @@
   },
   {
     "id": 3,
+    "quantity": 23,
     "image": "/src/images/blog-posts/plant3.png",
     "name": "Cacti & Succulent Care Tips",
     "price": 31.99,
@@ -34,6 +37,7 @@
   },
   {
     "id": 4,
+    "quantity": 23,
     "image": "/src/images/blog-posts/plant4.png",
     "name": "Best Houseplants Room by Room",
     "price": 31.99,
