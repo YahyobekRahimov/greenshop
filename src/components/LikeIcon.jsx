@@ -15,11 +15,13 @@ export default function LikeIcon({
 }) {
    const [liked, setLiked] = useState(state);
    const dispatch = useDispatch();
-   const likedProducts = useSelector((state) => state.likedProducts);
-   function handleLiked() {
+   function handleLiked(e) {
+      e.stopPropagation();
       if (!liked) {
          // if the user likes the product
-         dispatch(addLikedProduct(product));
+         if (product) {
+            dispatch(addLikedProduct(product));
+         }
          let data =
             JSON.parse(localStorage.getItem("likedProducts")) || [];
          data.push(product);

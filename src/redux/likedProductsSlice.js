@@ -5,10 +5,13 @@ const likedProductsSlice = createSlice({
    initialState: [],
    reducers: {
       addAllLikedProducts: (state, { payload }) => {
-         return payload;
+         state = payload;
+         return state;
       },
       addLikedProduct: (state, { payload }) => {
-         state.push(payload);
+         if (payload) {
+            state.push(payload);
+         }
       },
       removeLikedProduct: (state, { payload }) => {
          for (let i = 0; i < state.length; i++) {
