@@ -10,33 +10,33 @@ import MyPagination from "./MyPagination";
 import { setPagination } from "../../redux/paginationSlice";
 import PlantImage from "/src/images/plant10.png";
 import { useNavigate } from "react-router-dom";
+import AddToCart from "/src/components/AddToCart";
+import { addAllProductsToCart } from "/src/redux/cartProductsSlice.js";
 
 export default function Products(props) {
    const navigate = useNavigate();
+   const dispatch = useDispatch();
    const { value, filteredProducts } = props;
    const [products, setProducts] = useState(null);
    const page = useSelector((state) => state.paginationSlice);
-   const dispatch = useDispatch();
+
+   // * getting the liked products from local storage
    let likedProducts =
       JSON.parse(localStorage.getItem("likedProducts")) || [];
    dispatch(addAllLikedProducts(likedProducts));
 
-   const data = filteredProducts ?? JSON_DATA;
-   let count = Math.ceil(data.length / 16);
-   let PRODUCTS;
-   if (value == 1) {
-      PRODUCTS = data;
+   // * getting the products added to cart from localStorage
+   let productsInCart =
+      JSON.parse(localStorage.getItem("productsInCart")) || [];
+   dispatch(addAllProductsToCart(productsInCart));
+
+   // * redirecting the user to product details page.
+   function handleCardClick(product, PlantImage) {
+      let PRODUCT = { ...product, image: PlantImage };
+      navigate(`/shop/${PRODUCT.id}`, { state: { key: PRODUCT } });
    }
 
-   if (value == 2) {
-      PRODUCTS = data.filter((item) => item.price > 20);
-   }
-   if (value == 3) {
-      PRODUCTS = data.filter((item) => item.price < 20);
-   }
-
-   let result = products ?? PRODUCTS.slice(0, 16);
-
+   // * returns whether the product given to it is liked or not
    function returnState(product) {
       if (!(likedProducts.length > 1)) {
          return false;
@@ -56,15 +56,49 @@ export default function Products(props) {
       }
       return false;
    }
+
+   // * returns whether the product added to cart or not
+   function isAddedToCart(product) {
+      if (!productsInCart.length) {
+         return false;
+      }
+
+      try {
+         for (let i = 0; i < productsInCart.length; i++) {
+            const element = productsInCart[i];
+            if (!element) {
+               continue;
+            }
+            if (element.id == product.id) {
+               return true;
+            }
+         }
+      } catch (error) {
+         console.log(error);
+      }
+      return false;
+   }
+
+   const data = filteredProducts ?? JSON_DATA;
+   let count = Math.ceil(data.length / 16);
+   let PRODUCTS;
+   if (value == 1) {
+      PRODUCTS = data;
+   }
+
+   if (value == 2) {
+      PRODUCTS = data.filter((item) => item.price > 20);
+   }
+   if (value == 3) {
+      PRODUCTS = data.filter((item) => item.price < 20);
+   }
+
+   let result = products ?? PRODUCTS.slice(0, 16);
    function handlePaginationChange(e, value) {
       let start = (value - 1) * 16;
       let end = value * 16;
       setProducts(data.slice(start, end));
       dispatch(setPagination(value));
-   }
-   function handleCardClick(product, PlantImage) {
-      let PRODUCT = { ...product, image: PlantImage };
-      navigate(`/shop/${PRODUCT.id}`, { state: { key: PRODUCT } });
    }
 
    return (
@@ -87,14 +121,14 @@ export default function Products(props) {
                   <h4 className="font-bold text-primary text-center text-[1.25rem]">
                      ${product.price}
                   </h4>
-                  <div className="mt-2 px-5 flex justify-between text-center ">
-                     <div className="w-max h-max px-3 py-2 rounded-lg border-2 border-solid border-slate-400 ">
-                        {" "}
-                        <ShoppingIcon className="  w-[3rem] h-[2rem]" />
-                     </div>
+                  <div className="flex justify-around">
                      <LikeIcon
                         product={product}
                         state={returnState(product)}
+                     />
+                     <AddToCart
+                        product={product}
+                        state={isAddedToCart(product)}
                      />
                   </div>
                </div>

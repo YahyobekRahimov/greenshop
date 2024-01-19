@@ -43,6 +43,25 @@ export default {
             primaryGradient:
                "linear-gradient(98deg, rgba(245, 245, 245, 0.50) -23.46%, rgba(245, 245, 245, 0.50) 107.51%)",
          },
+         // animation: {
+         //    "tick-bounce": "bounce-spin 1s linear infinite",
+         // },
+         // keyframes: {
+         //    "tick-bounce": {
+         //       "0%, 100%": {
+         //          transform: "translateY(0rem)",
+         //       },
+         //       "30%": {
+         //          transform: "translateY(1rem)",
+         //       },
+         //       "50%": {
+         //          transform: "rotateX(180deg) translateY(1rem)",
+         //       },
+         //       "70%": {
+         //          transform: "rotateX(360deg)",
+         //       },
+         //    },
+         // },
       },
    },
    container: {
