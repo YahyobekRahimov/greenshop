@@ -7,6 +7,7 @@ import HeaderLinks from "./HeaderLinks";
 import HeaderButtons from "./HeaderButtons";
 import { useLocation } from "react-router-dom";
 
+
 export default function Header() {
    const [modalSearch, setModalSearch] = useState(false);
    const location = useLocation();

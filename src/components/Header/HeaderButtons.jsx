@@ -4,8 +4,12 @@ import LogoutIcon from "../../images/Logout.svg?react";
 import ModalSearch from "./ModalSearch";
 import ColorBadge from "../ColorBadge";
 import LoginButton from "./LoginButtons";
+import ModalLogin from "../ModalLogin";
 
-export default function HeaderButtons({ handleclick, setModalSearch }) {
+export default function HeaderButtons({
+   handleclick,
+   setModalSearch,
+}) {
    const isModalSearchVisible = !setModalSearch;
 
    return (
@@ -14,7 +18,7 @@ export default function HeaderButtons({ handleclick, setModalSearch }) {
             className={isModalSearchVisible && "block cursor-pointer"}
          />
          <ColorBadge />
-         <LoginButton />
+         <ModalLogin />
       </div>
    );
 }
