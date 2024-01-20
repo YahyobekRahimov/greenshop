@@ -21,7 +21,6 @@ const style = {
    bgcolor: "background.paper",
    boxShadow: 24,
    borderRadius: 4,
-   p: 4,
 };
 
 export default function TransitionsModal() {
@@ -59,27 +58,32 @@ export default function TransitionsModal() {
          >
             <Fade in={open}>
                <Box sx={style}>
-                  <h1 className="mt-[3rem] cursor-pointer mb-[3.125rem] text-center text-xl font-medium">
-                     <button
-                        onClick={clickSpanLogin}
-                        className={`button-link ${
-                           loginspan ? "text-green-700" : "text-black"
-                        }`}
-                     >
-                        Login
-                     </button>
-                     {" | "}
-                     <button
-                        onClick={clickSpanRegistr}
-                        className={`button-link ${
-                           loginspan ? "text-black" : "text-green-700"
-                        }`}
-                     >
-                        Register
-                     </button>
-                  </h1>
-
-                  {loginspan ? <Login setOpen={setOpen} /> : <Registr setOpen={setOpen} />}
+                  <div className="flex flex-col gap-14 px-[6.25rem]">
+                     <h1 className="mt-[3rem] cursor-pointer mb-[3.125rem] text-center text-xl font-medium">
+                        <button
+                           onClick={clickSpanLogin}
+                           className={`button-link ${
+                              loginspan
+                                 ? "text-green-700"
+                                 : "text-black"
+                           }`}
+                        >
+                           Login
+                        </button>
+                        {" | "}
+                        <button
+                           onClick={clickSpanRegistr}
+                           className={`button-link ${
+                              loginspan
+                                 ? "text-black"
+                                 : "text-green-700"
+                           }`}
+                        >
+                           Register
+                        </button>
+                     </h1>
+                     {loginspan ? <Login /> : <Registr />}
+                  </div>
                </Box>
             </Fade>
          </Modal>

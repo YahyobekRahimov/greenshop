@@ -1,4 +1,6 @@
 import Button from "./Button";
+import { TextField } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export default function Login() {
    return (
@@ -6,19 +8,28 @@ export default function Login() {
          <h2 className="text-sm mb-[0.875rem]">
             Enter your username and password to login.
          </h2>
-         <input
-            className="w-[20rem]  mb-[1rem] border-solid border-gray-400 border-2 rounded-md outline-none py-[0.75rem] pl-[0.8rem]"
-            type="text"
-            placeholder="Enter  Username or Email"
-         />
-
-         <input
-            className="w-[20rem]  mb-[1rem] border-solid border-gray-400 border-2 rounded-md outline-none py-[0.75rem] pl-[0.8rem]"
-            type="password"
-            placeholder="Password"
-         />
-
-         <Button classes="hover:bg-primaryDark text-white rounded-md bg-primary w-[20rem] py-[0.88rem] ">
+         <div className="flex flex-col w-full gap-[1rem]">
+            <TextField
+               fullWidth
+               id="outlined-basic"
+               label="Username or Email"
+               variant="outlined"
+            />
+            <TextField
+               fullWidth
+               id="outlined-basic"
+               label="Password"
+               variant="outlined"
+               type="password"
+            />
+            <Link
+               className="text-right text-primary hover:underline"
+               to="/"
+            >
+               Forgot Password?
+            </Link>
+         </div>
+         <Button classes="hover:bg-primaryDark text-white rounded-md bg-primary w-full py-[0.88rem] mt-7">
             Login
          </Button>
       </div>

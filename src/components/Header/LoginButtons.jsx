@@ -8,7 +8,7 @@ export default function LoginButton() {
    console.log(value);
 
    return (
-      <button className="hover:bg-primaryDark items-center flex gap-[0.25rem] text-white px-[1.0625rem] py-[0.5rem] rounded-md bg-green-600">
+      <div className="hover:bg-primaryDark items-center flex gap-[0.25rem] text-white px-[1.0625rem] py-[0.5rem] rounded-md bg-green-600">
          {value != "" ? (
             <>
                <LogoutIcon />
@@ -20,6 +20,6 @@ export default function LoginButton() {
                <span>My Account</span>
             </>
          )}
-      </button>
+      </div>
    );
 }
