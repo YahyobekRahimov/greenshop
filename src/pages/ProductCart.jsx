@@ -2,6 +2,7 @@ import { useState } from "react";
 import products from "../../data/blog.posts.json";
 import Container from "../components/Container";
 import Product from "../components/ProductCart";
+import CartTotal from "./Shop/CartTotal";
 
 export default function ProductCart() {
   const [items, setItems] = useState(
@@ -22,33 +23,37 @@ export default function ProductCart() {
 
   return (
     <Container>
-      <div className="text-left mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-4">Product Shop</h1>
-        <table className="w-full">
-          <thead className="border-b-2 ">
-            <tr className="mb-3">
-              <th className="px-6 py-2">Products</th>
-              <th className="px-6 py-2"></th>
-              <th className="px-6 py-2">Price</th>
-              <th className="px-6 py-2">Quantity</th>
-              <th className="px-6 py-2">Action</th>
-            </tr>
-          </thead>
-          <tbody className="bg-green-600 mb-3">
-            {items &&
-              items.map((item) => (
-                <Product
-                  key={item.id}
-                  product={item}
-                  quantity={item.quantity}
-                  onQuantityChange={(newQuantity) =>
-                    handleQuantityChange(item.id, newQuantity)
-                  }
-                  onDelete={() => handleDelete(item.id)}
-                />
-              ))}
-          </tbody>
-        </table>
+      <div className="mt-16 flex justify-between gap-16">
+        <div className="text-left mx-auto px-4 w-[48.75rem]">
+          <table className="w-full">
+            <thead className="border-b-2 ">
+              <tr className="mb-3">
+                <th className="px-6 py-2">Products</th>
+                <th className="px-6 py-2"></th>
+                <th className="px-6 py-2">Price</th>
+                <th className="px-6 py-2">Quantity</th>
+                <th className="px-6 py-2">Action</th>
+              </tr>
+            </thead>
+            <tbody className="bg-green-600 mb-3">
+              {items &&
+                items.map((item) => (
+                  <Product
+                    key={item.id}
+                    product={item}
+                    quantity={item.quantity}
+                    onQuantityChange={(newQuantity) =>
+                      handleQuantityChange(item.id, newQuantity)
+                    }
+                    onDelete={() => handleDelete(item.id)}
+                  />
+                ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="bg-white w-[20.625rem]">
+          <CartTotal />
+        </div>
       </div>
     </Container>
   );
