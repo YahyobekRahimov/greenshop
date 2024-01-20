@@ -1,4 +1,4 @@
-import Button from './Button'
+import Button from "./Button";
 
 export default function Login() {
    return (
@@ -9,7 +9,7 @@ export default function Login() {
          <input
             className="w-[20rem]  mb-[1rem] border-solid border-gray-400 border-2 rounded-md outline-none py-[0.75rem] pl-[0.8rem]"
             type="text"
-            placeholder="Enter  User Name or Email"
+            placeholder="Enter  Username or Email"
          />
 
          <input

@@ -20,6 +20,7 @@ const style = {
    height: 600,
    bgcolor: "background.paper",
    boxShadow: 24,
+   borderRadius: 4,
    p: 4,
 };
 
@@ -29,6 +30,7 @@ export default function TransitionsModal() {
    const handleClose = () => setOpen(false);
    const [loginspan, setLoginSpan] = useState();
    const [registrspan, setRegistrSpan] = useState(false);
+   
 
    function clickSpanLogin() {
       setLoginSpan(true);
@@ -70,14 +72,14 @@ export default function TransitionsModal() {
                      <button
                         onClick={clickSpanRegistr}
                         className={`button-link ${
-                            loginspan ? "text-black" :"text-green-700"
-                         }`}
+                           loginspan ? "text-black" : "text-green-700"
+                        }`}
                      >
                         Register
                      </button>
                   </h1>
 
-                  {loginspan ? <Login /> : <Registr />}
+                  {loginspan ? <Login setOpen={setOpen} /> : <Registr setOpen={setOpen} />}
                </Box>
             </Fade>
          </Modal>
