@@ -29,7 +29,6 @@ export default function TransitionsModal() {
    const handleClose = () => setOpen(false);
    const [loginspan, setLoginSpan] = useState();
    const [registrspan, setRegistrSpan] = useState(false);
-   
 
    function clickSpanLogin() {
       setLoginSpan(true);
@@ -84,7 +83,11 @@ export default function TransitionsModal() {
                            </button>
                         </div>
                      </h1>
-                     {loginspan ? <Login /> : <Registr />}
+                     {loginspan ? (
+                        <Login setOpen={setOpen} />
+                     ) : (
+                        <Registr setOpen={setOpen} />
+                     )}
                   </div>
                </Box>
             </Fade>
