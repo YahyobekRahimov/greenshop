@@ -1,75 +1,109 @@
 import React, { useRef } from "react";
 import Button from "./Button";
 import { TextField } from "@mui/material";
-export default function Registr() {
-   const usernameRef = useRef(null);
-   const emailRef = useRef(null);
-   const passwordRef = useRef(null);
-   const confirmPasswordRef = useRef(null);
-   const validate = () => {
-      if (!usernameRef.current?.value) {
-         return {
-            id: 0,
-            error: "Please, enter a username",
-            passed: false,
-         };
+import { useRef, useState } from "react";
+
+export default function Registr({ setOpen }) {
+   const nameRef = useRef();
+
+   const emailRef = useRef();
+
+   const passwordRef = useRef();
+
+   const cofirmRef = useRef();
+   const [nameError, setNameError] = useState(false);
+   const [emailError, setEmailError] = useState(false);
+   const [passwordError, setPasswordError] = useState(false);
+   const [confirmError, setConfirmError] = useState(false);
+   const [confrimCorrect, setConfrimCorrectError] = useState(false);
+
+   function validate() {
+      if (!nameRef.current.value) {
+         setNameError(true);
+         return false;
       }
-      if (!emailRef.current?.value) {
-         return {
-            id: 1,
-            error: "Please, enter an email",
-            passed: false,
-         };
-         false;
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (
+         !emailRef.current.value ||
+         !emailPattern.test(emailRef.current.value)
+      ) {
+         setEmailError(true);
       }
-      if (!passwordRef.current?.value) {
-         return {
-            id: 2,
-            error: "Please, enter a password",
-            passed: false,
-         };
+      if (!passwordRef.current.value) {
+         setPasswordError(true);
+         return false;
       }
-      if (!confirmPasswordRef.current?.value) {
-         return {
-            id: 3,
-            error: "Please, confirm your password",
-            passed: false,
-         };
+      if (!cofirmRef.current.value) {
+         setConfirmError(true);
+         return false;
       }
-      const username = usernameRef.current.value;
-      const email = emailRef.current.value;
-      const password = passwordRef.current.value;
-      const confirmPassword = confirmPasswordRef.current.value;
-      const users = JSON.parse(localStorage.getItem("users")) || [];
-      for (let i = 0; i < users.length; i++) {
-         const user = users[i];
-         if (user.username === username) {
-            return {
-               id: 0,
-               passed: false,
-               error: "Sorry, this username is already taken",
-            };
-         }
-         if (user.email == email) {
-            return {
-               id: 1,
-               passed: false,
-               error: "A user with this email already exists",
-            };
-         }
-         if (password !== confirmPassword) {
-            return {
-               id: 3,
-               passed: false,
-            };
-         }
+      if (passwordRef.current.value !== cofirmRef.current.value) {
+         setConfrimCorrectError(true);
+         return false;
+      } else if (
+         passwordRef.current.value === cofirmRef.current.value
+      ) {
+         setConfrimCorrectError(false);
       }
-   };
-   const handleSubmit = () => {
-      if (!validate().passed) {
+      return true;
+   }
+   function changeInput(e) {
+      if (e.target.value.length > 1) {
+         setNameError(false);
+      }
+   }
+   function changeInputEmail(e) {
+      if (e.target.value.length > 1) {
+         setEmailError(false);
+      }
+   }
+   function changeInputPassword(e) {
+      if (e.target.value.length > 1) {
+         setPasswordError(false);
+      }
+   }
+   function changeInputConfirm(e) {
+      if (e.target.value.length > 1) {
+         setConfirmError(false);
+      }
+   }
+   function clearValue() {
+      nameRef.current.value = "";
+      emailRef.current.value = "";
+      passwordRef.current.value = "";
+      cofirmRef.current.value = "";
+   }
+   function SaveLocalstore() {
+      const userData = {
+         name: nameRef.current.value,
+         email: emailRef.current.value,
+         password: passwordRef.current.value,
+      };
+
+      const userDataString = JSON.stringify(userData);
+
+      document.cookie = `username = ${nameRef.current.value}`;
+
+      let data = localStorage.getItem("users")
+         ? JSON.parse(localStorage.getItem("users"))
+         : [];
+      let user = {
+         name: nameRef.current.value,
+         email: emailRef.current.value,
+         password: passwordRef.current.value,
+      };
+      data.push(user);
+      localStorage.setItem("users", JSON.stringify(data));
+   }
+
+   function registrButtonClick() {
+      if (!validate()) {
          return;
       }
-   };
+      SaveLocalstore();
+      clearValue();
+      setOpen(false);
+   
    return (
       <div className="flex flex-col items-center">
          <h2 className="text-sm mb-[0.875rem] text-center">

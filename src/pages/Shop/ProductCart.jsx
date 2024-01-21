@@ -26,7 +26,7 @@ export default function ProductCart() {
 
    return (
       <Container>
-         <div className="mt-16 flex justify-between gap-16">
+         <div className="mt-16 flex justify-between gap-16 mb-20">
             <div className="text-left  w-[48.75rem]">
                <table className="w-full">
                   <thead className="border-b-2 ">

@@ -20,7 +20,7 @@ const style = {
    height: 600,
    bgcolor: "background.paper",
    boxShadow: 24,
-   // p: 4,
+   borderRadius: 4,
 };
 
 export default function TransitionsModal() {
@@ -29,6 +29,7 @@ export default function TransitionsModal() {
    const handleClose = () => setOpen(false);
    const [loginspan, setLoginSpan] = useState();
    const [registrspan, setRegistrSpan] = useState(false);
+   
 
    function clickSpanLogin() {
       setLoginSpan(true);
