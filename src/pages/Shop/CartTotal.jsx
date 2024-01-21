@@ -13,7 +13,7 @@ const CartTotal = () => {
           variant="outlined"
         />
         <button className="bg-primary text-white pl-[2.188rem] pr-[1.563rem] px-6 text-[0.938rem] ">
-          Apply
+          Aapply
         </button>
       </div>
     </div>
