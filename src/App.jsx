@@ -11,7 +11,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
 import ProductView from "./pages/ProductView";
-import ProductCart from "./pages/Shop/ProductCart";
+import ProductCart from "./pages/Shop/CartSummary/ProductCart";
 import ProductCheckout from "./pages/ProductCheckout";
 import MyAccount from "./pages/MyAccount";
 import Shop from "./pages/Shop/Shop";
