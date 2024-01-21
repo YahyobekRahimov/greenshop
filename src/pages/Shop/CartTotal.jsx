@@ -15,7 +15,6 @@ const CartTotal = () => {
         <button className="bg-primary text-white pl-[2.188rem] pr-[1.563rem] px-6 text-[0.938rem] ">
           Aapply
         </button>
-        <p>hello</p>
       </div>
     </div>
   );
