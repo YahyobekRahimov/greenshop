@@ -12,7 +12,7 @@ export default function ProductCart() {
    const dispatch = useDispatch();
    const data =
       JSON.parse(localStorage.getItem("productsInCart")) || [];
-   dispatch(addAllProductsToCart(data));
+   // dispatch(addAllProductsToCart(data));
    const items = useSelector((state) => state.cartProducts);
    const handleDelete = (productId) => {
       dispatch(removeFromCart(productId));
