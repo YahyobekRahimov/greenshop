@@ -12,7 +12,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
 import ProductView from "./pages/ProductView";
 import ProductCart from "./pages/Shop/CartSummary/ProductCart";
-import ProductCheckout from "./pages/ProductCheckout";
+import ProductCheckout from "./pages/Shop/CheckOut/ProductCheckout";
 import MyAccount from "./pages/MyAccount";
 import Shop from "./pages/Shop/Shop";
 import PlantCare from "./pages/PlantCare";

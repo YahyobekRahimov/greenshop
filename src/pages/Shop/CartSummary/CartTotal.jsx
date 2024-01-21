@@ -37,7 +37,7 @@ const CartTotal = () => {
         <span>$2,699.00</span>
       </div>
       <button className="bg-primary py-3 px-20 mb-4 text-white rounded hover:bg-primaryDark">
-        Proceed To Checkout
+        <Link to="/shop/checkout">Proceed To Checkout</Link>
       </button>
       <Link className="text-primary hover:text-primaryDark" to="/shop">
         Continue Shopping
