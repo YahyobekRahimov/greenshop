@@ -11,7 +11,6 @@ const Product = ({ product, quantity, onDelete }) => {
       dispatch(incrementQuantity(product.id));
       const data =
          JSON.parse(localStorage.getItem("productsInCart")) || [];
-      console.log(data);
       data[data.findIndex((prod) => prod.id == product.id)]
          .quantity++;
       localStorage.setItem("productsInCart", JSON.stringify(data));

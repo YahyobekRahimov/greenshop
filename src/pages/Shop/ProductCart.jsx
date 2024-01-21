@@ -1,15 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Container from "../../components/Container";
 import Product from "./ProductCartItems";
 import CartTotal from "./CartTotal";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFromCart } from "../../redux/cartProductsSlice";
+import {
+   addAllProductsToCart,
+   removeFromCart,
+} from "../../redux/cartProductsSlice";
 
 export default function ProductCart() {
-   const items = useSelector((state) => state.cartProducts);
    const dispatch = useDispatch();
+   const data =
+      JSON.parse(localStorage.getItem("productsInCart")) || [];
+   dispatch(addAllProductsToCart(data));
+   const items = useSelector((state) => state.cartProducts);
    const handleDelete = (productId) => {
       dispatch(removeFromCart(productId));
+      const data =
+         JSON.parse(localStorage.getItem("productsInCart")) || [];
+      const index =
+         data[data.findIndex((prod) => prod.id == productId)];
+      data.splice(index, 1);
+      localStorage.setItem("productsInCart", JSON.stringify(data));
    };
 
    return (
