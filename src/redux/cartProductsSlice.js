@@ -24,10 +24,27 @@ const cartProductsSlice = createSlice({
             }
          }
       },
+      incrementQuantity: (state, { payload }) => {
+         const index = state.findIndex(
+            (product) => product.id == payload
+         );
+         state[index].quantity++;
+      },
+      decrementQuantity: (state, { payload }) => {
+         const index = state.findIndex(
+            (product) => product.id == payload
+         );
+         state[index].quantity -= 1;
+      },
    },
 });
 
 export default cartProductsSlice.reducer;
 
-export const { addToCart, removeFromCart, addAllProductsToCart } =
-   cartProductsSlice.actions;
+export const {
+   addToCart,
+   removeFromCart,
+   addAllProductsToCart,
+   incrementQuantity,
+   decrementQuantity,
+} = cartProductsSlice.actions;
