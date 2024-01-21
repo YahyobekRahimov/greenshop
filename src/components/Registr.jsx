@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import Button from "./Button";
+import { TextField } from "@mui/material";
 import { useRef, useState } from "react";
 
 export default function Registr({ setOpen }) {
@@ -102,91 +103,45 @@ export default function Registr({ setOpen }) {
       SaveLocalstore();
       clearValue();
       setOpen(false);
-   }
+   
    return (
       <div className="flex flex-col items-center">
-         <h2 className="text-sm mb-[0.875rem]">
-            Enter your email and password to register.
+         <h2 className="text-sm mb-[0.875rem] text-center">
+            Enter your username, email and password to register.
          </h2>
-         <input
-            onChange={changeInput}
-            ref={nameRef}
-            className={`w-[20rem]  mb-[1.5rem] border-solid border-gray-400 border-2 rounded-md outline-none py-[0.75rem] pl-[0.8rem] ${
-               nameError ? "border-red-800" : "border-gray-400"
-            }`}
-            type="text"
-            placeholder="User Name"
-         />
-         {nameError && nameError ? (
-            <span className="text-red-800 mt-[-1rem] mb-[0.5rem]">
-               Please enter Username
-            </span>
-         ) : (
-            ""
-         )}
-         <input
-            onChange={changeInputEmail}
-            ref={emailRef}
-            className={`w-[20rem]  mb-[1.5rem] border-solid border-gray-400 border-2 rounded-md outline-none py-[0.75rem] pl-[0.8rem] ${
-               emailError ? "border-red-800" : "border-gray-400"
-            }`}
-            type="text"
-            placeholder="Enter your email address"
-         />
-         {emailError && emailError ? (
-            <span className="text-red-800 mt-[-1rem] mb-[0.5rem]">
-               Please enter your Email
-            </span>
-         ) : (
-            ""
-         )}
-         <input
-            onChange={changeInputPassword}
-            ref={passwordRef}
-            className={`w-[20rem]  mb-[1.5rem] border-solid border-gray-400 border-2 rounded-md outline-none py-[0.75rem] pl-[0.8rem] ${
-               passwordError ? "border-red-800" : "border-gray-400"
-            }`}
-            type="password"
-            placeholder="Enter your Password"
-         />
-         {passwordError && passwordError ? (
-            <span className="text-red-800 mt-[-1rem] mb-[0.5rem]">
-               Please enter Password
-            </span>
-         ) : (
-            ""
-         )}
-         <input
-            onChange={changeInputConfirm}
-            ref={cofirmRef}
-            className={`w-[20rem]  mb-[1.5rem] border-solid border-gray-400 border-2 rounded-md outline-none py-[0.75rem] pl-[0.8rem] ${
-               confirmError || confrimCorrect
-                  ? "border-red-800"
-                  : "border-gray-400"
-            }`}
-            type="password"
-            placeholder="Enter again Password"
-         />
-         {confirmError && confirmError ? (
-            <span className="text-red-800 mt-[-1rem] mb-[0.5rem]">
-               Please enter again Password
-            </span>
-         ) : (
-            ""
-         )}
-         {confrimCorrect && confrimCorrect ? (
-            <span className="text-red-800 mt-[-1rem] mb-[0.5rem]">
-               Please enter correct Password
-            </span>
-         ) : (
-            ""
-         )}
-         <Button
-            onClick={registrButtonClick}
-            classes="hover:bg-primaryDark text-white rounded-md bg-primary w-[20rem] py-[0.88rem] "
-         >
-            Registr
-         </Button>
+         <form className="w-full" onSubmit={handleSubmit}>
+            <div className="flex flex-col w-full gap-4 mb-4">
+               <TextField
+                  fullWidth
+                  label="Username"
+                  variant="outlined"
+                  inputRef={usernameRef}
+               />
+               <TextField
+                  fullWidth
+                  label="Enter your email address"
+                  variant="outlined"
+                  inputRef={emailRef}
+               />
+               <TextField
+                  fullWidth
+                  label="Password"
+                  variant="outlined"
+                  type="password"
+                  inputRef={passwordRef}
+               />
+               <TextField
+                  fullWidth
+                  label="Confirm Password"
+                  variant="outlined"
+                  type="password"
+                  inputRef={confirmPasswordRef}
+               />
+            </div>
+            <Button classes="hover:bg-primaryDark text-white rounded-md bg-primary w-full py-[0.88rem] ">
+               Login
+            </Button>
+         </form>
       </div>
    );
 }
