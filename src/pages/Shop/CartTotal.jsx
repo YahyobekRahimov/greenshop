@@ -13,8 +13,8 @@ const CartTotal = () => {
           label="Enter coupon code here..."
           variant="outlined"
         />
-        <button className="bg-primary text-white pl-[2.188rem] pr-[1.563rem] px-6 text-[0.938rem] ">
-          Aapply
+        <button className="bg-primary text-white px-7 text-[0.938rem] hover:bg-primaryDark">
+          Apply
         </button>
       </div>
       <div className="flex justify-between mb-4">
@@ -26,7 +26,7 @@ const CartTotal = () => {
         <span>(-) 00.00</span>
       </div>
       <div className="flex justify-between mb-7">
-        <span>Shiping</span>
+        <span>Shipping</span>
         <div className="flex flex-col items-end">
           <p className="text-lg mb-1">$16.00</p>
           <p className="text-primary">View shipping charge</p>
@@ -36,10 +36,10 @@ const CartTotal = () => {
         <span className="text-base">Total</span>
         <span>$2,699.00</span>
       </div>
-      <button className="bg-primary py-3 px-20 mb-4 text-white rounded">
+      <button className="bg-primary py-3 px-20 mb-4 text-white rounded hover:bg-primaryDark">
         Proceed To Checkout
       </button>
-      <Link className="text-primary" to="/shop">
+      <Link className="text-primary hover:text-primaryDark" to="/shop">
         Continue Shopping
       </Link>
     </div>
