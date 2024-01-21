@@ -57,29 +57,31 @@ export default function TransitionsModal() {
          >
             <Fade in={open}>
                <Box sx={style}>
-                  <div className="flex flex-col gap-14 px-[6.25rem]">
-                     <h1 className="mt-[3rem] cursor-pointer mb-[3.125rem] text-center text-xl font-medium">
-                        <button
-                           onClick={clickSpanLogin}
-                           className={`button-link ${
-                              loginspan
-                                 ? "text-green-700"
-                                 : "text-black"
-                           }`}
-                        >
-                           Login
-                        </button>
-                        {" | "}
-                        <button
-                           onClick={clickSpanRegistr}
-                           className={`button-link ${
-                              loginspan
-                                 ? "text-black"
-                                 : "text-green-700"
-                           }`}
-                        >
-                           Register
-                        </button>
+                  <div className="flex flex-col gap-14 px-[6.25rem] py-[3.125rem]">
+                     <h1 className="cursor-pointer text-center text-xl font-medium">
+                        <div className="flex justify-center items-center gap-3">
+                           <button
+                              onClick={clickSpanLogin}
+                              className={`button-link ${
+                                 loginspan
+                                    ? "text-green-700"
+                                    : "text-black"
+                              }`}
+                           >
+                              Login
+                           </button>
+                           <span>|</span>
+                           <button
+                              onClick={clickSpanRegistr}
+                              className={`button-link ${
+                                 loginspan
+                                    ? "text-black"
+                                    : "text-green-700"
+                              }`}
+                           >
+                              Register
+                           </button>
+                        </div>
                      </h1>
                      {loginspan ? <Login /> : <Registr />}
                   </div>

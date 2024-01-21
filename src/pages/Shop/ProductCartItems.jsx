@@ -31,6 +31,7 @@ const Product = ({ product, quantity, onDelete }) => {
             )
          ].quantity
    );
+   const SKU = Math.round(Math.random() * 1000000);
    return (
       <tr className="bg-softBackground w-full grid grid-cols-[0.9fr_3fr_0.5fr_1fr_1fr] items-center">
          <td className="px-6 py-2">
@@ -43,7 +44,7 @@ const Product = ({ product, quantity, onDelete }) => {
          <td className="px-6 py-2">
             <p className="text-sm font-semibold">{product.name}</p>
             <span className="text-textThird mt-1 text-[.875rem]">
-               SKU: {Math.round(Math.random * 100000)}
+               SKU: {SKU}
             </span>
          </td>
          <td className="px-6 py-2">{product.price}</td>

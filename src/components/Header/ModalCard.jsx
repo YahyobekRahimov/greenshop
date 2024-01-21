@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import PlantImage from "/src/images/plant14.png";
 
 export default function ModalCard({ data }) {
    return (
@@ -10,8 +11,8 @@ export default function ModalCard({ data }) {
                      <div>
                         <img
                            className="cursor-pointer w-[10.325rem]"
-                           src={e.image}
-                           alt=""
+                           src={PlantImage}
+                           alt={e.name}
                         />
                      </div>
                      <div className=" flex flex-col gap-2 text-2xl mb-2 ">
