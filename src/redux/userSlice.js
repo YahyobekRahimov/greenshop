@@ -33,6 +33,4 @@ const userSlice = createSlice({
    },
 });
 
-export const { addUserInfo } = userSlice.actions;
-
 export default usersSlice.reducer;
