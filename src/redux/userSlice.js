@@ -28,7 +28,7 @@ const userSlice = createSlice({
          state.orders = payload.orders ?? state.orders;
          state.reports = payload.reports ?? state.reports;
          state.downloads = payload.downloads ?? state.downloads;
-         // state.support = payload.support ?? state.support;
+         state.support = payload.support ?? state.support;
       },
    },
 });
