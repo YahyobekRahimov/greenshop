@@ -53,7 +53,7 @@ export default function Header() {
             />
          </Container>
          <Container>
-            <div className="h-[0.3px] w-full bg-green-200 mt-4"></div>
+            <div className="h-[0.3px] w-full bg-green-200 mt-[0.25rem]"></div>
          </Container>
          {location.pathname == "/" ? (
             ""
@@ -64,6 +64,7 @@ export default function Header() {
                      if (index == path.length - 1) {
                         return (
                            <Typography
+                              key={index}
                               sx={{
                                  textTransform: "capitalize",
                               }}
@@ -75,6 +76,7 @@ export default function Header() {
                      } else {
                         return (
                            <Link
+                              key={index}
                               to={getLink(page.toLowerCase().trim())}
                               className="capitalize hover:underline"
                            >
