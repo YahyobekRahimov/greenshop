@@ -48,7 +48,7 @@ export default function LabTabs() {
          <Box sx={{ width: "100%", typography: "body1" }}>
             <TabContext value={value}>
                <div>
-                  <div className="flex">
+                  <div className="flex items-center gap-6">
                      <Box
                         sx={{
                            borderBottom: 1,
@@ -61,12 +61,15 @@ export default function LabTabs() {
                            sx={{
                               "& .Mui-selected": {
                                  font: "36px",
+                                 fontWeight: "600",
                                  borderBottomStyle: "green",
                                  color: "green",
                                  backgroundColor: "green",
                               },
                               "& .MuiTab-root": {
                                  color: "green",
+                                 fontWeight: "600",
+                                 fontFamily: "'Cera Pro', sans-serif",
                                  backgroundColor: "white",
                               },
                            }}
