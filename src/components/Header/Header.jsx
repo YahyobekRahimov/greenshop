@@ -1,4 +1,4 @@
-// Header.js
+
 import React, { useState } from "react";
 import Container from "../Container";
 import { NavLink } from "react-router-dom";
@@ -15,6 +15,7 @@ export default function Header() {
    function handleclick() {
       setModalSearch(true);
    }
+   
 
    return (
       <div className="mt-[1.5rem]">

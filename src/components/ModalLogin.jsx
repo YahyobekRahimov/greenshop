@@ -29,7 +29,6 @@ export default function TransitionsModal() {
    const handleClose = () => setOpen(false);
    const [loginspan, setLoginSpan] = useState();
    const [registrspan, setRegistrSpan] = useState(false);
-   
 
    function clickSpanLogin() {
       setLoginSpan(true);
@@ -59,7 +58,7 @@ export default function TransitionsModal() {
             <Fade in={open}>
                <Box sx={style}>
                   <div className="flex flex-col gap-14 px-[6.25rem]">
-                     <h1 className="mt-[3rem] cursor-pointer mb-[3.125rem] text-center text-xl font-medium">
+                     <h1 className="mt-[3rem] cursor-pointer  text-center text-xl font-medium">
                         <button
                            onClick={clickSpanLogin}
                            className={`button-link ${
