@@ -3,13 +3,11 @@ import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import LoginButton from "./Header/LoginButtons";
 import Login from "./Login";
 import { useState } from "react";
 import Registr from "./Registr";
-import { TrendingUpRounded } from "@mui/icons-material";
+import Button from "@mui/material/Button";
 
 const style = {
    position: "absolute",
@@ -39,7 +37,7 @@ export default function TransitionsModal() {
    }
    return (
       <div>
-         <Button onClick={handleOpen}>
+         <Button onClick={handleOpen} variant="contained">
             <LoginButton />
          </Button>
          <Modal

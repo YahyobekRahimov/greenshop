@@ -79,7 +79,7 @@ export default function Products() {
             {products.map((product) => (
                <div
                   key={product.id}
-                  className="cursor-pointer shadow-custom w-[17rem] px-6 py-6 rounded-lg bg-softBackground hover:scale-105 duration-200"
+                  className="cursor-pointer shadow-md hover:shadow-xl w-[17rem] px-6 py-6 rounded-lg bg-softBackground hover:scale-105 duration-200"
                   onClick={() => handleCardClick(product, Plant5)}
                >
                   <img
