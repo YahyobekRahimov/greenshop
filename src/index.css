@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --find-more-bg: #fbfbfb;
-    --text-subtitel: #727272;
-    --green-primary: #46a358;
-    --green-primary-darker: #3a8549;
-    --soft-background: #f2efef;
-  }
+   :root {
+      --find-more-bg: #fbfbfb;
+      --text-subtitel: #727272;
+      --green-primary: #46a358;
+      --green-primary-darker: #3a8549;
+      --soft-background: #f2efef;
+      --md-palette-primary-main: #46a358 !important;
+      --md-palette-primary-dark: #3a8549 !important;
+   }
 }
