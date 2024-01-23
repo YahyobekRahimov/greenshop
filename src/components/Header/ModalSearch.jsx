@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useSpring, animated } from "@react-spring/web";
 import Search from "../../images/search.svg?react";
 import ModalCard from "./ModalCard";
 import Data from "../../../data/data.json";
 import { useState, useEffect, useRef } from "react";
+import { IconButton } from "@mui/material";
 
 const Fade = React.forwardRef(function Fade(props, ref) {
    const {
@@ -89,9 +89,9 @@ export default function SpringModal() {
 
    return (
       <div>
-         <Button className="hover:rounded-full" onClick={handleOpen}>
+         <IconButton onClick={handleOpen}>
             <Search />
-         </Button>
+         </IconButton>
          <Modal
             aria-labelledby="spring-modal-title"
             aria-describedby="spring-modal-description"
@@ -128,7 +128,7 @@ export default function SpringModal() {
                         </button>
                      </div>
                   </Typography>
-                  <Typography  
+                  <Typography
                      id="spring-modal-description"
                      sx={{ mt: 2 }}
                   >
