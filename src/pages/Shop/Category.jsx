@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import { addCategory } from "../../redux/filterSlice";
 import Categories from "/data/categories.json";
 
-export default function Category({handleFilter}) {
+export default function Category({ handleFilter }) {
    const [category, setCategory] = useState("all");
    const dispatch = useDispatch();
 
@@ -31,6 +31,16 @@ export default function Category({handleFilter}) {
                label="category"
                onChange={handleChange}
                className="w-[12rem]"
+               size="small"
+               sx={{
+                  borderRadius: "0.8rem",
+                  minHeight: "2rem",
+                  "& .MuiSelect-select": {
+                     minHeight: "2rem",
+                     display: "flex",
+                     alignItems: "center",
+                  },
+               }}
             >
                {Categories.map((category, index) => (
                   <MenuItem key={index} value={category.value}>
