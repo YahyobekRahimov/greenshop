@@ -100,7 +100,10 @@ export default function TransitionsModal() {
                         {loginSpan ? (
                            <Login setOpen={setOpen} />
                         ) : (
-                           <Register setOpen={setOpen} />
+                           <Register
+                              setOpen={setOpen}
+                              setLoginSpan={setLoginSpan}
+                           />
                         )}
                      </div>
                   </div>

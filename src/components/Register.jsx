@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import { TextField } from "@mui/material";
 import { useRef, useState } from "react";
 
-export default function Register({ setOpen }) {
+export default function Register({ setOpen, setLoginSpan }) {
    const usernameRef = useRef();
 
    const emailRef = useRef();
@@ -89,7 +89,7 @@ export default function Register({ setOpen }) {
          ? JSON.parse(localStorage.getItem("users"))
          : [];
       let user = {
-         name: usernameRef.current.value,
+         username: usernameRef.current.value,
          email: emailRef.current.value,
          password: passwordRef.current.value,
       };
@@ -102,7 +102,7 @@ export default function Register({ setOpen }) {
       if (validate()) {
          saveToLocalStorage();
          clearValue();
-         setOpen(false);
+         setLoginSpan(true);
       }
    }
    return (
