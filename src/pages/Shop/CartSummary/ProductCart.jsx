@@ -8,8 +8,11 @@ import {
 } from "../../../redux/cartProductsSlice";
 import TableHead from "./TableHead";
 import SimilarProducts from "./SimilarProducts";
+import { useState } from "react";
 
 export default function ProductCart() {
+  const [checked, setChecked] = useState([true, false]);
+
   const dispatch = useDispatch();
   const data = JSON.parse(localStorage.getItem("productsInCart")) || [];
   // dispatch(addAllProductsToCart(data));
@@ -27,12 +30,14 @@ export default function ProductCart() {
       <div className="mt-16 flex justify-between gap-16 mb-20">
         <div className="text-left  w-[48.75rem]">
           <table className="w-full">
-            <TableHead />
-            <tbody className="bg-green-600 mb-3">
+            <TableHead checked={checked} setChecked={setChecked} />
+            <tbody className="bg-green-600 mb-3 ">
               {items &&
                 items.map((item) => (
                   <Product
                     key={item.id}
+                    checked={checked}
+                    setChecked={setChecked}
                     product={item}
                     quantity={item.quantity}
                     onDelete={() => handleDelete(item.id)}
