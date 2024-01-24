@@ -6,10 +6,10 @@ export function setCookie(name, value, expirationHours) {
 }
 
 // Example: Set a cookie named "userInfo" with value "John Doe" that expires in 10 hours
-// setCookie("userInfo", "John Doe", 10);
+// * setCookie("userInfo", "John Doe", 10);
 
 // Example: Set a cookie named "userToken" with value "abc123" that expires in 10 days
-// setCookie("userToken", "abc123", 10 * 24);
+// * setCookie("userToken", "abc123", 10 * 24);
 
 export function getCookie(name) {
    let decodedCookie = decodeURIComponent(document.cookie);
@@ -29,11 +29,7 @@ export function getCookie(name) {
 }
 
 // Example: Get the value of the "userInfo" cookie
-let userInfoValue = getCookie("userInfo");
+// * let userInfoValue = getCookie("userInfo");
 
 // Example: Get the value of the "userToken" cookie
-let userTokenValue = getCookie("userToken");
-
-// Use the retrieved values as needed
-console.log("userInfo:", userInfoValue);
-console.log("userToken:", userTokenValue);
+// * let userTokenValue = getCookie("userToken");

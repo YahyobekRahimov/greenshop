@@ -1,8 +1,8 @@
-import Button from "./Button";
+import { Button } from "@mui/material";
 import { TextField } from "@mui/material";
 import { useRef, useState } from "react";
 
-export default function Registr({ setOpen }) {
+export default function Register({ setOpen }) {
    const usernameRef = useRef();
 
    const emailRef = useRef();
@@ -105,10 +105,7 @@ export default function Registr({ setOpen }) {
       }
    }
    return (
-      <div className="flex flex-col items-center">
-         <h2 className="text-sm mb-[0.875rem] text-center">
-            Enter your username, email and password to register.
-         </h2>
+      <div className="flex flex-col items-center justify-center">
          <form className="w-full" onSubmit={handleSubmit}>
             <div className="flex flex-col w-full gap-4 mb-4">
                <TextField
@@ -179,8 +176,12 @@ export default function Registr({ setOpen }) {
                   ""
                )}
             </div>
-            <Button classes="hover:bg-primaryDark text-white rounded-md bg-primary w-full py-[0.88rem] ">
-               Login
+            <Button
+               variant="contained"
+               size="large"
+               sx={{ width: "100%", marginTop: "2rem" }}
+            >
+               Register
             </Button>
          </form>
       </div>
