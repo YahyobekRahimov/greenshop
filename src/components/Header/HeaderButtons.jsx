@@ -5,6 +5,7 @@ import ModalSearch from "./ModalSearch";
 import ColorBadge from "../ColorBadge";
 import LoginButton from "./LoginButtons";
 import ModalLogin from "../ModalLogin";
+import LikedProductsIcon from "./LikedProductsIcon";
 
 export default function HeaderButtons({
    handleclick,
@@ -18,6 +19,7 @@ export default function HeaderButtons({
             className={isModalSearchVisible && "block cursor-pointer"}
          />
          <ColorBadge />
+         <LikedProductsIcon />
          <ModalLogin />
       </div>
    );
