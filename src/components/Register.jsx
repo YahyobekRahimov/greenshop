@@ -75,16 +75,6 @@ export default function Register({ setOpen, setLoginSpan }) {
       confirmRef.current.value = "";
    }
    function saveToLocalStorage() {
-      const userData = {
-         name: usernameRef.current.value,
-         email: emailRef.current.value,
-         password: passwordRef.current.value,
-      };
-
-      const userDataString = JSON.stringify(userData);
-
-      document.cookie = `username = ${usernameRef.current.value}`;
-
       let data = localStorage.getItem("users")
          ? JSON.parse(localStorage.getItem("users"))
          : [];

@@ -2,6 +2,7 @@ import { Button } from "@mui/material";
 import { TextField } from "@mui/material";
 import { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { setCookie, getCookie } from "../JavaScript/Cookies";
 
 export default function Login({ setOpen }) {
    const usernameEmail = useRef();
@@ -51,6 +52,11 @@ export default function Login({ setOpen }) {
          );
          if (users[index].password === passwordRef.current.value) {
             setOpen(false);
+            setCookie(
+               "userInfo",
+               `${users[index].username}|Divider|${users[index].email}`,
+               24 * 60 // 2 months
+            );
             navigate("/");
          }
       }

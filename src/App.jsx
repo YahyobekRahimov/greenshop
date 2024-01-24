@@ -13,13 +13,13 @@ import Home from "./pages/Home/Home";
 import ProductView from "./pages/ProductView";
 import ProductCart from "./pages/Shop/CartSummary/ProductCart";
 import ProductCheckout from "./pages/Shop/CheckOut/ProductCheckout";
-import MyAccount from "./pages/MyAccount";
 import Shop from "./pages/Shop/Shop";
 import PlantCare from "./pages/PlantCare";
 import Blogs from "./pages/Blogs";
 import FindMore from "./pages/Home/FindMore";
 import ScrollToTopOnNavigation from "/src/JavaScript/ScrollToTopOnNavigation.js";
 import Wishlist from "./pages/Shop/Wishlist/Wishlist";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
    return (
@@ -38,6 +38,7 @@ function App() {
             <Route path="/plant-care" element={<PlantCare />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/shop/wishlist" element={<Wishlist />} />
+            <Route path="/profile" element={<Profile />} />
          </Routes>
          <Footer />
       </BrowserRouter>
