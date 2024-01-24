@@ -23,11 +23,8 @@ export default function LikedProducts() {
    );
 
    return (
-      <IconButton>
-         <StyledBadge
-            badgeContent={likedProductsLength}
-            onClick={() => navigate("/shop/wishlist")}
-         >
+      <IconButton onClick={() => navigate("/shop/wishlist")}>
+         <StyledBadge badgeContent={likedProductsLength}>
             <HeartIcon className="w-6 h-6 stroke-black stroke-[2px]" />
          </StyledBadge>
       </IconButton>
