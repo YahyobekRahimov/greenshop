@@ -7,6 +7,7 @@ import {
 import CheckCircle from "/src/images/check-circle.svg?react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { Button } from "@mui/material";
 
 export default function AddToCart({ product, state, className }) {
    const dispatch = useDispatch();
@@ -29,11 +30,18 @@ export default function AddToCart({ product, state, className }) {
       setAdded(true);
    }
    return (
-      <div
+      <Button
          onClick={handleAddClick}
          className={`w-max h-max px-3 py-2 rounded-lg border-2 border-primary flex items-center bg-primary text-white ${
             added ? "gap-2 bg-transparent" : "fill-white"
          }`}
+         variant={added ? "outlined" : "contained"}
+         sx={{
+            textTransform: "capitalize",
+            padding: "0.5rem 0.75rem",
+            fontSize: "1.2rem",
+            fontFamily: "Cera Pro",
+         }}
       >
          <span className={`${added ? "text-primary" : ""}`}>
             {added ? "Added" : "Add to cart"}
@@ -41,8 +49,9 @@ export default function AddToCart({ product, state, className }) {
          {added ? (
             <CheckCircle className={`w-[1.75rem] h-[1.75rem]`} />
          ) : (
-            <CartIcon className={`w-[1.75rem] h-[1.75rem]`} />
+            ""
+            // <CartIcon className={`w-[1.75rem] h-[1.75rem]`} />
          )}
-      </div>
+      </Button>
    );
 }

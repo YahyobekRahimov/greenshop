@@ -4,6 +4,7 @@ import {
    decrementQuantity,
 } from "../../redux/cartProductsSlice";
 import plantImage from "/src/images/plant11.png";
+import Button from "@mui/material/Button";
 
 const Product = ({ product, quantity, onDelete }) => {
    const dispatch = useDispatch();
@@ -69,12 +70,13 @@ const Product = ({ product, quantity, onDelete }) => {
             </button>
          </td>
          <td className="px-6 py-2">
-            <button
+            <Button
+               variant="contained"
                onClick={onDelete}
                className="bg-red-300 text-zinc-800 px-4 py-1 rounded"
             >
-               Delete
-            </button>
+               delete
+            </Button>
          </td>
       </tr>
    );

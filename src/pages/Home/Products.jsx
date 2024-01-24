@@ -7,6 +7,15 @@ import Plant5 from "/src/images/plant5.png";
 import { useNavigate } from "react-router-dom";
 import AddToCart from "../../components/AddToCart";
 import { addAllProductsToCart } from "../../redux/cartProductsSlice";
+import {
+   Button,
+   Card,
+   CardActionArea,
+   CardActions,
+   CardContent,
+   CardMedia,
+   Typography,
+} from "@mui/material";
 
 export default function Products() {
    const navigate = useNavigate();
@@ -76,35 +85,71 @@ export default function Products() {
       <Container>
          <h2 className="text-[2rem] text-center">Products</h2>
          <div className="grid grid-cols-4 justify-items-center gap-y-16 pt-10 pb-10">
-            {products.map((product) => (
-               <div
-                  key={product.id}
-                  className="cursor-pointer shadow-custom w-[17rem] px-6 py-6 rounded-lg bg-softBackground hover:scale-105 duration-200"
-                  onClick={() => handleCardClick(product, Plant5)}
-               >
-                  <img
-                     className="select-none w-[14rem] h-[14rem] object-cover mb-3 border-2 border-solid rounded-lg bg-white"
-                     src={Plant5}
-                     alt={product.name}
-                  />
-                  <h3 className="text-[1.2rem] h-14">
-                     {product.name}
-                  </h3>
-                  <h4 className="font-bold text-primary text-[1.25rem]">
-                     ${product.price}
-                  </h4>
-                  <div className="flex justify-around">
-                     <LikeIcon
-                        product={product}
-                        state={returnState(product)}
-                     />
-                     <AddToCart
-                        product={product}
-                        state={isAddedToCart(product)}
-                     />
-                  </div>
-               </div>
-            ))}
+            {products.map((product) => {
+               return (
+                  <Card
+                     key={product.id}
+                     sx={{
+                        maxWidth: "16rem",
+                        maxHeight: "30rem",
+                     }}
+                  >
+                     <CardActionArea
+                        onClick={() =>
+                           handleCardClick(product, Plant5)
+                        }
+                     >
+                        <CardMedia
+                           component="img"
+                           alt="green iguana"
+                           image={Plant5}
+                           sx={{
+                              backgroundColor: "#FBFBFB",
+                           }}
+                        />
+                        <CardContent>
+                           <div className="min-h-[6rem] flex flex-col justify-between">
+                              <Typography
+                                 gutterBottom
+                                 variant="h5"
+                                 component="div"
+                                 fontSize="1.3rem"
+                                 sx={{ textOverflow: "ellipsis" }}
+                                 fontFamily="Cera Pro"
+                              >
+                                 {product.name}
+                              </Typography>
+                              <Typography
+                                 gutterBottom
+                                 variant="h6"
+                                 component="div"
+                                 className="text-primary"
+                                 fontWeight={600}
+                              >
+                                 ${product.price}
+                              </Typography>
+                           </div>
+                        </CardContent>
+                     </CardActionArea>
+                     <CardActions
+                        sx={{
+                           display: "flex",
+                           justifyContent: "center",
+                        }}
+                     >
+                        <LikeIcon
+                           className="cursor-pointer"
+                           product={product}
+                           state={returnState(product)}
+                        />
+                        <AddToCart
+                           product={product}
+                           state={isAddedToCart(product)}
+                        />
+                     </CardActions>
+                  </Card>
+               );
+            })}
          </div>
       </Container>
    );

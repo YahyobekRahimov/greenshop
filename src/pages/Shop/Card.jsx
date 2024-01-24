@@ -111,7 +111,7 @@ export default function Products(props) {
                   onClick={() => handleCardClick(product, PlantImage)}
                >
                   <img
-                     className="w-[14rem] h-[14rem] object-cover mb-3 transition duration-300 transform hover:scale-110"
+                     className="w-[14rem] h-[14rem] object-cover mb-3 transition duration-300 transform"
                      src={PlantImage}
                      alt={product.name}
                   />
