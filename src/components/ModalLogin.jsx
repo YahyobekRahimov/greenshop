@@ -6,7 +6,7 @@ import Fade from "@mui/material/Fade";
 import LoginButton from "./Header/LoginButtons";
 import Login from "./Login";
 import { useState } from "react";
-import Registr from "./Registr";
+import Register from "./Register";
 import Button from "@mui/material/Button";
 
 const style = {
@@ -15,24 +15,27 @@ const style = {
    left: "50%",
    transform: "translate(-50%, -50%)",
    width: 500,
-   height: 600,
+   maxHeight: "600px",
+   height: "100%",
    bgcolor: "background.paper",
    boxShadow: 24,
    borderRadius: 4,
+   // display: "flex",
+   // justifyContent: "center",
+   // alignItems: "center",
 };
 
 export default function TransitionsModal() {
    const [open, setOpen] = React.useState(false);
    const handleOpen = () => setOpen(true);
    const handleClose = () => setOpen(false);
-   const [loginspan, setLoginSpan] = useState();
-   const [registrspan, setRegistrSpan] = useState(false);
+   const [loginSpan, setLoginSpan] = useState(true);
 
    function clickSpanLogin() {
       setLoginSpan(true);
    }
 
-   function clickSpanRegistr() {
+   function clickSpanRegister() {
       setLoginSpan(false);
    }
    return (
@@ -55,37 +58,54 @@ export default function TransitionsModal() {
          >
             <Fade in={open}>
                <Box sx={style}>
-                  <div className="flex flex-col gap-14 px-[6.25rem] py-[3.125rem]">
-                     <h1 className="cursor-pointer text-center text-xl font-medium">
+                  <div
+                     className={`flex max-h-[600px] h-full flex-col justify-around px-[6.25rem] py-[3.125rem]`}
+                  >
+                     <div className="gap-5 flex flex-col w-full text-center text-xl font-medium">
                         <div className="flex justify-center items-center gap-3">
-                           <button
+                           <Button
+                              sx={{
+                                 color: loginSpan
+                                    ? "var(--green-primary)"
+                                    : "black",
+                                 textTransform: "capitalize",
+                                 fontFamily: "Cera Pro",
+                                 fontSize: "1.3rem",
+                              }}
+                              variant="text"
                               onClick={clickSpanLogin}
-                              className={`button-link ${
-                                 loginspan
-                                    ? "text-green-700"
-                                    : "text-black"
-                              }`}
                            >
                               Login
-                           </button>
+                           </Button>
                            <span>|</span>
-                           <button
-                              onClick={clickSpanRegistr}
-                              className={`button-link ${
-                                 loginspan
-                                    ? "text-black"
-                                    : "text-green-700"
-                              }`}
+                           <Button
+                              sx={{
+                                 color: loginSpan
+                                    ? "black"
+                                    : "var(--green-primary)",
+                                 fontFamily: "Cera Pro",
+                                 fontSize: "1.3rem",
+                                 textTransform: "capitalize",
+                              }}
+                              variant="text"
+                              onClick={clickSpanRegister}
                            >
                               Register
-                           </button>
+                           </Button>
                         </div>
-                     </h1>
-                     {loginspan ? (
-                        <Login setOpen={setOpen} />
-                     ) : (
-                        <Registr setOpen={setOpen} />
-                     )}
+                        <h2 className="text-sm mb-[0.875rem]">
+                           {loginSpan
+                              ? "Enter your username and password to login."
+                              : "Please, enter a username, email and password to register"}
+                        </h2>
+                     </div>
+                     <div>
+                        {loginSpan ? (
+                           <Login setOpen={setOpen} />
+                        ) : (
+                           <Register setOpen={setOpen} />
+                        )}
+                     </div>
                   </div>
                </Box>
             </Fade>
