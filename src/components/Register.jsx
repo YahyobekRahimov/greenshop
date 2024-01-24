@@ -11,15 +11,15 @@ export default function Register({ setOpen }) {
 
    const confirmRef = useRef();
 
-   const [nameError, setNameError] = useState(false);
-   const [emailError, setEmailError] = useState(false);
-   const [passwordError, setPasswordError] = useState(false);
-   const [confirmError, setConfirmError] = useState(false);
-   const [confirmCorrect, setConfirmCorrectError] = useState(false);
+   const [nameError, setNameError] = useState("");
+   const [emailError, setEmailError] = useState("");
+   const [passwordError, setPasswordError] = useState("");
+   const [confirmError, setConfirmError] = useState("");
+   const [passwordMatch, setPasswordMatch] = useState("");
 
    function validate() {
       if (!usernameRef.current.value) {
-         setNameError(true);
+         setNameError("Please, enter a username");
          return false;
       }
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -27,23 +27,24 @@ export default function Register({ setOpen }) {
          !emailRef.current.value ||
          !emailPattern.test(emailRef.current.value)
       ) {
-         setEmailError(true);
+         setEmailError("Please, enter a valid email");
+         return false;
       }
       if (!passwordRef.current.value) {
-         setPasswordError(true);
+         setPasswordError("Please, enter a password");
          return false;
       }
       if (!confirmRef.current.value) {
-         setConfirmError(true);
+         setConfirmError("Please, confirm your password");
          return false;
       }
       if (passwordRef.current.value !== confirmRef.current.value) {
-         setConfirmCorrectError(true);
+         setPasswordMatch("Passwords don't match");
          return false;
       } else if (
          passwordRef.current.value === confirmRef.current.value
       ) {
-         setConfirmCorrectError(false);
+         setPasswordMatch("");
       }
       return true;
    }
@@ -107,76 +108,59 @@ export default function Register({ setOpen }) {
    return (
       <div className="flex flex-col items-center justify-center">
          <form className="w-full" onSubmit={handleSubmit}>
-            <div className="flex flex-col w-full gap-4 mb-4">
-               <TextField
-                  fullWidth
-                  onChange={changeInput}
-                  label="Username"
-                  variant="outlined"
-                  inputRef={usernameRef}
-               />
-               {nameError && nameError ? (
-                  <span className="text-red-800 mt-[-1rem] mb-[0.5rem]">
-                     Please, enter username
+            <div className="flex flex-col w-full mb-4">
+               <div className="pt-4">
+                  <TextField
+                     fullWidth
+                     type="text"
+                     onChange={changeInput}
+                     label="Username"
+                     variant="outlined"
+                     inputRef={usernameRef}
+                  />
+                  <span className="text-red-700">{nameError}</span>
+               </div>
+               <div className="pt-4">
+                  <TextField
+                     type="email"
+                     fullWidth
+                     onChange={changeInputEmail}
+                     label="Enter your email address"
+                     variant="outlined"
+                     inputRef={emailRef}
+                  />
+                  <span className="text-red-700">{emailError}</span>
+               </div>
+               <div className="pt-4">
+                  <TextField
+                     fullWidth
+                     type="password"
+                     onChange={changeInputPassword}
+                     label="Password"
+                     variant="outlined"
+                     inputRef={passwordRef}
+                  />
+                  <span className="text-red-700">
+                     {passwordError}
                   </span>
-               ) : (
-                  ""
-               )}
-               <TextField
-                  fullWidth
-                  onChange={changeInputEmail}
-                  label="Enter your email address"
-                  variant="outlined"
-                  inputRef={emailRef}
-               />
-               {emailError && emailError ? (
-                  <span className="text-red-800 mt-[-1rem] mb-[0.5rem]">
-                     Please, enter your email
+               </div>
+               <div className="pt-4">
+                  <TextField
+                     fullWidth
+                     onChange={changeInputConfirm}
+                     label="Confirm Password"
+                     variant="outlined"
+                     type="password"
+                     inputRef={confirmRef}
+                  />
+                  <span className="text-red-700">{confirmError}</span>
+                  <span className="text-red-700">
+                     {passwordMatch}
                   </span>
-               ) : (
-                  ""
-               )}
-
-               <TextField
-                  fullWidth
-                  onChange={changeInputPassword}
-                  label="Password"
-                  variant="outlined"
-                  type="password"
-                  inputRef={passwordRef}
-               />
-               {passwordError && passwordError ? (
-                  <span className="text-red-800 mt-[-1rem] mb-[0.5rem]">
-                     Please, enter password
-                  </span>
-               ) : (
-                  ""
-               )}
-
-               <TextField
-                  fullWidth
-                  onChange={changeInputConfirm}
-                  label="Confirm Password"
-                  variant="outlined"
-                  type="password"
-                  inputRef={confirmRef}
-               />
-               {confirmError && confirmError ? (
-                  <span className="text-red-800 mt-[-1rem] mb-[0.5rem]">
-                     Please enter again Password
-                  </span>
-               ) : (
-                  ""
-               )}
-               {confirmCorrect && confirmCorrect ? (
-                  <span className="text-red-800 mt-[-1rem] mb-[0.5rem]">
-                     Please enter correct Password
-                  </span>
-               ) : (
-                  ""
-               )}
+               </div>
             </div>
             <Button
+               type="submit"
                variant="contained"
                size="large"
                sx={{ width: "100%", marginTop: "2rem" }}

@@ -20,9 +20,6 @@ const style = {
    bgcolor: "background.paper",
    boxShadow: 24,
    borderRadius: 4,
-   // display: "flex",
-   // justifyContent: "center",
-   // alignItems: "center",
 };
 
 export default function TransitionsModal() {
