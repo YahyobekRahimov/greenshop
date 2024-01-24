@@ -6,12 +6,15 @@ import { useState } from "react";
 import LikeIcon from "../components/LikeIcon";
 import PlantImage from "/src/images/plant13.png";
 import Container from "../components/Container";
+import { Button } from "@mui/material";
+import AddToCart from "../components/AddToCart";
 
 export default function ProductDetails() {
    const location = useLocation();
    const id = location.pathname.trim().slice(6);
    const index = data.findIndex((product) => product.id == id);
    const ProductData = data[index];
+   const [activeSize, setActiveSize] = useState(0);
    const [counter, setCounter] = useState(1);
    function decrement() {
       if (counter == 1) {
@@ -21,6 +24,75 @@ export default function ProductDetails() {
    }
    function increment() {
       setCounter(counter + 1);
+   }
+
+   // * getting the products added to cart from localStorage
+   let productsInCart =
+      JSON.parse(localStorage.getItem("productsInCart")) || [];
+
+   // * returns whether the product added to cart or not
+   function isAddedToCart(product) {
+      if (!productsInCart.length) {
+         return false;
+      }
+
+      try {
+         for (let i = 0; i < productsInCart.length; i++) {
+            const element = productsInCart[i];
+            if (!element) {
+               continue;
+            }
+            if (element.id == product.id) {
+               return true;
+            }
+         }
+      } catch (error) {
+         console.log(error);
+      }
+      return false;
+   }
+
+   // * getting the liked products from local storage
+   let likedProducts =
+      JSON.parse(localStorage.getItem("likedProducts")) || [];
+
+   function returnState(product) {
+      if (!(likedProducts.length > 1)) {
+         return false;
+      }
+      try {
+         for (let i = 0; i < likedProducts.length; i++) {
+            let element = likedProducts[i];
+            if (element == null) {
+               continue;
+            }
+            if (product.id === element.id) {
+               return true;
+            }
+         }
+      } catch (error) {
+         console.log(error);
+      }
+      return false;
+   }
+   function returnState(product) {
+      if (!(likedProducts.length > 1)) {
+         return false;
+      }
+      try {
+         for (let i = 0; i < likedProducts.length; i++) {
+            let element = likedProducts[i];
+            if (element == null) {
+               continue;
+            }
+            if (product.id === element.id) {
+               return true;
+            }
+         }
+      } catch (error) {
+         console.log(error);
+      }
+      return false;
    }
 
    return (
@@ -40,16 +112,16 @@ export default function ProductDetails() {
                />
             </div>
             <div className="w-[50%]">
-               <h1 className="text-[1.25rem] font-bold mb-[1rem]">
+               <h2 className="font-bold mb-[1rem] text-[1.75rem]">
                   {ProductData.name}
-               </h1>
+               </h2>
                <h3 className="text-[1.375rem] text-primary mb-[0.625rem]">
                   ${ProductData.price}
                </h3>
                <div className="mb-[1rem] w-[100%] h-[0.3px] bg-gray-300"></div>
-               <h2 className="font-medium text-[1rem] mb-[0.625rem]">
+               <h3 className="font-bold text-[1rem] mb-[0.625rem]">
                   Short Description:
-               </h2>
+               </h3>
                <p className="text-gray-600 mb-[1.5rem]">
                   {ProductData.description} The ceramic cylinder
                   planters come with a wooden stand to help elevate
@@ -57,12 +129,30 @@ export default function ProductDetails() {
                   planters come with a wooden stand to help elevate
                   your plants off the ground.
                </p>
+               <h3>Size:</h3>
+               <div className="flex gap-5 pt-3 pb-6">
+                  {ProductData.sizes.map((size, index) => {
+                     return (
+                        <div
+                           key={index}
+                           onClick={() => setActiveSize(index)}
+                           className={`rounded-full w-[1.75rem] h-[1.75rem] flex items-center justify-center border-2 border-solid cursor-pointer ${
+                              index == activeSize
+                                 ? "text-primary border-primary font-black"
+                                 : "text-textSecondary border-textSecondary"
+                           }`}
+                        >
+                           {size}
+                        </div>
+                     );
+                  })}
+               </div>
                <div className="flex gap-5 mb-[1.5rem] items-center">
                   <button
-                     className={`text-xs text-white px-[0.7rem] py-3 bg-primary rounded-full
+                     className={`text-[1.7rem] flex items-center justify-center text-white px-[0.7rem] bg-primary rounded-full
                 ${
                    counter == 1
-                      ? "cursor-not-allowed"
+                      ? "cursor-not-allowed opacity-55"
                       : "cursor-pointer"
                 }
              `}
@@ -70,20 +160,37 @@ export default function ProductDetails() {
                   >
                      -
                   </button>
-                  <h1 className="text-xl">{counter}</h1>
+                  <h1 className="text-xl w-[0.5rem] flex justify-center items-center">
+                     {counter}
+                  </h1>
                   <button
-                     className="text-xs text-white px-[0.7rem] py-3 bg-primary rounded-full"
+                     className="text-[1.7rem] flex items-center justify-center text-white px-[0.7rem] bg-primary rounded-full"
                      onClick={increment}
                   >
                      +
                   </button>
-                  <button className="px-[2rem] py-[0.625rem] border-2 border-solid border-green-700 rounded-md text-green-700 hover:bg-primary hover:text-white">
-                     By Now
-                  </button>
-                  <button className=" px-[1.25rem] py-[0.625rem] border-2 border-solid border-green-700 rounded-md text-green-700 hover:bg-primary hover:text-white">
-                     Add to Card
-                  </button>
-                  <LikeIcon />
+                  <Button
+                     size="large"
+                     variant="contained"
+                     className="px-[2rem] py-[0.625rem] border-2 border-solid border-green-700 rounded-md text-green-700 hover:bg-primary hover:text-white"
+                     sx={{
+                        textTransform: "capitalize",
+                        padding: "0.5rem 1rem",
+                        fontSize: "1.2rem",
+                        fontFamily: "Cera Pro",
+                     }}
+                  >
+                     Buy Now
+                  </Button>
+                  <AddToCart
+                     product={ProductData}
+                     state={isAddedToCart(ProductData)}
+                  />
+                  <LikeIcon
+                     className="cursor-pointer"
+                     product={ProductData}
+                     state={returnState(ProductData)}
+                  />
                </div>
                <h2 className=" text-gray-600 mb-[0.625rem]">
                   Category:{" "}

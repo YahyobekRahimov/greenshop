@@ -117,7 +117,7 @@ export default function SpringModal() {
                         <input
                            ref={ModalInputRef}
                            placeholder="What are looking for?"
-                           className="placeholder:text-gray-400 text-[1.5rem] ml-5 w-full p-3 duration-200 outline-none "
+                           className="placeholder:text-gray-400 text-[1.5rem] rounded-l-lg w-full p-3 duration-200 outline-none "
                            type="text"
                         />
                         <button
