@@ -1,5 +1,5 @@
 import { MenuItem, Select } from "@mui/material";
-import { React } from "react";
+import { React, useState } from "react";
 
 const MyInputs = ({
   label = "",
@@ -11,6 +11,12 @@ const MyInputs = ({
   options,
   ...otherProps
 }) => {
+  const [selectedValue, setSelectedValue] = useState(options);
+
+  const handleChange = (event) => {
+    setSelectedValue(event.target.value);
+  };
+
   if (showSelect) {
     const optionsArray = options.split(",").map((option) => option.trim());
 
@@ -21,11 +27,12 @@ const MyInputs = ({
             {label} {required && <span className="text-red-700">*</span>}
           </label>
           <Select
-            value={name}
+            value={selectedValue}
             size="small"
             className="w-full "
             name={name}
             required={required}
+            onChange={handleChange}
             {...otherProps}
           >
             {optionsArray.map((option) => (
