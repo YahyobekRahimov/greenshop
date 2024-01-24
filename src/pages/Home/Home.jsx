@@ -11,7 +11,7 @@ export default function Home() {
       <main>
          <Hero />
          <Products />
-         <Container classes="flex mb-10 mt-3">
+         <Container classes="flex pt-[8.5rem] gap-[1.75rem]">
             <FindMore
                image={FindMoreImagesOne}
                textTitel="Summer cactus& succulents"

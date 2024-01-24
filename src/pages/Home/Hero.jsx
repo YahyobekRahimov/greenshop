@@ -32,7 +32,7 @@ export default function Hero() {
                   <h3 className="uppercase text-[0.875rem] text-textPrimary font-medium">
                      Welcome to Greenshop
                   </h3>
-                  <h1 className="uppercase font-black text-[4.375rem]">
+                  <h1 className="uppercase font-black text-[4.375rem] text-textPrimary">
                      Let's make a better{" "}
                      <span className="text-primary">planet</span>
                   </h1>
@@ -53,7 +53,7 @@ export default function Hero() {
                   <h3 className="uppercase text-[0.875rem] text-textPrimary font-medium">
                      Welcome to Greenshop
                   </h3>
-                  <h1 className="uppercase font-black text-[4.375rem]">
+                  <h1 className="uppercase font-black 0 text-textPrimary">
                      Let's make a better{" "}
                      <span className="text-primary">planet</span>
                   </h1>
@@ -74,7 +74,7 @@ export default function Hero() {
                   <h3 className="uppercase text-[0.875rem] text-textPrimary font-medium">
                      Welcome to Greenshop
                   </h3>
-                  <h1 className="uppercase font-black text-[4.375rem]">
+                  <h1 className="uppercase font-black 0 text-textPrimary">
                      Let's make a better{" "}
                      <span className="text-primary">planet</span>
                   </h1>
