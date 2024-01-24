@@ -10,6 +10,7 @@ export default function ProductCheckout() {
         <FormInputs />
         <OrderedProducts />
       </div>
+
     </Container>
   );
 }
