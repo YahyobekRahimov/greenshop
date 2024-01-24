@@ -19,7 +19,7 @@ export default function FindMore(props) {
             </p>
             <Button
                image={<IconRight />}
-               classes="rounded-lg hover:bg-primaryDark text-white"
+               className="rounded-lg hover:bg-primaryDark text-white"
                variant="contained"
                sx={{
                   textTransform: "capitalize",

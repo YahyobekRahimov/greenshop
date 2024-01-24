@@ -37,9 +37,9 @@ export default function TransitionsModal() {
    }
    return (
       <div>
-         <Button onClick={handleOpen} variant="contained">
-            <LoginButton />
-         </Button>
+         <div>
+            <LoginButton handleOpen={handleOpen} />
+         </div>
          <Modal
             aria-labelledby="transition-modal-title"
             aria-describedby="transition-modal-description"
