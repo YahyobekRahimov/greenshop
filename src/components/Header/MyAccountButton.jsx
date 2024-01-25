@@ -1,13 +1,26 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Divider, IconButton } from "@mui/material";
 import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import MenuItemBase from "@mui/material/MenuItem";
 
+import { deleteCookie, getCookie } from "../../JavaScript/Cookies";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import { deleteCookie } from "../../JavaScript/Cookies";
-import { Delete } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
+
+import UserIcon from "/src/images/user.svg?react";
+import ShoppingBagIcon from "/src/images/shopping-bag.svg?react";
+
+import { styled } from "@mui/system";
+
+const MenuItem = styled(MenuItemBase)(
+   ({ theme }) => `
+   display: flex;
+   gap: 1rem;
+   padding-left: 1rem;
+   font-family: "Cera Pro";
+`
+);
 
 export default function MyAccountButton() {
    const [anchorEl, setAnchorEl] = useState(null);
@@ -32,6 +45,8 @@ export default function MyAccountButton() {
       deleteCookie("userInfo");
       navigate("/");
    }
+   const [username, email] = getCookie("userInfo").split("|Divider|");
+
    return (
       <div>
          <IconButton
@@ -42,8 +57,16 @@ export default function MyAccountButton() {
             onClick={handleClick}
             variant="contained"
             size="large"
+            sx={{
+               display: "flex",
+               flexDirection: "column",
+               position: "relative",
+            }}
          >
             <AccountCircleIcon fontSize="large" />
+            <span className="text-[0.8rem] absolute bottom-[-0.1rem]">
+               {username}
+            </span>
          </IconButton>
          <Menu
             id="demo-positioned-menu"
@@ -60,9 +83,16 @@ export default function MyAccountButton() {
                horizontal: "left",
             }}
          >
-            <MenuItem onClick={handleProfileClick}>Profile</MenuItem>
+            <MenuItem onClick={handleProfileClick}>
+               <UserIcon className="h-[1.4rem]" />
+               <span>Profile</span>
+            </MenuItem>
             <MenuItem onClick={handleMyAccountClick}>
-               My account
+               <ShoppingBagIcon className="h-[1.4rem]" />
+               My orders
+            </MenuItem>
+            <MenuItem onClick={handleMyAccountClick}>
+               Support
             </MenuItem>
             <Divider />
             <MenuItem onClick={handleLogout}>Logout</MenuItem>
