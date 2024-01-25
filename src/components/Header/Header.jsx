@@ -86,6 +86,7 @@ export default function Header() {
                      }
                   })}
                </Breadcrumbs>
+               <NavLink to="/profile">Profile</NavLink>
             </Container>
          )}
       </div>
