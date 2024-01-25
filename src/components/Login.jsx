@@ -14,6 +14,7 @@ export default function Login({ setOpen }) {
    const navigate = useNavigate();
 
    function validate() {
+      let hasNoError = true;
       if (
          !usernameEmail.current.value ||
          usernameEmail.current.value.length <= 3
@@ -21,21 +22,19 @@ export default function Login({ setOpen }) {
          setUsernameEmailError(
             "Please, enter a valid username or email"
          );
-         return false;
+         hasNoError = false;
       } else {
          setUsernameEmailError("");
       }
 
       if (!passwordRef.current.value) {
-         setPasswordError(
-            "You have entered an incorrect email or password"
-         );
-         return false;
+         setPasswordError("You must enter your password");
+         hasNoError = false;
       } else {
          setPasswordError("");
       }
 
-      return true;
+      return hasNoError;
    }
 
    function handleSubmit(e) {
@@ -50,7 +49,11 @@ export default function Login({ setOpen }) {
                user.username === usernameEmail.current.value ||
                user.email === usernameEmail.current.value
          );
-         if (users[index].password === passwordRef.current.value) {
+
+         if (
+            index !== -1 &&
+            users[index].password === passwordRef.current.value
+         ) {
             setOpen(false);
             setCookie(
                "userInfo",
@@ -58,6 +61,11 @@ export default function Login({ setOpen }) {
                24 * 60 // 2 months
             );
             navigate("/");
+         } else {
+            console.log("incorrect password");
+            setPasswordError(
+               "You have entered an incorrect email or password"
+            );
          }
       }
    }
@@ -67,6 +75,7 @@ export default function Login({ setOpen }) {
             <div className="flex flex-col w-full gap-[1rem]">
                <div>
                   <TextField
+                     autoFocus
                      fullWidth
                      label="Username or Email"
                      variant="outlined"

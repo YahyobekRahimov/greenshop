@@ -18,9 +18,10 @@ export default function Register({ setOpen, setLoginSpan }) {
    const [passwordMatch, setPasswordMatch] = useState("");
 
    function validate() {
+      let hasNoError = true;
       if (!usernameRef.current.value) {
          setNameError("Please, enter a username");
-         return false;
+         hasNoError = false;
       }
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (
@@ -28,25 +29,26 @@ export default function Register({ setOpen, setLoginSpan }) {
          !emailPattern.test(emailRef.current.value)
       ) {
          setEmailError("Please, enter a valid email");
-         return false;
+         hasNoError = false;
       }
       if (!passwordRef.current.value) {
          setPasswordError("Please, enter a password");
-         return false;
+         hasNoError = false;
       }
       if (!confirmRef.current.value) {
          setConfirmError("Please, confirm your password");
-         return false;
+         hasNoError = false;
       }
       if (passwordRef.current.value !== confirmRef.current.value) {
          setPasswordMatch("Passwords don't match");
-         return false;
+         hasNoError = false;
       } else if (
          passwordRef.current.value === confirmRef.current.value
       ) {
          setPasswordMatch("");
+         hasNoError = false;
       }
-      return true;
+      return hasNoError;
    }
    function changeInput(e) {
       if (e.target.value.length > 1) {
@@ -102,6 +104,7 @@ export default function Register({ setOpen, setLoginSpan }) {
                <div className="pt-4">
                   <TextField
                      fullWidth
+                     autoFocus
                      type="text"
                      onChange={changeInput}
                      label="Username"
@@ -110,7 +113,7 @@ export default function Register({ setOpen, setLoginSpan }) {
                   />
                   <span className="text-red-700">{nameError}</span>
                </div>
-               <div className="pt-4">
+               <div className={nameError ? "pt-2" : "pt-4"}>
                   <TextField
                      type="email"
                      fullWidth
@@ -121,7 +124,7 @@ export default function Register({ setOpen, setLoginSpan }) {
                   />
                   <span className="text-red-700">{emailError}</span>
                </div>
-               <div className="pt-4">
+               <div className={emailError ? "pt-2" : "pt-4"}>
                   <TextField
                      fullWidth
                      type="password"
@@ -134,7 +137,7 @@ export default function Register({ setOpen, setLoginSpan }) {
                      {passwordError}
                   </span>
                </div>
-               <div className="pt-4">
+               <div className={passwordError ? "pt-2" : "pt-4"}>
                   <TextField
                      fullWidth
                      onChange={changeInputConfirm}
