@@ -8,6 +8,8 @@ import Login from "./Login";
 import { useState } from "react";
 import Register from "./Register";
 import Button from "@mui/material/Button";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleLoginWindow } from "../redux/loginWindowSlice";
 
 const style = {
    position: "absolute",
@@ -26,15 +28,12 @@ export default function TransitionsModal() {
    const [open, setOpen] = React.useState(false);
    const handleOpen = () => setOpen(true);
    const handleClose = () => setOpen(false);
-   const [loginSpan, setLoginSpan] = useState(true);
+   const loginWindowOpen = useSelector(
+      (state) => state.loginWindowSlice
+   );
+   console.log(loginWindowOpen);
+   const dispatch = useDispatch();
 
-   function clickSpanLogin() {
-      setLoginSpan(true);
-   }
-
-   function clickSpanRegister() {
-      setLoginSpan(false);
-   }
    return (
       <div>
          <div>
@@ -62,7 +61,7 @@ export default function TransitionsModal() {
                         <div className="flex justify-center items-center gap-3">
                            <Button
                               sx={{
-                                 color: loginSpan
+                                 color: loginWindowOpen
                                     ? "var(--green-primary)"
                                     : "black",
                                  textTransform: "capitalize",
@@ -70,14 +69,16 @@ export default function TransitionsModal() {
                                  fontSize: "1.3rem",
                               }}
                               variant="text"
-                              onClick={clickSpanLogin}
+                              onClick={() =>
+                                 dispatch(toggleLoginWindow(true))
+                              }
                            >
                               Login
                            </Button>
                            <span>|</span>
                            <Button
                               sx={{
-                                 color: loginSpan
+                                 color: loginWindowOpen
                                     ? "black"
                                     : "var(--green-primary)",
                                  fontFamily: "Cera Pro",
@@ -85,25 +86,24 @@ export default function TransitionsModal() {
                                  textTransform: "capitalize",
                               }}
                               variant="text"
-                              onClick={clickSpanRegister}
+                              onClick={() =>
+                                 dispatch(toggleLoginWindow(false))
+                              }
                            >
                               Register
                            </Button>
                         </div>
                         <h2 className="text-sm mb-[0.875rem]">
-                           {loginSpan
+                           {loginWindowOpen
                               ? "Enter your username and password to login."
                               : "Please, enter a username, email and password to register"}
                         </h2>
                      </div>
                      <div>
-                        {loginSpan ? (
+                        {loginWindowOpen ? (
                            <Login setOpen={setOpen} />
                         ) : (
-                           <Register
-                              setOpen={setOpen}
-                              setLoginSpan={setLoginSpan}
-                           />
+                           <Register setOpen={setOpen} />
                         )}
                      </div>
                   </div>

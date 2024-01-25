@@ -1,8 +1,10 @@
 import { Button } from "@mui/material";
 import { TextField } from "@mui/material";
 import { useRef, useState } from "react";
+import { toggleLoginWindow } from "../redux/loginWindowSlice";
+import { useDispatch } from "react-redux";
 
-export default function Register({ setOpen, setLoginSpan }) {
+export default function Register({ setOpen }) {
    const usernameRef = useRef();
 
    const emailRef = useRef();
@@ -10,6 +12,8 @@ export default function Register({ setOpen, setLoginSpan }) {
    const passwordRef = useRef();
 
    const confirmRef = useRef();
+
+   const dispatch = useDispatch();
 
    const [nameError, setNameError] = useState("");
    const [emailError, setEmailError] = useState("");
@@ -19,9 +23,12 @@ export default function Register({ setOpen, setLoginSpan }) {
 
    function validate() {
       let hasNoError = true;
+      let autoFocused = false;
       if (!usernameRef.current.value) {
          setNameError("Please, enter a username");
          hasNoError = false;
+         usernameRef.current.focus();
+         autoFocused = true;
       }
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (
@@ -30,23 +37,26 @@ export default function Register({ setOpen, setLoginSpan }) {
       ) {
          setEmailError("Please, enter a valid email");
          hasNoError = false;
+         !autoFocused ? emailRef.current.focus() : "";
+         autoFocused = true;
       }
       if (!passwordRef.current.value) {
          setPasswordError("Please, enter a password");
          hasNoError = false;
+         !autoFocused ? passwordRef.current.focus() : "";
+         autoFocused = true;
       }
       if (!confirmRef.current.value) {
          setConfirmError("Please, confirm your password");
          hasNoError = false;
+         !autoFocused ? confirmRef.current.focus() : "";
+         autoFocused = true;
       }
       if (passwordRef.current.value !== confirmRef.current.value) {
          setPasswordMatch("Passwords don't match");
          hasNoError = false;
-      } else if (
-         passwordRef.current.value === confirmRef.current.value
-      ) {
-         setPasswordMatch("");
-         hasNoError = false;
+         !autoFocused ? passwordRef.current.focus() : "";
+         autoFocused = true;
       }
       return hasNoError;
    }
@@ -74,7 +84,7 @@ export default function Register({ setOpen, setLoginSpan }) {
       if (validate()) {
          saveToLocalStorage();
          clearValue();
-         setLoginSpan(true);
+         dispatch(toggleLoginWindow(true));
       }
    }
    return (
@@ -121,7 +131,7 @@ export default function Register({ setOpen, setLoginSpan }) {
                            e.target.value.length > 0 &&
                            (passwordError || passwordMatch)
                         ) {
-                           setConfirmError("");
+                           setPasswordError("");
                            setPasswordMatch("");
                         }
                      }}
