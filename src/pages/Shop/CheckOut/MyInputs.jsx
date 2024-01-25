@@ -1,6 +1,8 @@
 import { MenuItem, Select } from "@mui/material";
 import { React, useState } from "react";
 
+import Image from "/src/images/Img.svg?react";
+
 const MyInputs = ({
   label = "",
   type = "text",
@@ -9,6 +11,7 @@ const MyInputs = ({
   showSelect,
   placeholder = "",
   options,
+  text,
   ...otherProps
 }) => {
   const [selectedValue, setSelectedValue] = useState(options);
@@ -41,6 +44,23 @@ const MyInputs = ({
               </MenuItem>
             ))}
           </Select>
+        </form>
+      </div>
+    );
+  }
+
+  if (text) {
+    return (
+      <div className="mb-4 w-[21.875rem] mr-6">
+        <form>
+          <label htmlFor={name} className="block text-gray-700 font-bold mb-2">
+            {label} {required && <span className="text-red-600">*</span>}
+          </label>
+          <div className="flex gap-5">
+            <div className="p-[5px] bg-[#FBFBFB] border border-[#EAEAEA] rounded-3xl">
+              <Image />
+            </div>
+          </div>
         </form>
       </div>
     );
