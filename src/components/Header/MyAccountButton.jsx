@@ -10,6 +10,8 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 import UserIcon from "/src/images/user.svg?react";
 import ShoppingBagIcon from "/src/images/shopping-bag.svg?react";
+import HelpIcon from "/src/images/help.svg?react";
+import LogoutIcon from "/src/images/Logout-black.svg?react";
 
 import { styled } from "@mui/system";
 
@@ -32,19 +34,20 @@ export default function MyAccountButton() {
    const handleClose = () => {
       setAnchorEl(null);
    };
+   function handleMenuItemClick(index) {
+      handleClose();
+      if (index == 0) {
+         navigate("/profile");
+      } else if (index == 1) {
+         navigate("/profile/orders");
+      } else if (index == 2) {
+         navigate("/profile/support");
+      } else if (index == 3) {
+         deleteCookie("userInfo");
+         navigate("/");
+      }
+   }
 
-   function handleProfileClick() {
-      handleClose();
-   }
-   function handleMyAccountClick() {
-      handleClose();
-   }
-
-   function handleLogout() {
-      handleClose();
-      deleteCookie("userInfo");
-      navigate("/");
-   }
    const [username, email] = getCookie("userInfo").split("|Divider|");
 
    return (
@@ -83,19 +86,23 @@ export default function MyAccountButton() {
                horizontal: "left",
             }}
          >
-            <MenuItem onClick={handleProfileClick}>
-               <UserIcon className="h-[1.4rem]" />
+            <MenuItem onClick={() => handleMenuItemClick(0)}>
+               <UserIcon className="w-[1.4rem] h-[1.4rem]" />
                <span>Profile</span>
             </MenuItem>
-            <MenuItem onClick={handleMyAccountClick}>
-               <ShoppingBagIcon className="h-[1.4rem]" />
+            <MenuItem onClick={() => handleMenuItemClick(1)}>
+               <ShoppingBagIcon className="w-[1.4rem] h-[1.4rem]" />
                My orders
             </MenuItem>
-            <MenuItem onClick={handleMyAccountClick}>
+            <MenuItem onClick={() => handleMenuItemClick(2)}>
+               <HelpIcon className="w-[1.4rem] h-[1.4rem]" />
                Support
             </MenuItem>
             <Divider />
-            <MenuItem onClick={handleLogout}>Logout</MenuItem>
+            <MenuItem onClick={() => handleMenuItemClick(3)}>
+               <LogoutIcon className="w-[1.4rem] h-[1.4rem] *:stroke-black" />
+               Logout
+            </MenuItem>
          </Menu>
       </div>
    );
