@@ -50,26 +50,6 @@ export default function Register({ setOpen, setLoginSpan }) {
       }
       return hasNoError;
    }
-   function changeInput(e) {
-      if (e.target.value.length > 1) {
-         setNameError(false);
-      }
-   }
-   function changeInputEmail(e) {
-      if (e.target.value.length > 1) {
-         setEmailError(false);
-      }
-   }
-   function changeInputPassword(e) {
-      if (e.target.value.length > 1) {
-         setPasswordError(false);
-      }
-   }
-   function changeInputConfirm(e) {
-      if (e.target.value.length > 1) {
-         setConfirmError(false);
-      }
-   }
    function clearValue() {
       usernameRef.current.value = "";
       emailRef.current.value = "";
@@ -106,7 +86,11 @@ export default function Register({ setOpen, setLoginSpan }) {
                      fullWidth
                      autoFocus
                      type="text"
-                     onChange={changeInput}
+                     onChange={(e) =>
+                        e.target.value.length > 0 && nameError
+                           ? setNameError("")
+                           : ""
+                     }
                      label="Username"
                      variant="outlined"
                      inputRef={usernameRef}
@@ -117,7 +101,11 @@ export default function Register({ setOpen, setLoginSpan }) {
                   <TextField
                      type="email"
                      fullWidth
-                     onChange={changeInputEmail}
+                     onChange={(e) =>
+                        e.target.value.length > 0 && emailError
+                           ? setEmailError("")
+                           : ""
+                     }
                      label="Enter your email address"
                      variant="outlined"
                      inputRef={emailRef}
@@ -128,7 +116,15 @@ export default function Register({ setOpen, setLoginSpan }) {
                   <TextField
                      fullWidth
                      type="password"
-                     onChange={changeInputPassword}
+                     onChange={(e) => {
+                        if (
+                           e.target.value.length > 0 &&
+                           (passwordError || passwordMatch)
+                        ) {
+                           setConfirmError("");
+                           setPasswordMatch("");
+                        }
+                     }}
                      label="Password"
                      variant="outlined"
                      inputRef={passwordRef}
@@ -140,15 +136,22 @@ export default function Register({ setOpen, setLoginSpan }) {
                <div className={passwordError ? "pt-2" : "pt-4"}>
                   <TextField
                      fullWidth
-                     onChange={changeInputConfirm}
+                     onChange={(e) => {
+                        if (
+                           e.target.value.length > 0 &&
+                           (confirmError || passwordMatch)
+                        ) {
+                           setConfirmError("");
+                           setPasswordMatch("");
+                        }
+                     }}
                      label="Confirm Password"
                      variant="outlined"
                      type="password"
                      inputRef={confirmRef}
                   />
-                  <span className="text-red-700">{confirmError}</span>
                   <span className="text-red-700">
-                     {passwordMatch}
+                     {confirmError ? confirmError : passwordMatch}
                   </span>
                </div>
             </div>
