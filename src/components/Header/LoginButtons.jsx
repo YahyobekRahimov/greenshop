@@ -6,10 +6,8 @@ import { Button } from "@mui/material";
 
 export default function LoginButton({ handleOpen }) {
    const cookie = getCookie("userInfo");
-   console.log(cookie);
    if (cookie) {
       const [username, email] = cookie.split("|Divider|");
-      console.log(username, email);
    }
    return (
       <div className="flex items-center gap-1">

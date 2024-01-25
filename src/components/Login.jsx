@@ -3,28 +3,33 @@ import { TextField } from "@mui/material";
 import { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { setCookie, getCookie } from "../JavaScript/Cookies";
+import { useDispatch } from "react-redux";
+import { toggleLoginWindow } from "../redux/loginWindowSlice";
 
 export default function Login({ setOpen }) {
    const usernameEmail = useRef();
    const passwordRef = useRef();
+   const navigate = useNavigate();
+   const dispatch = useDispatch();
 
    const [usernameEmailError, setUsernameEmailError] = useState("");
    const [passwordError, setPasswordError] = useState("");
 
-   const navigate = useNavigate();
-
    function validate() {
       let hasNoError = true;
+      let autoFocused = false;
       if (!usernameEmail.current.value) {
-         setUsernameEmailError(
-            "Please, enter a valid username or email"
-         );
+         setUsernameEmailError("Please, enter a username or email");
          hasNoError = false;
+         usernameEmail.current.focus();
+         autoFocused = true;
       } else if (usernameEmail.current.value.length <= 3) {
          setUsernameEmailError(
             "User or email has to be longer than 3 characters"
          );
          hasNoError = false;
+         autoFocused ? "" : usernameEmail.current.focus();
+         autoFocused = true;
       } else {
          setUsernameEmailError("");
       }
@@ -32,11 +37,15 @@ export default function Login({ setOpen }) {
       if (!passwordRef.current.value) {
          setPasswordError("You must enter your password");
          hasNoError = false;
-      } else if (passwordRef.current.value.length >= 8) {
+         autoFocused ? "" : passwordRef.current.focus();
+         autoFocused = true;
+      } else if (passwordRef.current.value.length < 8) {
          setPasswordError(
             "The password must at least be 8 characters"
          );
          hasNoError = false;
+         autoFocused ? "" : passwordRef.current.focus();
+         autoFocused = true;
       } else {
          setPasswordError("");
       }
@@ -129,6 +138,18 @@ export default function Login({ setOpen }) {
                type="submit"
             >
                Login
+            </Button>
+            <Button
+               onClick={() => dispatch(toggleLoginWindow(false))}
+               variant="outlined"
+               sx={{
+                  fontFamily: "Cera Pro",
+                  textTransform: "initial",
+                  width: "100%",
+                  marginTop: "1.2rem",
+               }}
+            >
+               Don't have an account?
             </Button>
          </form>
       </div>

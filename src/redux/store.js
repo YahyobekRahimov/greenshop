@@ -3,6 +3,7 @@ import likedProductsSlice from "./likedProductsSlice";
 import cartProductsSlice from "./cartProductsSlice";
 import filterSlice from "./filterSlice";
 import paginationSlice from "./paginationSlice";
+import loginWindowSlice from "./loginWindowSlice";
 
 const store = configureStore({
    reducer: {
@@ -10,6 +11,7 @@ const store = configureStore({
       cartProducts: cartProductsSlice,
       filterSlice: filterSlice,
       paginationSlice: paginationSlice,
+      loginWindowSlice: loginWindowSlice,
    },
 });
 
