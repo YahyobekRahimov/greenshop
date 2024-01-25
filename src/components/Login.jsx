@@ -15,12 +15,14 @@ export default function Login({ setOpen }) {
 
    function validate() {
       let hasNoError = true;
-      if (
-         !usernameEmail.current.value ||
-         usernameEmail.current.value.length <= 3
-      ) {
+      if (!usernameEmail.current.value) {
          setUsernameEmailError(
             "Please, enter a valid username or email"
+         );
+         hasNoError = false;
+      } else if (usernameEmail.current.value.length <= 3) {
+         setUsernameEmailError(
+            "User or email has to be longer than 3 characters"
          );
          hasNoError = false;
       } else {
@@ -29,6 +31,11 @@ export default function Login({ setOpen }) {
 
       if (!passwordRef.current.value) {
          setPasswordError("You must enter your password");
+         hasNoError = false;
+      } else if (passwordRef.current.value.length >= 8) {
+         setPasswordError(
+            "The password must at least be 8 characters"
+         );
          hasNoError = false;
       } else {
          setPasswordError("");
@@ -80,6 +87,12 @@ export default function Login({ setOpen }) {
                      label="Username or Email"
                      variant="outlined"
                      inputRef={usernameEmail}
+                     onChange={(e) =>
+                        e.target.value.length > 0 &&
+                        usernameEmailError
+                           ? setUsernameEmailError("")
+                           : ""
+                     }
                   />
                   <span className="text-red-700">
                      {usernameEmailError}
@@ -92,6 +105,11 @@ export default function Login({ setOpen }) {
                      variant="outlined"
                      type="password"
                      inputRef={passwordRef}
+                     onChange={(e) =>
+                        e.target.value.length > 0 && passwordError
+                           ? setPasswordError("")
+                           : ""
+                     }
                   />
                   <span className="text-red-700">
                      {passwordError}
