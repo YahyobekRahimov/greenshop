@@ -86,7 +86,6 @@ export default function Header() {
                      }
                   })}
                </Breadcrumbs>
-               <Link to="/profile">Profile</Link>
             </Container>
          )}
       </div>

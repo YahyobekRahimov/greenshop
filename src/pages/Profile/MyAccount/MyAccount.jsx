@@ -1,69 +1,165 @@
-
-import user from "/src/images/user.svg";
-import addres from "/src/images/Location.svg";
-import shoppingBag from "/src/images/shopping-bag.svg";
-import heart from "/src/images/likeIcon.svg";
-import repots from "/src/images/reports.svg";
-import download from "/src/images/Download.svg";
-import support from "/src/images/support.svg";
-import logout from "/src/images/mylogout.svg";
+import UserIcon from "/src/images/user2.svg?react";
+import AddressIcon from "/src/images/Location.svg?react";
+import CartIcon from "/src/images/shoppingC.svg?react";
+import HeartIcon from "/src/images/heart.svg?react";
+import ReportsIcon from "/src/images/reports.svg?react";
+import DownloadIcon from "/src/images/Download.svg?react";
+import SupportIcon from "/src/images/support.svg?react";
+import LogoutIcon from "/src/images/mylogout.svg?react";
 import { Button } from "@mui/material";
+import { useState } from "react";
 
+const Tabs = [
+   {
+      title: "Account Details",
+      icon: <UserIcon className="w-[1.2rem] fill-textSecondary" />,
+      extraWrapperClasses: "",
+      useStroke: false,
+      useFill: true,
+   },
+   {
+      title: "Address",
+      icon: <AddressIcon className="w-[1.2rem] fill-textSecondary" />,
+      extraWrapperClasses: "",
+      useStroke: false,
+      useFill: true,
+   },
+   {
+      title: "Orders",
+      icon: <CartIcon className="w-[1.2rem]" />,
+      extraWrapperClasses: "shoppingCartIconContainer",
+      useStroke: false,
+      useFill: true,
+   },
+   {
+      title: "Wishlist",
+      icon: (
+         <HeartIcon className="w-[1.2rem] fill-textSecondary stroke-textSecondary stroke-[.5]" />
+      ),
+      extraWrapperClasses: "",
+      useStroke: true,
+      useFill: true,
+   },
+   {
+      title: "Reports",
+      icon: (
+         <ReportsIcon className="w-[1.2rem] stroke-textSecondary" />
+      ),
+      extraWrapperClasses: "",
+      useStroke: true,
+      useFill: false,
+   },
+   {
+      title: "Downloads",
+      icon: (
+         <DownloadIcon className="w-[1.2rem] stroke-textSecondary" />
+      ),
+      extraWrapperClasses: "",
+      useStroke: true,
+      useFill: false,
+   },
+   {
+      title: "Support",
+      icon: (
+         <SupportIcon className="w-[1.2rem] stroke-textSecondary" />
+      ),
+      extraWrapperClasses: "",
+      useStroke: true,
+      useFill: false,
+   },
+];
 export default function MyAccount() {
-  return (
-    <div className="w-[19.375rem] bg-softBackground rounded-lg py-[17px] pl-4">
-      <h2 className="mb-6 text-lg font-bold">My Account</h2>
-      <div className="flex gap-3 mb-6 cursor-pointer items-center text-textSecondary text-[0.938rem]">
-        <img className="w-[18px] h-[18px]" src={user} alt="user logo" />
-        <p>Account Details</p>
-      </div>
-      <div className="flex gap-3 mb-6 cursor-pointer items-center text-textSecondary text-[0.938rem]">
-        <img className="w-[18px] h-[18px]" src={addres} alt="addres logo" />
-        <p> Address </p>
-      </div>
-      <div className="flex gap-3 mb-6 cursor-pointer items-center text-textSecondary text-[0.938rem]">
-        <img
-          className="w-[18px] h-[18px]"
-          src={shoppingBag}
-          alt="addres logo"
-        />
-        <p> Orders </p>
-      </div>
-      <div className="flex gap-3 mb-6 cursor-pointer items-center text-textSecondary text-[0.938rem]">
-        <img className="w-[18px] h-[18px]" src={heart} alt="addres logo" />
-        <p> Wishlist </p>
-      </div>
-      <div className="flex gap-3 mb-6 cursor-pointer items-center text-textSecondary text-[0.938rem]">
-        <img className="w-[18px] h-[18px]" src={repots} alt="addres logo" />
-        <p> Reports </p>
-      </div>
-      <div className="flex gap-3 mb-6 cursor-pointer items-center text-textSecondary text-[0.938rem]">
-        <img className="w-[18px] h-[18px]" src={download} alt="addres logo" />
-        <p> Downloads </p>
-      </div>
-      <div className="flex gap-3 mb-6 cursor-pointer items-center text-textSecondary text-[0.938rem]">
-        <img className="w-[18px] h-[18px]" src={support} alt="addres logo" />
-        <p> Support </p>
-      </div>
+   const [selectedTab, setSelectedTab] = useState(0);
+   return (
+      <div className="w-[19.375rem] bg-softBackground rounded-lg py-[17px]">
+         <h2 className="pl-6 mb-6 text-lg font-bold">My Account</h2>
+         {Tabs.map((tab, index) => (
+            <div
+               className={`flex gap-3 cursor-pointer items-center py-[0.6rem] pl-4 text-textSecondary text-[0.938rem] border-l-[0.3125rem] border-transparent ${
+                  tab.extraWrapperClasses
+               } ${
+                  selectedTab == index
+                     ? `bg-white border-l-primary ${
+                          tab.useStroke && "svg-green-use-stroke"
+                       }  ${tab.useFill && "svg-green-use-fill"} ${
+                          tab.useStroke &&
+                          tab.useFill &&
+                          "svg-green-use-both"
+                       }`
+                     : ""
+               }`}
+               onClick={() => setSelectedTab(index)}
+               key={index}
+            >
+               {tab.icon}
+               <p
+                  className={`${
+                     selectedTab == index ? "text-primary" : ""
+                  }`}
+               >
+                  {tab.title}
+               </p>
+            </div>
+         ))}
+         {/* <div
+            className={`flex gap-3 mb-6 cursor-pointer items-center text-textSecondary text-[0.938rem] ${selected}`}
+         >
+            <UserIcon className="w-[1.2rem] fill-textSecondary" />
+            <p>Account Details</p>
+         </div>
+         <div
+            className={`flex gap-3 mb-6 cursor-pointer items-center text-textSecondary text-[0.938rem] ${selected}`}
+         >
+            <AddressIcon className="w-[1.2rem] fill-textSecondary" />
+            <p> Address </p>
+         </div>
+         <div
+            className={`flex gap-3 mb-6 cursor-pointer items-center shoppingCartIconContainer text-textSecondary text-[0.938rem] ${selected}`}
+         >
+            <CartIcon className="w-[1.2rem]" />
+            <p> Orders </p>
+         </div>
+         <div
+            className={`flex gap-3 mb-6 cursor-pointer items-center text-textSecondary text-[0.938rem] ${selected}`}
+         >
+            <HeartIcon className="w-[1.2rem] fill-textSecondary stroke-textSecondary stroke-[.5]" />
+            <p> Wishlist </p>
+         </div>
+         <div
+            className={`flex gap-3 mb-6 cursor-pointer items-center text-textSecondary text-[0.938rem] ${selected}`}
+         >
+            <ReportsIcon className="w-[1.2rem] stroke-textSecondary" />
+            <p> Reports </p>
+         </div>
+         <div
+            className={`flex gap-3 mb-6 cursor-pointer items-center text-textSecondary text-[0.938rem] ${selected}`}
+         >
+            <DownloadIcon className="w-[1.2rem] stroke-textSecondary" />
+            <p> Downloads </p>
+         </div>
+         <div
+            className={`flex gap-3 mb-6 cursor-pointer items-center text-textSecondary text-[0.938rem] ${selected}`}
+         >
+            <SupportIcon className="w-[1.2rem] stroke-textSecondary" />
+            <p> Support </p>
+         </div> */}
 
-      <div className="border-t">
-        <Button
-          style={{
-            color: "#46A358",
-            textTransform: "capitalize",
-            fontWeight: 700,
-            fontSize: "0.934rem",
-            marginTop: "10px",
-          }}
-        >
-          <img
-            src={logout}
-            alt="logout logo"
-            className="mr-[6px] text-primary"
-          />
-          Loguot
-        </Button>
+         <div className="border-t">
+            <Button
+               style={{
+                  color: "#46A358",
+                  textTransform: "capitalize",
+                  fontWeight: 700,
+                  fontSize: "0.934rem",
+                  marginTop: "10px",
+                  display: "flex",
+                  gap: "0.5rem",
+               }}
+            >
+               <LogoutIcon className="w-[1.2rem] stroke-textSecondary" />
+               Loguot
+            </Button>
+         </div>
       </div>
-    </div>
-  );
+   );
 }
