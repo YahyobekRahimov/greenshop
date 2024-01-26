@@ -13,3 +13,18 @@
       --md-palette-primary-dark: #3a8549 !important;
    }
 }
+
+.shoppingCartIconContainer #shoppingCartIconPath {
+   fill: #727272;
+}
+
+.svg-green-use-fill > svg * {
+   fill: var(--green-primary) !important;
+}
+.svg-green-use-stroke > svg * {
+   stroke: var(--green-primary) !important;
+}
+.svg-green-use-both > svg * {
+   fill: var(--green-primary) !important;
+   stroke: var(--green-primary) !important;
+}
