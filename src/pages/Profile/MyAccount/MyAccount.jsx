@@ -101,48 +101,6 @@ export default function MyAccount() {
                </p>
             </div>
          ))}
-         {/* <div
-            className={`flex gap-3 mb-6 cursor-pointer items-center text-textSecondary text-[0.938rem] ${selected}`}
-         >
-            <UserIcon className="w-[1.2rem] fill-textSecondary" />
-            <p>Account Details</p>
-         </div>
-         <div
-            className={`flex gap-3 mb-6 cursor-pointer items-center text-textSecondary text-[0.938rem] ${selected}`}
-         >
-            <AddressIcon className="w-[1.2rem] fill-textSecondary" />
-            <p> Address </p>
-         </div>
-         <div
-            className={`flex gap-3 mb-6 cursor-pointer items-center shoppingCartIconContainer text-textSecondary text-[0.938rem] ${selected}`}
-         >
-            <CartIcon className="w-[1.2rem]" />
-            <p> Orders </p>
-         </div>
-         <div
-            className={`flex gap-3 mb-6 cursor-pointer items-center text-textSecondary text-[0.938rem] ${selected}`}
-         >
-            <HeartIcon className="w-[1.2rem] fill-textSecondary stroke-textSecondary stroke-[.5]" />
-            <p> Wishlist </p>
-         </div>
-         <div
-            className={`flex gap-3 mb-6 cursor-pointer items-center text-textSecondary text-[0.938rem] ${selected}`}
-         >
-            <ReportsIcon className="w-[1.2rem] stroke-textSecondary" />
-            <p> Reports </p>
-         </div>
-         <div
-            className={`flex gap-3 mb-6 cursor-pointer items-center text-textSecondary text-[0.938rem] ${selected}`}
-         >
-            <DownloadIcon className="w-[1.2rem] stroke-textSecondary" />
-            <p> Downloads </p>
-         </div>
-         <div
-            className={`flex gap-3 mb-6 cursor-pointer items-center text-textSecondary text-[0.938rem] ${selected}`}
-         >
-            <SupportIcon className="w-[1.2rem] stroke-textSecondary" />
-            <p> Support </p>
-         </div> */}
 
          <div className="border-t">
             <Button
