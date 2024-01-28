@@ -9,6 +9,8 @@ export default function Profile() {
    let resultTab;
    if (selectedTab == 0) {
       resultTab = <Personalnfo />;
+   } else if (selectedTab == 1) {
+   } else if (selectedTab == 2) {
    }
    return (
       <Container>

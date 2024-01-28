@@ -70,7 +70,7 @@ export default function Header() {
                               }}
                               color="text.primary"
                            >
-                              {page}
+                              {page.split("-").join(" ")}
                            </Typography>
                         );
                      } else {
