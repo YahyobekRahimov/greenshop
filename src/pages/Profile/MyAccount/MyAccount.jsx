@@ -68,8 +68,7 @@ const Tabs = [
       useFill: false,
    },
 ];
-export default function MyAccount() {
-   const [selectedTab, setSelectedTab] = useState(0);
+export default function MyAccount({ selectedTab, setSelectedTab }) {
    return (
       <div className="w-[19.375rem] bg-softBackground rounded-lg py-[17px]">
          <h2 className="pl-6 mb-6 text-lg font-bold">My Account</h2>
@@ -112,6 +111,7 @@ export default function MyAccount() {
                   marginTop: "10px",
                   display: "flex",
                   gap: "0.5rem",
+                  marginLeft: "1rem",
                }}
             >
                <LogoutIcon className="w-[1.2rem] stroke-textSecondary" />
