@@ -15,7 +15,7 @@ import ProductCart from "./pages/Shop/CartSummary/ProductCart";
 import ProductCheckout from "./pages/Shop/CheckOut/ProductCheckout";
 import Shop from "./pages/Shop/Shop";
 import PlantCare from "./pages/PlantCare";
-import Blogs from "./pages/Blogs";
+import Blogs from "./pages/Blogs/Blogs";
 import FindMore from "./pages/Home/FindMore";
 import ScrollToTopOnNavigation from "/src/JavaScript/ScrollToTopOnNavigation.js";
 import Wishlist from "./pages/Shop/Wishlist/Wishlist";
@@ -36,7 +36,12 @@ function App() {
             />
             <Route path="/shop" element={<Shop />} />
             <Route path="/plant-care" element={<PlantCare />} />
-            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blogs" element={<Blogs />}>
+               <Route
+                  path="/blogs/:category"
+                  element={<Blogs />}
+               ></Route>
+            </Route>
             <Route path="/shop/wishlist" element={<Wishlist />} />
             <Route path="/profile" element={<Profile />} />
          </Routes>
