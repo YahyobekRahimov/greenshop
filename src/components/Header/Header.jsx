@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Container from "../Container";
 import { NavLink } from "react-router-dom";
@@ -17,12 +16,9 @@ export default function Header() {
    function handleclick() {
       setModalSearch(true);
    }
-<<<<<<< HEAD
-   
-=======
+
    const path = location.pathname.split("/").slice(1);
    path.unshift("Home");
->>>>>>> 72b9f9eba1e157a7903fae53fcf298b7a50dae44
 
    function getLink(pageName) {
       switch (pageName) {
