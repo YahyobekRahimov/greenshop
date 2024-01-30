@@ -1,4 +1,5 @@
 import Container from "../../components/Container";
+import Address from "./MyAccount/Address";
 import MyAccount from "./MyAccount/MyAccount";
 import Personalnfo from "./Personalnfo/Personalnfo";
 import { useState } from "react";
@@ -10,6 +11,7 @@ export default function Profile() {
    if (selectedTab == 0) {
       resultTab = <Personalnfo />;
    } else if (selectedTab == 1) {
+      resultTab = <Address />;
    } else if (selectedTab == 2) {
    }
    return (
