@@ -7,6 +7,7 @@ export default function BlogsArticles() {
          {Blogs.map((blog, index) => {
             return (
                <ArticleCards
+                  key={index}
                   title={blog.title}
                   id={blog.id}
                   category={blog.category}
