@@ -1,108 +1,92 @@
-import { MenuItem, Select } from "@mui/material";
+import { Button, MenuItem, Select } from "@mui/material";
 import { React, useState } from "react";
 
 import Image from "/src/images/Img.svg?react";
 
 const MyInputs = ({
-   label = "",
-   type = "text",
-   name = "",
-   required,
-   showSelect,
-   placeholder = "",
-   options,
-   text,
-   className,
-   ...otherProps
+  label = "",
+  type = "text",
+  name = "",
+  required,
+  showSelect,
+  placeholder = "",
+  options,
+  text,
+  className,
+  ...otherProps
 }) => {
-   const [selectedValue, setSelectedValue] = useState(options);
+  const [selectedValue, setSelectedValue] = useState(options);
 
-   const handleChange = (event) => {
-      setSelectedValue(event.target.value);
-   };
+  const handleChange = (event) => {
+    setSelectedValue(event.target.value);
+  };
 
-   if (showSelect) {
-      const optionsArray = options
-         .split(",")
-         .map((option) => option.trim());
+  if (showSelect) {
+    const optionsArray = options.split(",").map((option) => option.trim());
 
-      return (
-         <div className="mb-4 w-[21.875rem] mr-6">
-            <form>
-               <label
-                  htmlFor={name}
-                  className="block text-gray-700 font-bold mb-2"
-               >
-                  {label}{" "}
-                  {required && (
-                     <span className="text-red-700">*</span>
-                  )}
-               </label>
-               <Select
-                  value={selectedValue}
-                  size="small"
-                  className="w-full "
-                  name={name}
-                  required={required}
-                  onChange={handleChange}
-                  {...otherProps}
-               >
-                  {optionsArray.map((option) => (
-                     <MenuItem key={option} value={option}>
-                        {option}
-                     </MenuItem>
-                  ))}
-               </Select>
-            </form>
-         </div>
-      );
-   }
-
-   if (text) {
-      return (
-         <div className="w-max">
-            <form>
-               <label
-                  htmlFor={name}
-                  className="block text-gray-700 font-bold mb-2"
-               >
-                  {label}{" "}
-                  {required && (
-                     <span className="text-red-600">*</span>
-                  )}
-               </label>
-               <div className="flex gap-5">
-                  <div className="p-[5px] bg-[#FBFBFB] border border-[#EAEAEA] rounded-3xl">
-                     <Image />
-                  </div>
-               </div>
-            </form>
-         </div>
-      );
-   }
-
-   return (
-      <div className="w-full">
-         <label
-            htmlFor={name}
-            className="block text-gray-700 font-bold mb-2"
-         >
-            {label}{" "}
-            {required && <span className="text-red-600">*</span>}
-         </label>
-         <input
-            id={name}
-            type={type}
+    return (
+      <div className="mb-4 w-[21.875rem] mr-6">
+        <form>
+          <label htmlFor={name} className="block text-gray-700 font-bold mb-2">
+            {label} {required && <span className="text-red-700">*</span>}
+          </label>
+          <Select
+            value={selectedValue}
+            size="small"
+            className="w-full "
             name={name}
             required={required}
-            placeholder={placeholder}
-            className={`border border-gray-300 p-2 w-full focus:border-blue-500 focus:outline-none focus:ring-blue-200 focus:ring-2 duration-200 rounded-md ${
-               required && !otherProps.value ? "" : ""
-            }`}
+            onChange={handleChange}
             {...otherProps}
-         />
+          >
+            {optionsArray.map((option) => (
+              <MenuItem key={option} value={option}>
+                {option}
+              </MenuItem>
+            ))}
+          </Select>
+        </form>
       </div>
-   );
+    );
+  }
+
+  if (text) {
+    return (
+      <div className="w-max">
+        <form>
+          <label htmlFor={name} className="block text-gray-700 font-bold mb-2">
+            {label} {required && <span className="text-red-600">*</span>}
+          </label>
+          <div className="flex gap-5">
+            <div className="p-[5px] bg-[#FBFBFB] border border-[#EAEAEA] rounded-3xl">
+              <Image />
+            </div>
+            <Button variant="contained">Change</Button>
+            <Button>Remove</Button>
+          </div>
+        </form>
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-full">
+      <label htmlFor={name} className="block text-gray-700 font-bold mb-2">
+        {label} {required && <span className="text-red-600">*</span>}
+      </label>
+      <input
+        id={name}
+        type={type}
+        name={name}
+        required={required}
+        placeholder={placeholder}
+        className={`border border-gray-300 p-2 w-full focus:border-blue-500 focus:outline-none focus:ring-blue-200 focus:ring-2 duration-200 rounded-md ${
+          required && !otherProps.value ? "" : ""
+        }`}
+        {...otherProps}
+      />
+    </div>
+  );
 };
 
 export default MyInputs;
