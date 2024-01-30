@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import CategoriesData from "/data/blogs/blogCategories.json";
+import MyInputs from "../Shop/CheckOut/MyInputs";
 
 export default function BlogsFilter() {
    let acceptableCharacters = [
@@ -50,12 +51,20 @@ export default function BlogsFilter() {
                      .split(" ")
                      .join("-");
                   return (
-                     <li className="text-xl w-max cursor-pointer">
+                     <li className="text-xl w-max cursor-pointer hover:text-primary duration-200">
                         <NavLink to={link}>{category}</NavLink>
                      </li>
                   );
                })}
             </ul>
+         </div>
+         <div className="border-dashed border border-textSecondary p-5 w-max flex flex-col">
+            <h3>Search</h3>
+            <MyInputs
+               type="text"
+               placeholder="Search for a planet"
+               className="w-min m-0"
+            />
          </div>
       </div>
    );

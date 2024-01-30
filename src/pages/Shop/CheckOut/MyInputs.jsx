@@ -12,6 +12,7 @@ const MyInputs = ({
    placeholder = "",
    options,
    text,
+   className,
    ...otherProps
 }) => {
    const [selectedValue, setSelectedValue] = useState(options);
@@ -59,7 +60,7 @@ const MyInputs = ({
 
    if (text) {
       return (
-         <div className="mb-4 w-[21.875rem] mr-6">
+         <div className="w-max">
             <form>
                <label
                   htmlFor={name}
@@ -81,7 +82,7 @@ const MyInputs = ({
    }
 
    return (
-      <div className="mb-4 w-[21.875rem] mr-6">
+      <div className="w-full">
          <label
             htmlFor={name}
             className="block text-gray-700 font-bold mb-2"
