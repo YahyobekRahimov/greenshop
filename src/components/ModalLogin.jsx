@@ -28,11 +28,16 @@ export default function TransitionsModal() {
    const [open, setOpen] = React.useState(false);
    const handleOpen = () => setOpen(true);
    const handleClose = () => setOpen(false);
+<<<<<<< HEAD
+   const [loginspan, setLoginSpan] = useState();
+   const [registrspan, setRegistrSpan] = useState(false);
+=======
    const loginWindowOpen = useSelector(
       (state) => state.loginWindowSlice
    );
    console.log(loginWindowOpen);
    const dispatch = useDispatch();
+>>>>>>> 72b9f9eba1e157a7903fae53fcf298b7a50dae44
 
    return (
       <div>
@@ -54,6 +59,33 @@ export default function TransitionsModal() {
          >
             <Fade in={open}>
                <Box sx={style}>
+<<<<<<< HEAD
+                  <div className="flex flex-col gap-14 px-[6.25rem]">
+                     <h1 className="mt-[3rem] cursor-pointer  text-center text-xl font-medium">
+                        <button
+                           onClick={clickSpanLogin}
+                           className={`button-link ${
+                              loginspan
+                                 ? "text-green-700"
+                                 : "text-black"
+                           }`}
+                        >
+                           Login
+                        </button>
+                        {" | "}
+                        <button
+                           onClick={clickSpanRegistr}
+                           className={`button-link ${
+                              loginspan
+                                 ? "text-black"
+                                 : "text-green-700"
+                           }`}
+                        >
+                           Register
+                        </button>
+                     </h1>
+                     {loginspan ? <Login /> : <Registr />}
+=======
                   <div
                      className={`flex max-h-[600px] h-full flex-col justify-around px-[6.25rem] py-[3.125rem]`}
                   >
@@ -106,6 +138,7 @@ export default function TransitionsModal() {
                            <Register setOpen={setOpen} />
                         )}
                      </div>
+>>>>>>> 72b9f9eba1e157a7903fae53fcf298b7a50dae44
                   </div>
                </Box>
             </Fade>
