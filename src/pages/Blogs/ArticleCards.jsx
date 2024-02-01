@@ -14,7 +14,7 @@ export default function ArticleCards({
    return (
       <div className="p-10">
          <img src={`https://picsum.photos/300/200?random=${id}`} />
-         <h3 className="text-2xl">{title}</h3>
+         <h3 className="text-2xl my-5">{title}</h3>
          <p className="pb-5">{content.slice(0, 500)}...</p>
          <ul className="flex items-center gap-10 pb-5">
             <li>

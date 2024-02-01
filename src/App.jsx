@@ -20,6 +20,8 @@ import FindMore from "./pages/Home/FindMore";
 import ScrollToTopOnNavigation from "/src/JavaScript/ScrollToTopOnNavigation.js";
 import Wishlist from "./pages/Shop/Wishlist/Wishlist";
 import Profile from "./pages/Profile/Profile";
+import ContactUs from "./pages/ContactUs/ContactUs";
+import About from "./pages/About/About";
 
 function App() {
    return (
@@ -35,7 +37,8 @@ function App() {
                element={<ProductCheckout />}
             />
             <Route path="/shop" element={<Shop />} />
-            <Route path="/plant-care" element={<PlantCare />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/about" element={<About />} />
             <Route path="/blogs" element={<Blogs />}>
                <Route
                   path="/blogs/:category"

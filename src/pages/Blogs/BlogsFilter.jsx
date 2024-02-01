@@ -45,7 +45,7 @@ export default function BlogsFilter() {
             <h2 className="text-2xl text-textPrimary mb-10 mt-5">
                Categories
             </h2>
-            <ul className="list-decimal flex flex-col gap-2">
+            <ul className="flex flex-col gap-2">
                {CategoriesData.map((category, index) => {
                   let link = category
                      .toLowerCase()
@@ -61,7 +61,8 @@ export default function BlogsFilter() {
                         key={index}
                         className="text-xl w-max cursor-pointer hover:text-primary duration-200"
                      >
-                        <NavLink to={link}>{category}</NavLink>
+                        {index}.
+                        <NavLink to={link}>{" " + category}</NavLink>
                      </li>
                   );
                })}
