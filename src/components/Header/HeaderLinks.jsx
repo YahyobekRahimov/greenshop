@@ -4,12 +4,12 @@ import { NavLink } from "react-router-dom";
 export default function HeaderLinks({ location }) {
    return (
       <div>
-         <ul className="list-none flex gap-16 items-center">
+         <ul className="list-none flex gap-8 items-center">
             <li className={`hover:text-green-600 text-green-700`}>
                <NavLink
-                  className={`${
+                  className={`pb-[1.1rem] ${
                      location.pathname === "/"
-                        ? " pb-[1.1rem] border-solid border-b-4 border-b-green-600 text-green-700"
+                        ? "  border-solid border-b-4 border-b-green-600 text-green-700"
                         : "border-b-white text-black"
                   }`}
                   to="/"
@@ -19,9 +19,9 @@ export default function HeaderLinks({ location }) {
             </li>
             <li className="hover:text-green-600">
                <NavLink
-                  className={`${
+                  className={`pb-[1.1rem] ${
                      location.pathname == "/shop"
-                        ? " pb-[1.1rem] border-solid border-b-4 border-b-green-600 text-green-700"
+                        ? "  border-solid border-b-4 border-b-green-600 text-green-700"
                         : "border-b-white text-black"
                   }`}
                   to="/shop"
@@ -31,21 +31,33 @@ export default function HeaderLinks({ location }) {
             </li>
             <li className="hover:text-green-600">
                <NavLink
-                  className={`${
-                     location.pathname == "/plant-care"
-                        ? " pb-[1.1rem] border-solid border-b-4 border-b-green-600 text-green-700"
+                  className={`pb-[1.1rem] ${
+                     location.pathname == "/about"
+                        ? "  border-solid border-b-4 border-b-green-600 text-green-700"
                         : "border-b-white text-black"
                   }`}
-                  to="/plant-care"
+                  to="/about"
                >
-                  Plant Care
+                  About us
                </NavLink>
             </li>
             <li className="hover:text-green-600">
                <NavLink
-                  className={`${
+                  className={`pb-[1.1rem] ${
+                     location.pathname == "/contact"
+                        ? "  border-solid border-b-4 border-b-green-600 text-green-700"
+                        : "border-b-white text-black"
+                  }`}
+                  to="/contact"
+               >
+                  Contact us
+               </NavLink>
+            </li>
+            <li className="hover:text-green-600">
+               <NavLink
+                  className={`pb-[1.1rem] ${
                      location.pathname == "/blogs"
-                        ? "pb-[1.1rem] border-solid border-b-4 border-b-green-600 text-green-700"
+                        ? " border-solid border-b-4 border-b-green-600 text-green-700"
                         : "border-b-white text-black"
                   }`}
                   to="/blogs"
