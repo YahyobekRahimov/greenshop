@@ -8,10 +8,13 @@ import { useLocation } from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import { Link } from "react-router-dom";
+import integrateLocalWithRedux from "./integratingProductsWithRedux";
 
 export default function Header() {
    const [modalSearch, setModalSearch] = useState(false);
    const location = useLocation();
+
+   integrateLocalWithRedux();
 
    function handleclick() {
       setModalSearch(true);
