@@ -41,8 +41,8 @@ body {
    grid-template-columns: 1fr 1fr 1fr 2fr;
 }
 
-@media (min-width: 640px) {
-   
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
 }
-
-

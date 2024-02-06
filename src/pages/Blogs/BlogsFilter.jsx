@@ -61,7 +61,7 @@ export default function BlogsFilter() {
                         key={index}
                         className="text-xl w-max cursor-pointer hover:text-primary duration-200"
                      >
-                        {index}.
+                        {index + 1}.
                         <NavLink to={link}>{" " + category}</NavLink>
                      </li>
                   );
