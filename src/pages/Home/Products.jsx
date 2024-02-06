@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Container from "../../components/Container";
 import LikeIcon from "../../components/LikeIcon";
 import data from "/data/data.json";
@@ -22,15 +22,8 @@ export default function Products() {
    const dispatch = useDispatch();
    let products = data.slice(38);
 
-   // * getting the liked products from local storage
-   let likedProducts =
-      JSON.parse(localStorage.getItem("likedProducts")) || [];
-   dispatch(addAllLikedProducts(likedProducts));
-
-   // * getting the products added to cart from localStorage
-   let productsInCart =
-      JSON.parse(localStorage.getItem("productsInCart")) || [];
-   dispatch(addAllProductsToCart(productsInCart));
+   const likedProducts = useSelector((state) => state.likedProducts);
+   const productsInCart = useSelector((state) => state.cartProducts);
 
    // * redirecting the user to product details page.
    function handleCardClick(product, PlantImage) {
