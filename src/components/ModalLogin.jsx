@@ -32,7 +32,6 @@ export default function TransitionsModal() {
    const loginWindowOpen = useSelector(
       (state) => state.loginWindowSlice
    );
-   console.log(loginWindowOpen);
    const dispatch = useDispatch();
 
    return (
